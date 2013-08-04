@@ -545,6 +545,10 @@ body .banners div.promotion:last-child a {
 .collection-list li img {
 	float: left;
 	margin: 0 10px 20px 0;
+	border:1px solid #;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px; 
 }
 
 /* @group favourites list */
@@ -960,7 +964,7 @@ aside .collection-list img {
 	clear: both;
 	background: #fff -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#eaecec));
 	background: -moz-linear-gradient(0% 100% 90deg,#eaecec, #fafafa);
-	height: 350px;
+	height: 422px;
 	margin: 20px -20px -20px;
 	padding: 20px;
 	color: #eaecec;
@@ -978,15 +982,15 @@ aside .collection-list img {
 #product-info .card_screenshots li {
 	display: block;
 	float: left;
-	width: 250px;
+	width: 320px;
 	height: 350px;
 	margin-right: 20px;
 }
 
 #product-info .card_screenshots img {
 	display: block;
-	width: 250px;
-	height: 350px;
+	width: 300px;
+	height: 422px;
 	border-radius: 10px;
 	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.2);

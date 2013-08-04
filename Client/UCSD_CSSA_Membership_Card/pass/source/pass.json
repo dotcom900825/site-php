@@ -1,1 +1,69 @@
-{"formatVersion":1,"passTypeIdentifier":"pass.com.ipassstore.ucsdcssa","serialNumber":"112","teamIdentifier":"3JAYL5R2NX","webServiceURL":"https:\/\/www.ipassstore.com\/lib\/ws\/","authenticationToken":"d6135341d564b35adbf8ff03965b86436d568a88","barcode":{"message":"13755769917797572","format":"PKBarcodeFormatPDF417","messageEncoding":"iso-8859-1","altText":"\u6d3b\u52a8\u65b0\u95fb\u4e0e\u6253\u6298\u4fe1\u606f\u8bf7\u89c1\u80cc\u9762"},"locations":[],"organizationName":"UCSD CSSA","description":"UCSD CSSA Membership Card","logoText":"UCSD CSSA","foregroundColor":"rgb(255, 255, 255)","backgroundColor":"rgb(150, 0, 0)","storeCard":{"headerFields":[{"key":"header","label":"Features","value":"Fall GBM","changeMessage":"%@"}],"auxiliaryFields":[{"key":"eventTime","label":"Time","value":"Sep, 2013"},{"key":"eventLocation","label":"Location","value":"Price Center"}],"backFields":[{"key":"features","label":"Upcoming Event","value":"The 2013 Fall GBM will be hosted at Price Center East Ball Room in Sep 29th, 2013. Let's look forward to its launch."},{"key":"sponsors","label":"Sponsor Information","value":"Citibank Forward Credit Card\nNo social security number required\nApply now:\n(800) 627-3999\n8813 Villa La Jolla Dr, La Jolla, CA 92037"},{"key":"discountDeals","label":"Membership Card Discount Details","value":"Hi Thai (\u6cf0\u56fd\u98ce\u5473)\n10% Off\nOn Campus\n(858)558-4606\n\nShogun \u5c06\u519b (\u65e5\u672c\u6599\u7406)\n10% Off\nExcluding daily specials\nPrice Center\n(858)453-0220\n\nBombay Coast (\u5370\u5ea6\u98ce\u60c5)\n10% Off\nPrice Center\n(858)622-9070\n\nCafe Espresso Roma\n$0.50 Off each item\nExcluding drinks\nPrice Center\n(858)450-2141\n\nYogurt World\n10% Off\nOn Campus\n\nTapioca Express\n10% Off\n(Cash, Triton Cash Only)\nPrice Center\n(858)450-2141\n\n\u5bcc\u4e34\u9152\u5bb6 China Max\n10% Off(Cash Only)\n4698 Convoy Street, San Diego, CA 92111\n(858)650-3333\n\nTea Station \u52a0\u5dde\u8336\u6808\n10% Off\nExcluding daily specials and $20 minimumm total charge\n1\u53f7\u5e97:7315 Clairemont Mesa Blvd., San Diego, CA\n2\u53f7\u5e97:9003 Mira Mesa Blvd., San Diego, CA 92126\n\nPho T Cali (\u6b63\u5b97\u8d8a\u5357\u7c73\u7c89)\n10% Off\n7351 Clairemont Mesa Blvd., San Diego, CA 92111\n(858)565-6997\n\nMelody KTV & Cafe\n10% Off\n4344 Convoy Street, San Diego, CA 92111\n(858)292-1689\n\nOzone Billiard Cafe\n10% Off  (Less than 10 people)\n15% Off (10 or more people)\n4887 Convoy Street, San Diego, CA 92111\n(858)268-0688\n\n\u6881\u5988\u5988\u5bb6 Liang's Kitchen\n10% Off              (Cash Only)\n4681 Convoy Street, San Diego, CA 92111\n(858)277-5573\n\nDede's Teajiuce City \u6e1d\u9999\u6751\n10% Off              (Cash Only)\n4647 Convoy Street, San Diego, CA 92111\n(858)279-5999\n\nSpicy City \u8fc7\u6865\u56ed\n10% Off              (Cash Only)\n4690 Convoy Street, San Diego, CA 92111\n(858)278-4690"},{"key":"contact","label":"\u8054\u7cfb\u65b9\u5f0f","value":"\u5b98\u65b9\u7f51\u7ad9 www.ucsdcssa.org\n\u5b66\u672f\u90e8\u7f51\u7ad9 cssaucsdac.weebly.com\nCSSA Facebook Page @UCSD CSSA\n\u4eba\u4eba\u4e3b\u9875 http:\/\/page.renren.com\/601269960\/index\n\u65b0\u6d6a\u5fae\u535a @CSSA_UCSD"},{"key":"iPassStore","label":"Powered by iPassStore.com","value":"Become a partner:\npartner@ipassstore.com\n\nFind out more at:\niPassStore.com\n"}]}}
+{
+    "formatVersion": 1,
+    "passTypeIdentifier": "pass.com.ipassstore.ucsdcssa",
+    "serialNumber": "112",
+    "teamIdentifier": "3JAYL5R2NX",
+    "webServiceURL": "https://www.ipassstore.com/lib/ws/",
+    "authenticationToken": "d6135341d564b35adbf8ff03965b86436d568a88",
+    "barcode": {
+        "message": "13755769917797572",
+        "format": "PKBarcodeFormatPDF417",
+        "messageEncoding": "iso-8859-1",
+        "altText": "活动新闻与打折信息请见背面"
+    },
+    "locations": [],
+    "organizationName": "UCSD CSSA",
+    "description": "UCSD CSSA Membership Card",
+    "logoText": "UCSD CSSA",
+    "foregroundColor": "rgb(255, 255, 255)",
+    "backgroundColor": "rgb(150, 0, 0)",
+    "storeCard": {
+        "headerFields": [
+            {
+                "key": "header",
+                "label": "Features",
+                "value": "Fall GBM",
+                "changeMessage": "%@"
+            }
+        ],
+        "auxiliaryFields": [
+            {
+                "key": "eventTime",
+                "label": "Time",
+                "value": "Sep, 2013"
+            },
+            {
+                "key": "eventLocation",
+                "label": "Location",
+                "value": "Price Center"
+            }
+        ],
+        "backFields": [
+            {
+                "key": "features",
+                "label": "Upcoming Event",
+                "value": "The 2013 Fall GBM will be hosted at Price Center East Ball Room in Sep 29th, 2013. Let's look forward to its launch."
+            },
+            {
+                "key": "sponsors",
+                "label": "Sponsor Information",
+                "value": "Citibank Forward Credit Card\nNo social security number required\nApply now:\n(800) 627-3999\n8813 Villa La Jolla Dr, La Jolla, CA 92037"
+            },
+            {
+                "key": "discountDeals",
+                "label": "Membership Card Discount Details",
+                "value": "Hi Thai (泰国风味)\n10% Off\nOn Campus\n(858)558-4606\n\nShogun 将军 (日本料理)\n10% Off\nExcluding daily specials\nPrice Center\n(858)453-0220\n\nBombay Coast (印度风情)\n10% Off\nPrice Center\n(858)622-9070\n\nCafe Espresso Roma\n$0.50 Off each item\nExcluding drinks\nPrice Center\n(858)450-2141\n\nYogurt World\n10% Off\nOn Campus\n\nTapioca Express\n10% Off\n(Cash, Triton Cash Only)\nPrice Center\n(858)450-2141\n\n富临酒家 China Max\n10% Off(Cash Only)\n4698 Convoy Street, San Diego, CA 92111\n(858)650-3333\n\nTea Station 加州茶栈\n10% Off\nExcluding daily specials and $20 minimumm total charge\n1号店:7315 Clairemont Mesa Blvd., San Diego, CA\n2号店:9003 Mira Mesa Blvd., San Diego, CA 92126\n\nPho T Cali (正宗越南米粉)\n10% Off\n7351 Clairemont Mesa Blvd., San Diego, CA 92111\n(858)565-6997\n\nMelody KTV & Cafe\n10% Off\n4344 Convoy Street, San Diego, CA 92111\n(858)292-1689\n\nOzone Billiard Cafe\n10% Off  (Less than 10 people)\n15% Off (10 or more people)\n4887 Convoy Street, San Diego, CA 92111\n(858)268-0688\n\n梁妈妈家 Liang's Kitchen\n10% Off              (Cash Only)\n4681 Convoy Street, San Diego, CA 92111\n(858)277-5573\n\nDede's Teajiuce City 渝香村\n10% Off              (Cash Only)\n4647 Convoy Street, San Diego, CA 92111\n(858)279-5999\n\nSpicy City 过桥园\n10% Off              (Cash Only)\n4690 Convoy Street, San Diego, CA 92111\n(858)278-4690"
+            },
+            {
+                "key": "contact",
+                "label": "联系方式",
+                "value": "官方网站 www.ucsdcssa.org\n学术部网站 cssaucsdac.weebly.com\nCSSA Facebook Page @UCSD CSSA\n人人主页 http://page.renren.com/601269960/index\n新浪微博 @CSSA_UCSD"
+            },
+            {
+                "key": "iPassStore",
+                "label": "Powered by iPassStore.com",
+                "value": "Become a partner:\npartner@ipassstore.com\n\nFind out more at:\niPassStore.com\n"
+            }
+        ]
+    }
+}

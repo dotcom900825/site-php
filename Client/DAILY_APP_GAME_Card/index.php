@@ -77,8 +77,8 @@
 	<section id="promotions">
 		<section class="banners">
 			<h3>Featured Cards</h3>
-			<div id="promotion_1" class="promotion"><a href="/partner_id" target="_blank"><img src="../../resource/image/ad_left.png" width="340" height="130" alt="Card Info"></a></div>
-			<div id="promotion_2" class="promotion"><a href="/partner_id" target="_blank"><img src="../../resource/image/ad_right.jpeg" width="340" height="130" alt="Card Info"></a></div>
+			<div id="promotion_1" class="promotion"><a href="" target="_blank"><img src="../../resource/image/ad_left.png" width="340" height="130" alt="Card Info"></a></div>
+			<div id="promotion_2" class="promotion"><a href="" target="_blank"><img src="../../resource/image/ad_right.jpeg" width="340" height="130" alt="Card Info"></a></div>
 		</section>
 			
 	
@@ -231,14 +231,14 @@
 					
 <li>
 	<div class="wrapper stacks">
-		<a href="" title="Find out more about">
-			<img src="" width="48" height="48" />
+		<a href="https://www.ipassstore.com/Client/UCSD_UTA_Membership_Card/" title="Find out more about">
+			<img src="Client/UCSD_UTA_Membership_Card/image/logo.png" width="48" height="48" />
 			<h3>UCSD UTA</h3>
 			<p>Student Organization</p>
 		</a>
 		<div class="info-bar">
-			<a class="price" href="" title="Download">Download</a>
-			<a class="info" href="" title="Find out more about">Information</a>
+			<a class="price" href="https://www.ipassstore.com/Client/UCSD_UTA_Membership_Card/" title="Download">Download</a>
+			<a class="info" href="https://www.ipassstore.com/Client/UCSD_UTA_Membership_Card/" title="Find out more about">Information</a>
 		</div>
 	</div>
 </li>
@@ -253,8 +253,8 @@
 			<p>Restaurant<br>La Jolla, CA</p>
 		</a>
 		<div class="info-bar">
-			<a class="price" href="partner_id" title="Download">Download</a>
-			<a class="info" href="partner_id">Information</a>
+			<a class="price" href="https://www.ipassstore.com/Client/SD_Restaurant_Georges_At_The_Cove/" title="Download">Download</a>
+			<a class="info" href="https://www.ipassstore.com/Client/SD_Restaurant_Georges_At_The_Cove/">Information</a>
 		</div>
 	</div>
 </li>
@@ -263,14 +263,14 @@
 					
 <li>
 	<div class="wrapper stacks">
-		<a href="" title="Find out more about">
-			<img src="" width="48" height="48" />
+		<a href="https://www.ipassstore.com/Client/UCSD_CSSA_Membership_Card/" title="Find out more about">
+			<img src="Client/UCSD_CSSA_Membership_Card/image/logo.png" width="48" height="48" />
 			<h3>UCSD CSSA</h3>
 			<p>Student Organization</p>
 		</a>
 		<div class="info-bar">
-			<a class="price" href="" title="Download">Download</a>
-			<a class="info" href="" title="Find out more about">Information</a>
+			<a class="price" href="https://www.ipassstore.com/Client/UCSD_CSSA_Membership_Card/" title="Download">Download</a>
+			<a class="info" href="https://www.ipassstore.com/Client/UCSD_CSSA_Membership_Card/" title="Find out more">Information</a>
 		</div>
 	</div>
 </li>
@@ -301,8 +301,8 @@
 			<p>Lifestyle</p>
 		</a>
 		<div class="info-bar">
-			<a class="price" href="" title="Download">Download</a>
-			<a class="info" href="" title="Find out more about">Information</a>
+			<a class="price" href="https://itunes.apple.com/us/app/apple-store/id375380948?mt=8" title="Download">Download</a>
+			<a class="info" href="https://itunes.apple.com/us/app/apple-store/id375380948?mt=8" title="Find out more">Information</a>
 		</div>
 	</div>
 </li>
@@ -317,8 +317,8 @@
 			<p>Movie Tickets</p>
 		</a>
 		<div class="info-bar">
-			<a class="price" href="" title="Download">Download</a>
-			<a class="info" href="" title="Find out more about">Information</a>
+			<a class="price" href="https://itunes.apple.com/us/app/fandango-movies-times-tickets/id307906541?mt=8&ign-mpt=uo%3D2" title="Download">Download</a>
+			<a class="info" href="https://itunes.apple.com/us/app/fandango-movies-times-tickets/id307906541?mt=8&ign-mpt=uo%3D2" title="Find out more">Information</a>
 		</div>
 	</div>
 </li>
@@ -333,8 +333,8 @@
 			<p>Food & Drinks</p>
 		</a>
 		<div class="info-bar">
-			<a class="price" href="" title="Download">Download</a>
-			<a class="info" href="" title="Find out more about">Information</a>
+			<a class="price" href="https://itunes.apple.com/us/app/starbucks/id331177714?mt=8" title="Download">Download</a>
+			<a class="info" href="https://itunes.apple.com/us/app/starbucks/id331177714?mt=8" title="Find out more">Information</a>
 		</div>
 	</div>
 </li>
@@ -349,8 +349,8 @@
 			<p>Finance</p>
 		</a>
 		<div class="info-bar">
-			<a class="price" href="" title="Download">Download</a>
-			<a class="info" href="" title="Find out more about">Information</a>
+			<a class="price" href="https://itunes.apple.com/us/app/discover-mobile/id338010821" title="Download">Download</a>
+			<a class="info" href="https://itunes.apple.com/us/app/discover-mobile/id338010821" title="Find out more">Information</a>
 		</div>
 	</div>
 </li>
@@ -365,8 +365,8 @@
 			<p>Tickets</p>
 		</a>
 		<div class="info-bar">
-			<a class="price" href="" title="Download">Download</a>
-			<a class="info" href="" title="Find out more about">Information</a>
+			<a class="price" href="https://itunes.apple.com/us/app/ticketmaster/id500003565?mt=8" title="Download">Download</a>
+			<a class="info" href="https://itunes.apple.com/us/app/ticketmaster/id500003565?mt=8" title="Find out more about">Information</a>
 		</div>
 	</div>
 </li>
@@ -375,7 +375,7 @@
 			</ol>
 		</section>
 	</aside>
-
+	
 </section>
 
 	
