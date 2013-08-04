@@ -118,6 +118,11 @@ class Passes
 			$pass = new GenericPass(4, "pass.com.ipassstore.dailyFreeAppGame", ".com", "iPassStore", "admin@iPassStore.com");
 			$pass = $pass->createPassWithExistingSerialNr($error);
 		}
+        else if($cardID == 5){
+            Log::WriteLog("cardID:5");
+            $pass = new EventPass(5, "pass.com.ipassstore.ucsduta", "UTA", "UCSD UTA", "tmp@gmail.com");
+            $pass = $pass->createPassWithExistingSerialNr($error);
+        }
 		else if($cardID == 7){
 			Log::WriteLog("cardID:7");
 			$pass = new EventPass(7, "pass.com.ipassstore.tucssa", "TU_CSSA", "tucssa",	"admin@ipassstore.com");
