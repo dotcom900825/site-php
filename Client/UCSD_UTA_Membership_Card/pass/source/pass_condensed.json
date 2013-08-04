@@ -1,0 +1,69 @@
+{
+    "formatVersion": 1,
+    "passTypeIdentifier": "pass.com.ipassstore.ucsduta",
+    "serialNumber": "<INSERT SERIAL NUMBER>",
+    "teamIdentifier": "3JAYL5R2NX",
+    "webServiceURL": "https://www.ipassstore.com/lib/ws/",
+    "authenticationToken": "<INSERT TOKEN>",
+    "barcode": {
+        "message": "<INSERT BARCODE>",
+        "format": "PKBarcodeFormatPDF417",
+        "messageEncoding": "iso-8859-1",
+        "altText": "活動新聞與會員福利請見背面"
+    },
+    "locations": [],
+    "organizationName": "UCSD UTA",
+    "description": "UCSD UTA Membership Card",
+    "logoText": "UCSD UTA",
+    "foregroundColor": "rgb(255, 255, 255)",
+    "backgroundColor": "rgb(20, 66, 114)",
+    "storeCard": {
+        "headerFields": [
+            {
+                "key": "header",
+                "label": "Upcoming Event",
+                "value": "Sponsors 2013",
+                "changeMessage": "%@"
+            }
+        ],
+        "auxiliaryFields": [
+            {
+                "key": "studentName",
+                "label": "NAME",
+                "value": "<INSERT NAME>"
+            },
+            {
+                "key": "eventTime",
+                "label": "Time",
+                "value": "Sep, 2013"
+            },
+            {
+                "key": "eventLocation",
+                "label": "Location",
+                "value": "Price Center"
+            }
+        ],
+        "backFields": [
+            {
+                "key": "event",
+                "label": "活動新聞",
+                "value": "We will have event description here."
+            },
+            {
+                "key": "event sponsor",
+                "label": "活動贊助商",
+                "value": "Event sponsor info goes to here."
+            },
+            {
+                "key": "deals",
+                "label": "會員卡打折信息",
+                "value": "Spot KTV\nCategory: KTV and Chinese Restaurant (Taiwanese)\nLocation: 7327 Clairemont Mesa Blvd, San Diego, CA 92111\nPhone: (858)268-1588\nDiscount: 12% off if pays at least 50% in cash, 8% off if not\n\nChina Max\nCategory: Chinese Restaurant (Cantonese)\nLocation: 4698 Convoy St, San Diego, CA 92111\nPhone: (858) 650-3333\nDiscount: 10% off, cash only\n\nKaraoke 101\nCategory: KTV\nLocation: 7578 Clairemont Mesa Blvd, San Diego, CA 92111\nPhone: (858)292-1945\nDiscount: 10% off\n\nE&Drink\nCategory: Chinese Restaurant (Small Hotpot)\nLocation: 7330 Clairemont Mesa Blvd, San Diego, CA 92111\nPhone: (858)560-9888\nDiscount: 2+ pots, buy 1 drink +1 drink for free\n\nTea Station\nCategory: Café (Taiwanese Boba Shop)\nLocation:7315 Clairemont Mesa Blvd, San Diego, CA 92111\nPhone: (858) 268-8198\nDiscount: 10% off, $20 min\n\nDede's Teajuice City\nCategory: Chinese Restaurant (Sichuan Cuisine)\nLocation: 4647 Convoy St, San Diego, CA 92111\nPhone: (858) 279-5999\nDiscount: 10% off, cash only\n\nCafé Hue\nCategory: Café\nLocation: 3860 Convoy St, Ste 106, San Diego, CA 92111\nPhone: (858)571-7947\nDiscount: 10% off\n\nUp2You Café\nCategory: Café\nLocation: 7770 Vickers St, Ste 101, San Diego, CA 92111\nPhone: (619) 663-6388\nDiscount: 10% off\n\nFriend's House\nCategory: Korean Restaurant\nLocation: 4647 Convoy St, Ste 101A, San Diego, CA 92111\nPhone: (858) 292-0499\nDiscount: 10% off\n\nSpicy House\nCategory: Chinese Restaurant\nLocation: Convoy St, Ste 105, San Diego, CA 92111\nPhone: (858) 278-5883\nDiscount: 10% off\n\nSalon 101\nCategory: Barber Shop\nLocation: UCSD Price Center East Level 2\nPhone: (858)404-0834\nDiscount: 10% off\n\nUCSD Espresso Roma\nCategory: Café\nLocation: UCSD Price Center West Level 1\nPhone: (858) 450-2141\nDiscount: 10% off\n\nSan Tong Palace\nCategory: Chinese and Korean Restaurant\nLocation: 4690 Convoy St, San Diego, CA 92111\nPhone: (858) 571-6837\nDiscount: 10% off\n\nBao's Awesome Burgers\nCategory: American Restaurant\nLocation: 4646 Convoy St, San Diego, CA 92111\nPhone: (858) 571-6038\nDiscount: 10% off\n\nTea n More\nCategory: Café (Taiwanese Boba Shop)\nLocation: 7380 Clairemont Mesa Blvd, San Diego, CA 92111\nPhone: (858) 571-2926\nDiscount: 10% off, drinks only\n\nThang Thang\nCategory: Korean Restaurant\nLocation: 7905 Engineer Rd, San Diego, CA\nPhone: (858) 569-1582\nDiscount: 10% off\n\nLittle Korea\nCategory: Korean Restaurant (Delivery too)\nLocation: 8008 Girard Ave, Ste 210, La Jolla, CA 92037\nPhone: (858) 551-0282\nDiscount: 10% off\n\n"
+            },
+            {
+                "key": "contact",
+                "label": "Powered by iPassStore.com",
+                "value": "Become a partner:\npartner@ipassstore.com\n\nFind out more at:\niPassStore.com\n"
+            }
+        ]
+    }
+}

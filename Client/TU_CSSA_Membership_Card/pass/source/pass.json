@@ -1,0 +1,65 @@
+{
+    "formatVersion": 1,
+    "passTypeIdentifier": "pass.com.ipassstore.tucssa",
+    "serialNumber": "111",
+    "teamIdentifier": "3JAYL5R2NX",
+    "webServiceURL": "https://www.ipassstore.com/lib/ws/",
+    "authenticationToken": "0fa3712aa93334cb9fd2d8bac1bd7f572c26553b",
+    "barcode": {
+        "message": "13754218093233702",
+        "format": "PKBarcodeFormatPDF417",
+        "messageEncoding": "iso-8859-1",
+        "altText": "活动新闻与会员福利请见背面"
+    },
+    "locations": [],
+    "organizationName": "TU TCSSA",
+    "description": "TU TCSSA Membership Card",
+    "logoText": "TCSSA",
+    "foregroundColor": "rgb(255, 255, 255)",
+    "labelColor": "rgb(255, 255, 255)",
+    "backgroundColor": "rgb(0, 51, 26)",
+    "storeCard": {
+        "headerFields": [
+            {
+                "key": "header",
+                "label": "Upcoming Event",
+                "value": "Sample Event",
+                "changeMessage": "%@"
+            }
+        ],
+        "auxiliaryFields": [
+            {
+                "key": "eventTime",
+                "label": "Time",
+                "value": "Event Time"
+            },
+            {
+                "key": "eventLocation",
+                "label": "Location",
+                "value": "Event Location"
+            }
+        ],
+        "backFields": [
+            {
+                "key": "event",
+                "label": "活动新闻",
+                "value": "We will have event description here."
+            },
+            {
+                "key": "event sponsor",
+                "label": "活动赞助商",
+                "value": "Event sponsor info goes to here."
+            },
+            {
+                "key": "deals",
+                "label": "会员卡打折信息",
+                "value": "Discount Details"
+            },
+            {
+                "key": "contact",
+                "label": "Powered by iPassStore.com",
+                "value": "Become a partner:\npartner@ipassstore.com\n\nFind out more at:\niPassStore.com\n"
+            }
+        ]
+    }
+}

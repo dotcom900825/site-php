@@ -1,0 +1,279 @@
+body{
+	background-image:url('../../../resource/image/BackGround.png');
+	background-repeat:repeat;
+	margin-top:-20px;
+}
+div.Wrapper.container{
+	display:block;
+}
+div.container>div.row{
+	background-image:url('../../../resource/image/ShelfBackground.JPG');
+	background-repeat:repeat-y;
+	width:978px;
+	height:1500px;
+	display:block;
+	margin:0 auto;
+	font-size:0px;/*this can eliminate the space in inline-block*/
+}
+h1{
+	font-size:50px;
+	font-family:Arial;
+	margin-left:30px;
+	margin-top:20px;
+	padding-top:20px;
+}
+div.row>hr{
+	border-color:#A9A9A9;
+	width:920px;
+}
+div#ShelfTopPadding{
+	height:0px;
+	width:100%;
+	display:block;
+}
+span.CardAttachmentDown{
+	background-image:url('../../../resource/image/CardBackShadow.png');
+	background-repeat:norepeat;
+	width:20px;
+	height:41px;
+	float:right;
+	margin-top:-42px;
+	margin-right:35px;
+	display:none;
+}
+div.OneCard{
+	display:inline-block;
+	width:18.5%;
+	height:142px;
+	margin-left:0.75%;
+	margin-right:0.75%;
+	margin-top:50px;
+	position:relative;
+	text-align:center;
+}
+
+div.OneCard>a{
+	line-height:142px;
+}
+div.OneCard>a>img{
+	width: 112px;
+	vertical-align: bottom;
+}
+div#shelf{
+	width:850px;
+	margin:0 auto;
+}
+img.OneShelf{
+	position:absolute;
+	margin-left:29px;
+}
+img#shelf1{
+	margin-top:155px;
+}
+img#shelf2{
+	margin-top:346px;
+}
+img#shelf3{
+	margin-top:537px;
+}
+img#shelf4{
+	margin-top:728px;
+}
+img#shelf5{
+	margin-top:919px;
+}
+
+/*@media handheld and */
+/*((orientation:portrait*/
+/*and max-device-width:800px*/
+/*[>and min-device-width:320px<]*/
+/*)*/
+/*or */
+/*(orientation:landscape*/
+/*)){*/
+/*@media handheld{*/
+
+@media (max-device-width : 800px){
+/*@media (orientation : landscape){*/
+	div.OneCard{
+		display:inline-block;
+		width:32%;
+		margin-left:0.65%;
+		margin-right:0.65%;
+		margin-top:50px;
+		position:relative;
+		text-align:center;
+	}
+	div#shelf{
+		width:510px;
+		/*width:90%;*/
+	}
+	img.OneShelf{
+		height:93px;
+	}
+	div.container>div.row{
+		zoom:1.5;
+		width:640px;
+		/*width:100%;*/
+		background-image:url("../../../resource/image/ShelfBackground640.JPG");
+		background-repeat:repeat-y;
+	}
+	div.row>hr{
+		width:582px;
+		/*width:90%;*/
+	}
+}
+
+/***************for smaller screen support****************/
+/*@media handheld and (orientation:portrait)*/
+/*and max-device-width:320px{*/
+	/*div.OneCard{*/
+		/*display:inline-block;*/
+		/*width:32%;*/
+		/*margin-left:0.65%;*/
+		/*margin-right:0.65%;*/
+		/*margin-top:50px;*/
+		/*position:relative;*/
+		/*text-align:center;*/
+	/*}*/
+	/*div#Shelf{*/
+		/*width:262px;*/
+	/*}*/
+	/*img.OneShelf{*/
+		/*height:93px;*/
+	/*}*/
+	/*div.container>div.row{*/
+		/*width:320px;*/
+		/*background-image:url("./img/ShelfBackground320.JPG");*/
+		/*background-repeat:repeat-y;*/
+	/*}*/
+	/*div.row>hr{*/
+		/*width:262px;*/
+	/*}*/
+/*}*/
+
+@media only screen 
+and (max-width:800px){
+/*and (min-width:320px){*/
+	div.OneCard{
+		display:inline-block;
+		width:32%;
+		margin-left:0.65%;
+		margin-right:0.65%;
+		margin-top:50px;
+		position:relative;
+		text-align:center;
+	}
+	div#shelf{
+		width:515px;
+	}
+	img.OneShelf{
+		height:93px;
+	}
+	div.container>div.row{
+		width:640px;
+		background-image:url("../../../resource/image/ShelfBackground640.JPG");
+		background-repeat:repeat-y;
+	}
+	div.row>hr{
+		width:582px;
+	}
+	/*h1{*/
+		/*display:none;*/
+	/*}*/
+}
+/***************for smaller screen support****************/
+/*@media only screen */
+/*and (max-width:320px){*/
+	/*div.OneCard{*/
+		/*display:inline-block;*/
+		/*width:32%;*/
+		/*margin-left:0;*/
+		/*margin-right:0;*/
+		/*margin-top:50px;*/
+		/*position:relative;*/
+		/*text-align:center;*/
+	/*}*/
+	/*div.OneCard>a>img{*/
+		/*width:65px;*/
+	/*}*/
+	/*div#Shelf{*/
+		/*width:280px;*/
+	/*}*/
+	/*img.OneShelf{*/
+		/*height:93px;*/
+	/*}*/
+	/*div.container>div.row{*/
+		/*width:320px;*/
+		/*background-image:url("./img/ShelfBackground320.JPG");*/
+		/*background-repeat:repeat-y;*/
+	/*}*/
+	/*div.row>hr{*/
+		/*width:320px;*/
+	/*}*/
+/*}*/
+
+/**********************the below lines are deprecated*************************/
+/*
+ * handheld / screen?
+ * 	size
+ *
+ * */
+/*[> Smartphones (portrait and landscape) ----------- <]*/
+/*@media handheld and (max-device-width : 720px){*/
+/*[>or (max-width:720px){<]*/
+	/*[>h1{<]*/
+		/*[>visibility:hidden;<]*/
+	/*[>}<]*/
+/*}*/
+
+/*[>@media (max-width: 640px) {<]*/
+/*@media only screen*/
+/*and (max-width: 720px){*/
+/*[>and (max-device-width : 640px) {<]*/
+	/*[>h1{<]*/
+		/*[>visibility:hidden;<]*/
+	/*[>}<]*/
+	/*div.OneCard{*/
+		/*display:inline-block;*/
+		/*width:32%;*/
+		/*margin-left:0.65%;*/
+		/*margin-right:0.65%;*/
+		/*margin-top:50px;*/
+		/*position:relative;*/
+		/*text-align:center;*/
+	/*}*/
+	/*div#Shelf{*/
+		/*width:582px;*/
+	/*}*/
+	/*img.OneShelf{*/
+		/*height:93px;*/
+	/*}*/
+	/*div.container>div.row{*/
+		/*width:640px;*/
+		/*background-image:url("./img/ShelfBackground640.JPG");*/
+		/*background-repeat:repeat-y;*/
+	/*}*/
+	/*div.row>hr{*/
+		/*width:582px;*/
+	/*}*/
+/*}*/
+/*@media handheld and (orientation: landscape){*/
+	/*h1{*/
+		/*visibility:hidden;*/
+	/*}*/
+	/*div.container>div.row{*/
+		/*width:978px;*/
+		/*background-image:url("./img/ShelfBackground.JPG");*/
+		/*background-repeat:repeat-y;*/
+	/*}*/
+	/*div#Shelf{*/
+		/*width:900px;*/
+		/*margin:0 auto;*/
+	/*}*/
+	/*div.row>hr{*/
+		/*width:900px;*/
+	/*}*/
+	/*img.OneShelf{*/
+		/*height:93px;*/
+	/*}*/
