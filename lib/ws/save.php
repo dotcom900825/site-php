@@ -29,12 +29,14 @@ foreach($form as $key => $value){
     $path = array_slice($path, 1);
     $path = implode('_', $path);
     if(Utils::arrayAccessSetter($jsonContent, $path, $value)){
-	echo $path.'</br>';
-	echo "+saved+".'</br>';
+        echo $path.'</br>';
+        echo "+saved+".'</br>';
     }
-    else
-	echo $path.'</br>';
-	echo "+notSaved+".'</br>';
+    else{
+        echo $path.'</br>';
+        echo "+notSaved+".'</br>';
+    }
+    echo "=========<\/br>";
 }
 
 $jsonObject->setJsonContent($jsonContent);
