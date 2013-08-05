@@ -28,7 +28,13 @@ foreach($form as $key => $value){
     $path = explode('_', $key);
     $path = array_slice($path, 1);
     $path = implode('_', $path);
-    Utils::arrayAccessSetter($jsonContent, $path, $value);
+    if(Utils::arrayAccessSetter($jsonContent, $path, $value)){
+	echo $path.'</br>';
+	echo "+saved+".'</br>';
+    }
+    else
+	echo $path.'</br>';
+	echo "+notSaved+".'</br>';
 }
 
 $jsonObject->setJsonContent($jsonContent);
