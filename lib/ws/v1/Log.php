@@ -17,17 +17,17 @@ class Log {
         }
     }
 
-    public function WriteLog($content){
+    public static function WriteLog($content){
         Log::WriteLogWithFormat($content);
     }
 
-	public function WriteLogRaw($content){
+	public static function WriteLogRaw($content){
 		$dbugFile = dirname(__FILE__)."/debug";
 		$current = file_get_contents($dbugFile);
 		file_put_contents($dbugFile, $current."$content");
 	}
 
-	public function WriteLogWithFormat($content){
+	public static function WriteLogWithFormat($content){
 		$date = date('m/d/Y h:i:s a', time());
         Log::WriteLogRaw($current.
             "==================$date====================\r\n".
