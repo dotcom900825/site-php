@@ -28,12 +28,13 @@ if (isset($_GET['message'])){
 }
 ?>
 <div class="wrapper">
-    <form action="/lib/ws/push_new.php" method="post">
+    <form action="/lib/ws/save.php" method="post">
 	 <?php
             $options = DataInterface::getCardNamesAndIdByUsername($_SESSION['username']);
             if ($options == null) {
                 print "<p style=\"text-align:center;\"><strong class=\"warning-message\">No cards created yet!</strong></p>";
             } else {
+                // TODO: this is a safety problem, fix it some day
                 if(isset($_REQUEST['cardId']) && $_REQUEST['cardId'] != "")
                     $defaultCardId = $_REQUEST['cardId'];
                 else
@@ -51,75 +52,75 @@ if (isset($_GET['message'])){
                 
             }
             ?>
-        <div class="absolute-wrapper-outter">
+        <div class="absolute-wrapper-outer">
             <div id="storecard-front-lengend-wrapper" class="absolute-wrapper-inner">
                 <div id="logo-wrapper">
                     <label class="lengend-label" for="">Logo</label>
-                    <input type="file" name="logo" disabled />
+                    <input type="file" name="pic_logo" disabled />
                 </div>
                 <div id="logoText-wrapper">
                     <label class="lengend-label" for="">Logo Text</label>
                     <?php
                         $logoText = $jsonContent["logoText"];
-                        print " <input type=\"\" name=\"logoText\" value=\"$logoText\"/>";
+                        print " <input type=\"\" name=\"json_logoText\" value=\"$logoText\"/>";
                     ?>                   
                 </div>
                 <div id="headerFields_label-wrapper">
                     <label class="lengend-label" for="">Title Label</label>
                     <?php
                         $headerFields_label = $jsonContent["storeCard"]["headerFields"][0]["label"];
-                        print " <input type=\"text\" name=\"headerFields_label\" value=\"$headerFields_label\"/>";
+                        print " <input type=\"text\" name=\"json_headerFields_label\" value=\"$headerFields_label\"/>";
                     ?>   
                 </div>
                 <div id="headerFields_value-wrapper">
                     <label class="lengend-label" for="">Title Content</label>
                     <?php
                         $headerFields_value = $jsonContent["storeCard"]["headerFields"][0]["value"];
-                        print " <input type=\"\" name=\"headerFields_value\" value=\"$headerFields_value\"/>";
+                        print " <input type=\"\" name=\"json_headerFields_value\" value=\"$headerFields_value\"/>";
                     ?>  
                 </div>
                 <div id="strip-wrapper">
                     <label class="lengend-label" for="">Main Picture</label>
-                    <input type="file" name="strip" disabled />
+                    <input type="file" name="pic_strip" disabled />
                 </div>
                 <div id="auxiliaryField0_label-wrapper">
                     <label class="lengend-label" for="">Section 1 Label</label>
                     <?php
                         $auxiliaryFields_0_label = $jsonContent["storeCard"]["auxiliaryFields"][0]["label"];
-                        print " <input type=\"\" name=\"auxiliaryFields_0_label\" value=\"$auxiliaryFields_0_label\"/>";
+                        print " <input type=\"\" name=\"json_auxiliaryFields_0_label\" value=\"$auxiliaryFields_0_label\"/>";
                     ?>      
                 </div>
                 <div id="auxiliaryField0_value-wrapper">
                     <label class="lengend-label" for="">Section 1 Content</label>
                     <?php
                         $auxiliaryFields_0_value = $jsonContent["storeCard"]["auxiliaryFields"][0]["value"];
-                        print " <input type=\"\" name=\"auxiliaryFields_0_value\" value=\"$auxiliaryFields_0_value\"/>";
+                        print " <input type=\"\" name=\"json_auxiliaryFields_0_value\" value=\"$auxiliaryFields_0_value\"/>";
                     ?>  
                 </div>
                 <div id="auxiliaryField1_label-wrapper">
                     <label class="lengend-label" for="">Section 2 Label</label>
                     <?php
                         $auxiliaryFields_1_label = $jsonContent["storeCard"]["auxiliaryFields"][1]["label"];
-                        print " <input type=\"\" name=\"auxiliaryFields_1_label\" value=\"$auxiliaryFields_1_label\"/>";
+                        print " <input type=\"\" name=\"json_auxiliaryFields_1_label\" value=\"$auxiliaryFields_1_label\"/>";
                     ?>  
                 </div>
                 <div id="auxiliaryField1_value-wrapper">
                     <label class="lengend-label" for="">Section 2 Content</label>
                     <?php
                         $auxiliaryFields_1_value = $jsonContent["storeCard"]["auxiliaryFields"][1]["value"];
-                        print " <input type=\"\" name=\"auxiliaryFields_1_value\" value=\"$auxiliaryFields_1_value\"/>";
+                        print " <input type=\"\" name=\"json_auxiliaryFields_1_value\" value=\"$auxiliaryFields_1_value\"/>";
                     ?>
                 </div>
                 <div id="barcode_message-wrapper">
                     <label class="lengend-label" for="">Barcode Content</label>
                     <?php
                         $barcode_message = $jsonContent["barcode"]["message"];
-                        print " <input type=\"\" name=\"barcode_message\" value=\"$barcode_message\"/>";
+                        print " <input type=\"\" name=\"json_barcode_message\" value=\"$barcode_message\"/>";
                     ?>
                 </div>
                 <div id="barcode_format-wrapper">
                     <label class="lengend-label" for="">Barcode format</label>
-                    <select id="" name="barcode_format" onChange="save(this.value)">
+                    <select id="" name="json_barcode_format" onChange="save(this.value)">
                     <?php
                         $tmpVar = $jsonContent["barcode"]["format"];
                         
@@ -147,7 +148,7 @@ if (isset($_GET['message'])){
                     <label class="lengend-label" for="">Info</label>
                     <?php
                         $barcode_altText = $jsonContent["barcode"]["altText"];
-                        print " <input type=\"\" name=\"barcode_altText\" value=\"$barcode_altText\"/>";
+                        print " <input type=\"\" name=\"json_barcode_altText\" value=\"$barcode_altText\"/>";
                     ?>
                 </div>
                 <img class="lengend-sample-picture" src="resource/image/storecard-front-lengend.png" alt="" style="width:800px;" />

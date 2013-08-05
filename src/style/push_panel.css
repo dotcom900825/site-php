@@ -2,7 +2,7 @@
 div.absolute-wrapper-inner{
     position:absolute;
 }
-div.absolute-wrapper-outter{
+div.absolute-wrapper-outer {
     position:relative;
     z-index:0;
     padding:15px;
