@@ -69,14 +69,14 @@ if (isset($_GET['message'])){
                     <label class="lengend-label" for="">Title Label</label>
                     <?php
                         $headerFields_label = $jsonContent["storeCard"]["headerFields"][0]["label"];
-                        print " <input type=\"text\" name=\"json_storeCard_headerFields_label\" value=\"$headerFields_label\"/>";
+                        print " <input type=\"text\" name=\"json_storeCard_headerFields_0_label\" value=\"$headerFields_label\"/>";
                     ?>   
                 </div>
                 <div id="headerFields_value-wrapper">
                     <label class="lengend-label" for="">Title Content</label>
                     <?php
                         $headerFields_value = $jsonContent["storeCard"]["headerFields"][0]["value"];
-                        print " <input type=\"\" name=\"json_storeCard_headerFields_value\" value=\"$headerFields_value\"/>";
+                        print " <input type=\"\" name=\"json_storeCard_headerFields_0_value\" value=\"$headerFields_value\"/>";
                     ?>  
                 </div>
                 <div id="strip-wrapper">
