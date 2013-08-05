@@ -69,14 +69,14 @@ if (isset($_GET['message'])){
                     <label class="lengend-label" for="">Title Label</label>
                     <?php
                         $headerFields_label = $jsonContent["storeCard"]["headerFields"][0]["label"];
-                        print " <input type=\"text\" name=\"json_headerFields_label\" value=\"$headerFields_label\"/>";
+                        print " <input type=\"text\" name=\"json_storeCard_headerFields_label\" value=\"$headerFields_label\"/>";
                     ?>   
                 </div>
                 <div id="headerFields_value-wrapper">
                     <label class="lengend-label" for="">Title Content</label>
                     <?php
                         $headerFields_value = $jsonContent["storeCard"]["headerFields"][0]["value"];
-                        print " <input type=\"\" name=\"json_headerFields_value\" value=\"$headerFields_value\"/>";
+                        print " <input type=\"\" name=\"json_storeCard_headerFields_value\" value=\"$headerFields_value\"/>";
                     ?>  
                 </div>
                 <div id="strip-wrapper">
@@ -87,28 +87,28 @@ if (isset($_GET['message'])){
                     <label class="lengend-label" for="">Section 1 Label</label>
                     <?php
                         $auxiliaryFields_0_label = $jsonContent["storeCard"]["auxiliaryFields"][0]["label"];
-                        print " <input type=\"\" name=\"json_auxiliaryFields_0_label\" value=\"$auxiliaryFields_0_label\"/>";
+                        print " <input type=\"\" name=\"json_storeCard_auxiliaryFields_0_label\" value=\"$auxiliaryFields_0_label\"/>";
                     ?>      
                 </div>
                 <div id="auxiliaryField0_value-wrapper">
                     <label class="lengend-label" for="">Section 1 Content</label>
                     <?php
                         $auxiliaryFields_0_value = $jsonContent["storeCard"]["auxiliaryFields"][0]["value"];
-                        print " <input type=\"\" name=\"json_auxiliaryFields_0_value\" value=\"$auxiliaryFields_0_value\"/>";
+                        print " <input type=\"\" name=\"json_storeCard_auxiliaryFields_0_value\" value=\"$auxiliaryFields_0_value\"/>";
                     ?>  
                 </div>
                 <div id="auxiliaryField1_label-wrapper">
                     <label class="lengend-label" for="">Section 2 Label</label>
                     <?php
                         $auxiliaryFields_1_label = $jsonContent["storeCard"]["auxiliaryFields"][1]["label"];
-                        print " <input type=\"\" name=\"json_auxiliaryFields_1_label\" value=\"$auxiliaryFields_1_label\"/>";
+                        print " <input type=\"\" name=\"json_storeCard_auxiliaryFields_1_label\" value=\"$auxiliaryFields_1_label\"/>";
                     ?>  
                 </div>
                 <div id="auxiliaryField1_value-wrapper">
                     <label class="lengend-label" for="">Section 2 Content</label>
                     <?php
                         $auxiliaryFields_1_value = $jsonContent["storeCard"]["auxiliaryFields"][1]["value"];
-                        print " <input type=\"\" name=\"json_auxiliaryFields_1_value\" value=\"$auxiliaryFields_1_value\"/>";
+                        print " <input type=\"\" name=\"json_storeCard_auxiliaryFields_1_value\" value=\"$auxiliaryFields_1_value\"/>";
                     ?>
                 </div>
                 <div id="barcode_message-wrapper">
