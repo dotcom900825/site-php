@@ -38,6 +38,13 @@ class Passes
         }
     }
 
+    private function deletePass($params){
+        DebugLog::WriteLogWithFormat("!!!!!!!! should not reach this point!");
+        DebugLog::WriteLogWithFormat(print_r($params,true));
+        httpResponseCode(401);
+        return;
+    }
+
     //download the pass with given authentication token and serial number
     private function getPass($params)
     {
@@ -75,7 +82,7 @@ class Passes
         lastUpdated      - the lastUpdated timestamp of the pass in the database*/
         if ($ifModifiedSince != null && $ifModifiedSince >= $row['LastUpdated']) {
             //******************** Debug Block **************************
-            Log : WriteLog("lastUpdated:" . strval($row['LastUpdated']));
+            Log::WriteLog("lastUpdated:" . strval($row['LastUpdated']));
             //***********************************************************
 
             //the pass was not modified
