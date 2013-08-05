@@ -25,9 +25,10 @@ $jsonObject = new JsonInterface($cardId);
 $jsonContent = $jsonObject->getJsonContent();
 
 foreach($form as $key => $value){
-    $path = explode('_',$key);
-    $path = array_slice($path,1);
-    Utils::arrayAccessSetter($jsonContent,$path,$value);
+    $path = explode('_', $key);
+    $path = array_slice($path, 1);
+    $path = implode('_', $path);
+    Utils::arrayAccessSetter($jsonContent, $path, $value);
 }
 
 $jsonObject->setJsonContent($jsonContent);
