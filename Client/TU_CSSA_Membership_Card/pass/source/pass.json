@@ -23,37 +23,32 @@
             {
                 "key": "header",
                 "label": "Upcoming Event",
-                "value": "Sample Event",
-                "changeMessage": "%@"
+                "value": "Mid-Autumn Fest",
+                "changeMessage": "Event Update: %@"
             }
         ],
         "auxiliaryFields": [
             {
                 "key": "eventTime",
                 "label": "Time",
-                "value": "Event Time"
+                "value": "6:00pm CDT"
             },
             {
                 "key": "eventLocation",
                 "label": "Location",
-                "value": "Event Location"
+                "value": "LBC 212-Qatar Ballroom"
             }
         ],
         "backFields": [
             {
                 "key": "event",
                 "label": "活动新闻",
-                "value": "We will have event description here."
+                "value": "中秋晚会节目报名正在进行中：http://t.cn/zQXRXNo"
             },
             {
                 "key": "event sponsor",
-                "label": "活动赞助商",
-                "value": "Event sponsor info goes to here."
-            },
-            {
-                "key": "deals",
-                "label": "会员卡打折信息",
-                "value": "Discount Details"
+                "label": "TCSSA在线",
+                "value": "注册会员：http://eepurl.com/sEn8L\n微博：@TCSSA\n微信：TulaneCSSA\n论坛：http://tcssa.boards.net/\n更多：http://tcssa.tulane.edu/#contact"
             },
             {
                 "key": "contact",
