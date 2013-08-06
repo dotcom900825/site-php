@@ -28,7 +28,7 @@ foreach($form as $key => $value){
     $path = explode('_', $key);
     $path = array_slice($path, 1);
     $path = implode('_', $path);
-//    if(Utils::arrayAccessSetter($jsonContent, $path, $value)){
+    Utils::arrayAccessSetter($jsonContent, $path, $value);
 //        echo $path.'</br>';
 //        echo "+saved+".'</br>';
 //    }
