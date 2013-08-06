@@ -8,7 +8,7 @@ require_once (dirname(__file__) . "/../../../lib/class/Utils.php");
 DebugLog::WriteLogWithFormat(dirname(__file__) . "/push.php");
 
 if (!isset($_SESSION['status']) || $_SESSION['status'] != "In") {
-    header("Location: test.php");
+    header("Location: secret_new.php");
 }
 $cardId = $_POST['cardId'];
 $username = $_SESSION['username'];
@@ -28,16 +28,16 @@ foreach($form as $key => $value){
     $path = explode('_', $key);
     $path = array_slice($path, 1);
     $path = implode('_', $path);
-    if(Utils::arrayAccessSetter($jsonContent, $path, $value)){
-        echo $path.'</br>';
-        echo "+saved+".'</br>';
-    }
-    else{
-        echo $path.'</br>';
-        echo "+notSaved+".'</br>';
-    }
-    echo "=========<\/br>";
+//    if(Utils::arrayAccessSetter($jsonContent, $path, $value)){
+//        echo $path.'</br>';
+//        echo "+saved+".'</br>';
+//    }
+//    else{
+//        echo $path.'</br>';
+//        echo "+notSaved+".'</br>';
+//    }
+//    echo "=========<\/br>";
 }
-
 $jsonObject->setJsonContent($jsonContent);
 $jsonObject->saveJsonToFile();
+header("Location: push_panel_new.php?message=push was successful!");
