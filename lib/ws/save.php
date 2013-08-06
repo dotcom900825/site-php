@@ -40,4 +40,4 @@ foreach($form as $key => $value){
 }
 $jsonObject->setJsonContent($jsonContent);
 $jsonObject->saveJsonToFile();
-header("Location: push_panel_new.php?message=push was successful!");
+header("Location: push_panel_new.php?message=saved successfully!");
