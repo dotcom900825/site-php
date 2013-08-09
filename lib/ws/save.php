@@ -40,4 +40,4 @@ foreach($form as $key => $value){
 }
 $jsonObject->setJsonContent($jsonContent);
 $jsonObject->saveJsonToFile();
-header("Location: https://www.ipassstore.com/push_panel_new.php?message=saved successfully!");
+header("Location: ./../../push_panel_new.php?message=saved successfully!");
