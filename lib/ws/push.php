@@ -7,8 +7,9 @@ require_once (dirname(__file__) . "/../../../lib/class/JsonInterface.php");
 DebugLog::WriteLogWithFormat(dirname(__file__) . "/push.php");
 
 if (!isset($_SESSION['status']) || $_SESSION['status'] != "In") {
-    header("Location: test.php");
+    header("Location: secret_new.php");
 }
+
 $cardId = $_POST['cardId'];
 $username = $_SESSION['username'];
 $form = array();

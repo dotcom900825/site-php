@@ -1,18 +1,13 @@
 <?php
-
 session_start();
-
 if (!isset($_SESSION['status']) || $_SESSION['status'] != "In") {
     header("Location: secret_new.php");
 }
 require_once (dirname(__file__) . "/../lib/class/DataInterface.php");
 require_once (dirname(__file__) . "/../lib/class/JsonInterface.php");
-
 ?>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<html>
 <head>
     <meta charset="UTF-8">
     <title></title>
@@ -38,12 +33,15 @@ if (isset($_GET['message'])){
                 $defaultCardId = -1;
                 if(isset($_REQUEST['cardId']) && $_REQUEST['cardId'] != "" && in_array($_REQUEST['cardId'], $options))
                     $defaultCardId = $_REQUEST['cardId'];
-                print "<select name='cardId'>";
+                print "<select name='cardId' onChange=\"loadCardContent(this)\">";
                 foreach ($options as $cardName => $cardId) {
 					if($defaultCardId == -1){
 						$defaultCardId = $cardId;
 					}
-                    print "<option value='$cardId'>$cardName</option>";
+                    if($cardId == $defaultCardId)
+                        print "<option value='$cardId' selected>$cardName</option>";
+                    else
+                        print "<option value='$cardId'>$cardName</option>";
                 }
                 print "</select>";
                 $cardType = DataInterface::getCardType($defaultCardId);
@@ -156,8 +154,8 @@ if (isset($_GET['message'])){
         </div>
         <div id="operation-panel" class="panel">
             <input type="submit" value="Save" />
-            <input type="button" value="Discard Change" onClick="discardChange()" disabled/>
-            <input id="push-button" type="button" value="Push" onClick="push()" disabled/>
+            <input type="button" value="Discard Change" onClick="discardChange()"/>
+            <input id="push-button" type="button" value="Push" onClick="push()"/>
         </div>
     </form>
 </div>
