@@ -12,16 +12,13 @@ if (isset($_POST['action']) && isset($_POST['username']) && isset($_POST['passwo
         header("location: push_panel_new.php");
     else
         header("location: push_panel.php");
-} else
-    if (isset($_POST['action']) && $_POST['action'] == "Logout") {
-        $_SESSION = array();
-        session_destroy();
-        echo "Logout success!\n";
-    } else
-        if (isset($_POST['action']) && $_POST['action'] == "Login") {
-            echo "Login failed! in login.php\n";
-        } else {
-            echo "Unexpected error\n";
-        }
+} else if (isset($_POST['action']) && $_POST['action'] == "Logout") {
+    $_SESSION = array();
+    session_destroy();
+    echo "Logout success!\n";
+} else if (isset($_POST['action']) && $_POST['action'] == "Login") {
+    echo "Login failed! in login.php\n";
+} else {
+    echo "Unexpected error\n";
+}
 
-?>

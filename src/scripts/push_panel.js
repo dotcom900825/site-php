@@ -44,7 +44,7 @@ function discardChange(){
         beforeSend : function() {
         },
         success : function(result) {
-            $('form').replaceWith($(result).find('form'));
+            $('#main-form').replaceWith($(result).find('#main-form'));
             console.log($(result).find('div.wrapper'));
         },
         error : function() {
@@ -62,7 +62,7 @@ function loadCardContent(sel){
         beforeSend : function() {
         },
         success : function(result) {
-            $('form').replaceWith($(result).find('form'));
+            $('#main-form').replaceWith($(result).find('#main-form'));
             console.log($(result).find('div.wrapper'));
         },
         error : function() {

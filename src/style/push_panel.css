@@ -26,8 +26,14 @@ label.lengend-label{
     color:#F85B07;
     font-family:"Arial", Arial, Sans-serif;
     font-weight:bold;
+    display: inline;
+    cursor: default;
+}
+span.fileupload-preview{
+    color:#F85B07;
 }
 img.lengend-sample-picture{
+    max-width: 800px;
     position:absolute;   
     z-index:-1;
 }
@@ -36,49 +42,66 @@ img.lengend-sample-picture{
     font-family:"Arial", Arial, Sans-serif;
     font-weight:bold;
 }
-
+.content-input{
+    width:150px;
+}
+#barcode-select{
+    width:150px;
+}
+div.fileupload{
+    width:160px;
+}
 /*absolute positioning*/
+div#select-card{
+    width:830px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
+div#logoText-wrapper{
+    margin-bottom: -7px;
+}
 div#logo-wrapper{
-    position:absolute;   
-    margin-top:44px;
+    position:absolute;
+    margin-top:41px;
 }
 div#headerFields_label-wrapper{
     position:absolute;   
-    width:260px;
+    width:300px;
     margin-left:555px;
-    margin-top:-26px;
+    margin-top:-33px;
 }
 div#headerFields_value-wrapper{
     position:absolute;   
     margin-left:642px;
-    margin-top:50px;
+    margin-top:43px;
 }
 div#strip-wrapper{
-    position:absolute;   
+    position:absolute;
     margin-left:642px;
-    margin-top:141px;
+    margin-top:134px;
 }
 div#auxiliaryField0_label-wrapper{
     position:absolute;   
-    margin-top:252px;
+    margin-top:245px;
 }
 div#auxiliaryField0_value-wrapper{
     position:absolute;   
-    margin-top:348px;
+    margin-top:341px;
 }
 div#auxiliaryField1_label-wrapper{
     position:absolute;   
     margin-left:642px;
-    margin-top:252px;
+    margin-top:245px;
 }
 div#auxiliaryField1_value-wrapper{
     position:absolute;   
     margin-left:642px;
-    margin-top:348px;
+    margin-top:341px;
 }
 div#barcode_message-wrapper{
     position:absolute;   
-    margin-top:442px;
+    margin-top:435px;
 }
 div#barcode_format-wrapper{
     position:absolute;   
@@ -88,7 +111,7 @@ div#barcode_format-wrapper{
 div#barcode_altText-wrapper{
     position:absolute;   
     margin-left:642px;
-    margin-top:507px;
+    margin-top:500px;
 }
 
 /*normal*/
@@ -112,4 +135,7 @@ div#operation-panel{
     -moz-box-shadow: 3px 3px 4px #B9B9B9;
     -webkit-box-shadow: 3px 3px 4px #B9B9B9;
     filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+#logout-button{
+
 }
