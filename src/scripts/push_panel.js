@@ -1,14 +1,6 @@
 //saving the card may not need ajax call?
 function save($par){
     console.log($par);
-//    var logoText = $("#logoText-wrapper>input").val()
-
-
-
-
-    //$.ajax({
-
-    //});
 }
 //TODO: validate the form
 function validator(name, value){
@@ -18,22 +10,21 @@ function validator(name, value){
         default:
     }
 }
-// TODO: need add cardId param to send to push.php
 function push(){
     console.log("push");
-
+    var cardId = $('form>select').val();
     $.ajax({
         type : 'POST',
         url : "./../../lib/ws/push.php",
+        data: {'cardId' : cardId},
         beforeSend : function() {
         },
         success : function(result) {
+            alert(result);
         },
         error : function() {
         }
     });
-
-
 }
 //TODO: maybe this is not needed? or add a button to do this?
 function saveAndPush(){
@@ -42,17 +33,28 @@ function saveAndPush(){
     push();
 }
 
-//TODO: this is not good, since refreshing the page will load the default first card
 function discardChange(){
     console.log("abandon change");
-    location.reload();
-
+    var cardId = $('form>select').val();
+    console.log(cardId);
+    $.ajax({
+        type : 'POST',
+        url : "./../../push_panel_new.php",
+        data: {'cardId':cardId},
+        beforeSend : function() {
+        },
+        success : function(result) {
+            $('form').replaceWith($(result).find('form'));
+            console.log($(result).find('div.wrapper'));
+        },
+        error : function() {
+        }
+    });
 }
 
 function loadCardContent(sel){
     var cardId = sel.value;
     console.log(cardId);
-
     $.ajax({
         type : 'POST',
         url : "./../../push_panel_new.php",

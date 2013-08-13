@@ -13,22 +13,22 @@ if (!isset($_SESSION['status']) || $_SESSION['status'] != "In") {
 $cardId = $_POST['cardId'];
 $username = $_SESSION['username'];
 $form = array();
-
-foreach($_POST as $key => $value){
-    if(Utils::startsWith($key,"json")){
-        $form[$key] = $value;
+try{
+    foreach($_POST as $key => $value){
+        if(Utils::startsWith($key,"json")){
+            $form[$key] = $value;
+        }
     }
-}
-$intCardId = intval($cardId);
-$jsonObject = new JsonInterface($cardId);
+    $intCardId = intval($cardId);
+    $jsonObject = new JsonInterface($cardId);
 
-$jsonContent = $jsonObject->getJsonContent();
+    $jsonContent = $jsonObject->getJsonContent();
 
-foreach($form as $key => $value){
-    $path = explode('_', $key);
-    $path = array_slice($path, 1);
-    $path = implode('_', $path);
-    Utils::arrayAccessSetter($jsonContent, $path, $value);
+    foreach($form as $key => $value){
+        $path = explode('_', $key);
+        $path = array_slice($path, 1);
+        $path = implode('_', $path);
+        Utils::arrayAccessSetter($jsonContent, $path, $value);
 //        echo $path.'</br>';
 //        echo "+saved+".'</br>';
 //    }
@@ -37,7 +37,10 @@ foreach($form as $key => $value){
 //        echo "+notSaved+".'</br>';
 //    }
 //    echo "=========<\/br>";
+    }
+    $jsonObject->setJsonContent($jsonContent);
+    $jsonObject->saveJsonToFile();
+    header("Location: ./../../push_panel_new.php?cardId=$cardId&message=saved successfully!");
+}catch(Exception $e){
+    DebugLog::WriteLogWithFormat("Exception:".$e->getTraceAsString());
 }
-$jsonObject->setJsonContent($jsonContent);
-$jsonObject->saveJsonToFile();
-header("Location: ./../../push_panel_new.php?message=saved successfully!");
