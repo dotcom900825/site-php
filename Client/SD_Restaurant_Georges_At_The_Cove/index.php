@@ -68,8 +68,12 @@
 				</form>
 			</li>
 		</ul>
+		
 	</nav>
+	
 </header>
+
+
 
 <section id="content">
 	

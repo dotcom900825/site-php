@@ -1,0 +1,60 @@
+{
+    "formatVersion": 1,
+    "passTypeIdentifier": "pass.com.ipassstore.cssa",
+    "serialNumber": "111",
+    "teamIdentifier": "3JAYL5R2NX",
+    "webServiceURL": "https://www.ipassstore.com/lib/ws/",
+    "authenticationToken": "0fa3712aa93334cb9fd2d8bac1bd7f572c26553b",
+    "barcode": {
+        "message": "13754218093233702",
+        "format": "PKBarcodeFormatPDF417",
+        "messageEncoding": "iso-8859-1",
+        "altText": "活动新闻与会员福利请见背面"
+    },
+    "locations": [],
+    "organizationName": "TU TCSSA",
+    "description": "TU TCSSA Membership Card",
+    "logoText": "UchiagoCSSA",
+    "foregroundColor": "rgb(255, 255, 255)",
+    "labelColor": "rgb(255, 255, 255)",
+    "backgroundColor": "rgb(0, 51, 26)",
+    "storeCard": {
+        "headerFields": [
+            {
+                "key": "header",
+                "label": "Upcoming Event",
+                "value": "Mid-Autumn Fest",
+                "changeMessage": "Event Update: %@"
+            }
+        ],
+        "auxiliaryFields": [
+            {
+                "key": "eventTime",
+                "label": "Time",
+                "value": "6:00pm CDT"
+            },
+            {
+                "key": "eventLocation",
+                "label": "Location",
+                "value": "LBC 212-Qatar Ballroom"
+            }
+        ],
+        "backFields": [
+            {
+                "key": "event",
+                "label": "活动新闻",
+                "value": "中秋晚会节目报名正在进行中：http://t.cn/zQXRXNo"
+            },
+            {
+                "key": "event sponsor",
+                "label": "TCSSA在线",
+                "value": "注册会员：http://eepurl.com/sEn8L\n微博：@TCSSA\n微信：TulaneCSSA\n论坛：http://tcssa.boards.net/\n更多：http://tcssa.tulane.edu/#contact"
+            },
+            {
+                "key": "contact",
+                "label": "Powered by iPassStore.com",
+                "value": "Become a partner:\npartner@ipassstore.com\n\nFind out more at:\niPassStore.com\n"
+            }
+        ]
+    }
+}

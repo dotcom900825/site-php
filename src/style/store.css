@@ -339,6 +339,46 @@ header#site form input:focus {
 	box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
+/* Hiring Ribbon */
+
+.ribbon {
+    background: #eee;
+    font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	color: #7d7d7d;
+    border-left: 1px dashed #aaa;
+    border-right: 1px dashed #aaa;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 5px 0 0 #eee,
+                -5px 0 0 #eee;
+    height: 80px;
+    margin: 0 5px;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    width: 45px;
+    -webkit-filter: drop-shadow(0 2px 5px hsla(0,0%,0%,.5));
+}
+.ribbon:after,
+.ribbon:before {
+    border-top: 15px solid #eee;
+    content: '';
+    height: 0;
+    position: absolute;
+    top: 100%;
+    width: 0;
+}
+.ribbon:after {
+    border-left: 50px solid transparent;
+    right: -6px;
+}
+.ribbon:before {
+    border-right: 50px solid transparent;
+    left: -6px;
+}
+
+
 /* @group .content */
 
 #content {

@@ -1,0 +1,474 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>
+		  
+		iPassStore - 		Job Board
+	</title>
+	<!--[if lt IE 9]><script type="text/javascript">Date.now = Date.now || function() { return +new Date; };</script><![endif]-->
+		<meta property="og:description" content="You can submit your resume by visiting this link. If you know anyone who would be a great fit for this position, please pass the link along. Thanks!" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<meta name="keywords" content="" />
+	<!-- Style sheets -->
+	<link rel="stylesheet" type="text/css" href="../src/style/tweak.css" title="default" />
+	<link rel="stylesheet" type="text/css" href="../src/style/jobs.css" title="default" />
+	<!--[if lte IE 9]>
+	<style type="text/css">
+	#resumator-apply-with-linkedin-wrapper,#resumator-apply-with-indeed-wrapper{
+		display:none !important;
+	}
+	</style>
+	<![endif]-->
+	<!-- User CSS settings -->
+	<style type="text/css">
+		/* Basic CMS Settings */
+		body { background-color: #fcfcfc; }
+		a, .resumator-job-title a { color: #46484d; }
+		#resumator-jobs-title, #resumator-job-title h1, #resumator-job-overview h2 strong, #resumator-resumes-title { color: #46484d; }
+		#resumator-company-name h1 { color: #46484d; }
+
+/* 
+    Include External Fonts, etc.
+*/
+/* 
+    Variables
+*/
+/* 
+    Structure
+*/
+body {
+  background: repeat scroll 0 0 #f3f3f1 !important;
+  font-family: "pnbold","Helvetica Neue",Helvetica,Arial,Sans-serif  !important; }
+
+b.rtop, b.rbottom {
+  display: none !important; }
+
+#resumator-site-wrapper {
+  margin: 40px auto;
+  background: none !important; }
+  #resumator-site-wrapper div.rounded_container {
+    border: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+
+#resumator-site-header {
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  border-bottom: 0; }
+  #resumator-site-header #resumator-jobboard-logo {
+    margin: 0;
+    padding: 0;
+    padding-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    width: 100%; }
+
+#resumator-content-left-wrapper, #resumator-content-right-wrapper,
+#resumator-content-left, #resumator-content-right {
+  margin: 0;
+  padding: 0; }
+
+#resumator-content-left-wrapper, #resumator-content-right-wrapper {
+  margin-bottom: 40px; }
+
+#resumator-content-left-wrapper, #resumator-content-left {
+  width: 550px; }
+
+#resumator-content-left {
+  padding: 0 40px 0 20px; }
+
+#resumator-content-right-wrapper, #resumator-content-right {
+  width: 330px; }
+
+#resumator-jobboard-home-content {
+  padding-top: 14px; }
+
+#resumator-content-right #resumator-jobboard-home-content p {
+  font-family: "sk",Georgia,"Times New Roman",serif;
+  color: #45494d;
+  font-size: 14px;
+  line-height: 1.5em;
+  margin-bottom: 1.5em; }
+
+#resumator-footer-wrapper {
+  /* Sorry, Resumator! */
+  display: none;
+  margin: 0 40px;
+  border-top: 1px solid #f0f0f0;
+  text-align: center; }
+  #resumator-footer-wrapper a {
+    text-align: center;
+    width: 100%;
+    opacity: 0.3;
+    -moz-transition: opacity 1s ease 0s;
+    -webkit-transition: opacity 1s ease 0s;
+    -o-transition: opacity 1s ease 0s;
+    transition: opacity 1s ease 0s; }
+    #resumator-footer-wrapper a:hover {
+      opacity: 0.5; }
+  #resumator-footer-wrapper #resumator-credit {
+    /* float: none; */ }
+
+#resumator-jobs-title {
+  display: none;
+  font-family: "pnsemi","Helvetica Neue",Helvetica,Arial,Sans-serif;
+  border-left: 5px solid #bf4343;
+  padding-left: 15px;
+  letter-spacing: -1px;
+  font-size: 36px;
+  text-transform: uppercase; }
+
+.resumator-department-heading {
+  margin: 0; }
+  .resumator-department-heading h4 {
+    font-size: 21px;
+    color: #333;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    margin: 40px 0 0 0;
+    border-bottom: 1px solid #ddd; }
+
+.resumator-job {
+  border-bottom: 1px solid #dededc;
+  padding: 20px 0;
+  margin: 0; }
+  .resumator-job .resumator-jobs-text {
+    font-family: "pnsemi","Helvetica Neue",Helvetica,Arial,Sans-serif; }
+  .resumator-job .resumator-job-title {
+    margin: 0;
+    padding: 0;
+    border-top: none; }
+  .resumator-job .resumator-job-title a {
+    color: #bf4343;
+    font-size: 21px;
+    letter-spacing: -1px;
+    text-shadow: 0 -1px 0 rgba(192, 192, 192, 0.1); }
+    .resumator-job .resumator-job-title a:hover {
+      color: #333;
+      text-decoration: none; }
+  .resumator-job .resumator-job-info {
+    margin: 0;
+    padding: 0;
+    letter-spacing: -0.5px;
+    color: #777;
+    padding-top: 4px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-shadow: 0 -1px 0 rgba(192, 192, 192, 0.1); }
+    .resumator-job .resumator-job-info .resumator-job-location {
+      display: none; }
+
+/* 
+    Job Description Pages
+*/
+h1.resumator-jobs-text {
+  font-family: "pnsemi","Helvetica Neue",Helvetica,Arial,Sans-serif;
+  padding-left: 10px;
+  color: #333;
+  font-size: 36px;
+  letter-spacing: -1px;
+  text-shadow: 0 -1px 0 rgba(192, 192, 192, 0.1);
+  /* text-transform: uppercase; */ }
+
+#resumator-job-button-back-top {
+  font-family: "pnsemi","Helvetica Neue",Helvetica,Arial,Sans-serif;
+  float: none;
+  border-top: 1px solid #dededc;
+  border-bottom: 1px solid #dededc;
+  margin: 0 20px 20px 20px;
+  padding: 0.75em 20px 0.25em; }
+  #resumator-job-button-back-top p {
+    font-family: "skitalic",Georgia,"Times New Roman",serif;
+    text-decoration: italic;
+    color: #777;
+    font-size: 14px; }
+    #resumator-job-button-back-top p a {
+      color: #bf4343; }
+
+#resumator-job-button-back-bottom {
+  display: none; }
+
+#resumator-job-overview {
+  margin: 0;
+  padding: 0;
+  /* border-bottom: 1px solid #dededc; */
+  margin: -10px 20px 40px 20px;
+  padding: 0 20px; }
+  #resumator-job-overview h2 {
+    font-family: "skitalic",Georgia,"Times New Roman",serif;
+    text-decoration: italic;
+    color: #777;
+    font-size: 14px;
+    margin-right: 0.5em;
+    padding-bottom: 20px; }
+    #resumator-job-overview h2 strong {
+      display: none; }
+    #resumator-job-overview h2:after {
+      content: ' • '; }
+    #resumator-job-overview h2:last-child:after {
+      content: ''; }
+
+#resumator-job-description {
+  margin-left: 20px; }
+
+#resumator-job-description p, #resumator-job-description ul li {
+  font-family: "sk",Georgia,"Times New Roman",serif;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5em; }
+  #resumator-job-description p strong, #resumator-job-description ul li strong {
+    color: #777; }
+
+#resumator-social-links {
+  border-top: 1px solid #dededc; }
+  #resumator-social-links ul {
+    border-top: none; }
+    #resumator-social-links ul li.resumator-email {
+      margin-left: 20px; }
+    #resumator-social-links ul li.resumator-facebook {
+      margin-right: 20px; }
+
+#resumator-content-right form {
+  width: 300px;
+  overflow: hidden; }
+  #resumator-content-right form #resumator-resumes-title {
+    font-family: "pnsemi","Helvetica Neue",Helvetica,Arial,Sans-serif;
+    text-transform: uppercase; }
+  #resumator-content-right form #resumator-message-required {
+    font-family: "skitalic",Georgia,"Times New Roman",serif;
+    text-decoration: italic;
+    color: #777;
+    font-size: 14px;
+    width: 300px;
+    padding-bottom: 1em; }
+  #resumator-content-right form .resumator-label {
+    font-family: "pnsemi","Helvetica Neue",Helvetica,Arial,Sans-serif;
+    color: #777;
+    text-transform: uppercase; }
+  #resumator-content-right form input[type=text],
+  #resumator-content-right form #resumator-resume-paste-wrapper textarea {
+    font-family: "skitalic",Georgia,"Times New Roman",serif;
+    text-decoration: italic;
+    font-size: 14px;
+    border: 1px solid rgba(192, 192, 192, 0.5);
+    width: 274px;
+    margin-bottom: 0.5em; }
+  #resumator-content-right form #resumator-resume-paste-wrapper textarea {
+    height: 150px; }
+  #resumator-content-right form #resumator-resume-options p,
+  #resumator-content-right form #resumator-resume-upload-wrapper p,
+  #resumator-content-right form #resumator-resume-paste-wrapper p {
+    font-family: "skitalic",Georgia,"Times New Roman",serif;
+    text-decoration: italic;
+    color: #777;
+    font-size: 14px; }
+    #resumator-content-right form #resumator-resume-options p a,
+    #resumator-content-right form #resumator-resume-upload-wrapper p a,
+    #resumator-content-right form #resumator-resume-paste-wrapper p a {
+      color: #bf4343; }
+  #resumator-content-right form #resumator-resume-upload-wrapper,
+  #resumator-content-right form #resumator-resume-paste-wrapper {
+    width: 274px; }
+  #resumator-content-right form #resumator-submit-resume, #resumator-content-right form #resumator-resume-value {
+    font-family: "pnsemi","Helvetica Neue",Helvetica,Arial,Sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    padding: 5px 11px 5px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    border: none;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -webkit-font-smoothing: antialiased;
+    background-color: #565656;
+    background-image: -ms-linear-gradient(top, #5a5a5a, #505050);
+    background-image: -webkit-linear-gradient(top, #5a5a5a, #505050);
+    background-image: -o-linear-gradient(top, #5a5a5a, #505050);
+    background-image: linear-gradient(top, #5a5a5a, #505050);
+    background-image: -moz-linear-gradient(top, #5a5a5a, #505050);
+    background-repeat: repeat-x;
+    border-color: #404040;
+    border-color: #505050 #505050 #2A2A2A;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-color: progid:dximagetransform.microsoft.gradient(startColorstr='#5a5a5a', endColorstr='#505050', GradientType=0);
+    border-color: progid:dximagetransform.microsoft.gradient(enabled=false); }
+  #resumator-content-right form #resumator-cancel-resume {
+    display: none; }
+
+.resumator-jobs-text.norm.t22 {
+  font-family: "sk",Georgia,"Times New Roman",serif;
+  color: #777;
+  margin-left: 10px;
+  font-size: 14px !important; }	
+  
+
+</style>
+	
+
+</head>
+<body id="resumator-jobboard" class="resumator-jobboard-home jobboard">
+	<a name="back2top"></a>
+	<div id="resumator-site-wrapper" class="resumator-jobs-text">
+		<div id="resumator-rounded-container" class=""><b class="rtop"><b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b></b><div class="rounded_container">			<div id="resumator-site-header" class="resumator-jobs-text">
+				<div id="resumator-company-name" class="resumator-jobs-text">
+																<div id="resumator-jobboard-logo">
+							<a href="https://www.ipassstore.com/"><img src="/resource/image/logo.png" /></a>
+						</div>
+									</div>
+			</div>
+			<div id="resumator-body-wrapper" class="resumator-jobs-text">
+				<div id="resumator-body" class="resumator-jobs-text clrfix">
+					<div id="messages_wrapper">
+											</div>
+					<div id="resumator-content-left-wrapper" class="resumator-jobs-text">
+	<div id="resumator-content-left" class="resumator-home-joblist">
+		<div class="resumator-jobs-text" id="resumator-jobs-title">Current Openings</div>
+		
+						
+			<!-- Engineering Internship -->		
+			<div class="resumator-department-heading">
+				<h4>Engineering Internship&nbsp;</h4>
+			</div>
+						
+			<div class="resumator-job resumator-jobs-text clrfix">
+				<div class="resumator-job-title resumator-jobs-text">
+					<a href="https://www.ipassstore.com/jobs/growth_internal_tools_engineer_intern.html" class="resumator-jobs-text resumator-job-title-link">Growth & Internal Tools Engineer Intern</a>
+				</div>
+			
+				<div class="resumator-job-info resumator-jobs-text">
+					<span class="resumator-job-location resumator-job-heading resumator-jobs-text">Location:</span> 
+						La Jolla, CA (UC San Diego Campus)									</div>
+			</div>
+						
+						
+			<div class="resumator-job resumator-jobs-text clrfix">
+				<div class="resumator-job-title resumator-jobs-text">
+					<a href="https://www.ipassstore.com/jobs/mobile_application_engineer_intern.html" class="resumator-jobs-text resumator-job-title-link">Mobile Application Engineer Intern</a>
+				</div>
+			
+				<div class="resumator-job-info resumator-jobs-text">
+					<span class="resumator-job-location resumator-job-heading resumator-jobs-text">Location:</span> 
+						La Jolla, CA (UC San Diego Campus)									</div>
+			</div>
+						
+						
+			<div id="resumator-job-job_20111206010829_40HYERTRQSKXZX4K" class="resumator-job resumator-jobs-text clrfix">
+				<div class="resumator-job-title resumator-jobs-text">
+					<a href="https://www.ipassstore.com/jobs/web_developer_intern.html" class="resumator-jobs-text resumator-job-title-link">Web Developer Intern</a>
+				</div>
+			
+				<div class="resumator-job-info resumator-jobs-text">
+					<span class="resumator-job-location resumator-job-heading resumator-jobs-text">Location:</span> 
+						La Jolla, CA (UC San Diego Campus)									</div>
+			</div>
+						
+			
+			<!-- Marketing Internship -->
+			<div class="resumator-department-heading">
+				<h4>Marketing Internship&nbsp;</h4>
+			</div>
+						
+			<div class="resumator-job resumator-jobs-text clrfix">
+				<div class="resumator-job-title resumator-jobs-text">
+					<a href="https://www.ipassstore.com/jobs/social_media_marketing_intern.html" class="resumator-jobs-text resumator-job-title-link">Social Media Marketing Intern</a>
+				</div>
+			
+				<div class="resumator-job-info resumator-jobs-text">
+					<span class="resumator-job-location resumator-job-heading resumator-jobs-text">Location:</span> 
+						La Jolla, CA (UC San Diego Campus)									</div>
+			</div>
+			
+			<div class="resumator-job resumator-jobs-text clrfix">
+				<div class="resumator-job-title resumator-jobs-text">
+					<a href="https://www.ipassstore.com/jobs/online_sales_intern.html" class="resumator-jobs-text resumator-job-title-link">Online Sales Intern</a>
+				</div>
+			
+				<div class="resumator-job-info resumator-jobs-text">
+					<span class="resumator-job-location resumator-job-heading resumator-jobs-text">Location:</span> 
+						La Jolla, CA (UC San Diego Campus)									</div>
+			</div>
+			
+			<!-- Product Internship -->
+			<div class="resumator-department-heading">
+				<h4>Product Internship&nbsp;</h4>
+			</div>
+						
+			
+			<div class="resumator-job resumator-jobs-text clrfix">
+				<div class="resumator-job-title resumator-jobs-text">
+					<a href="https://www.ipassstore.com/jobs/ui_designer_intern.html" class="resumator-jobs-text resumator-job-title-link">Visual UI Designer Intern</a>
+				</div>
+			
+				<div class="resumator-job-info resumator-jobs-text">
+					<span class="resumator-job-location resumator-job-heading resumator-jobs-text">Location:</span> 
+						La Jolla, CA (UC San Diego Campus)									</div>
+			</div>
+			
+				</div>		
+														
+</div>
+
+<div id="resumator-content-right-wrapper" class="border0 resumator-jobs-text">
+	<div id="resumator-content-right">
+		<div id="resumator-content-introduction" class="resumator-jobs-text">
+			<div id="resumator-jobboard-home-content" class="resumator-jobs-text">
+			
+			  <div class="meta">
+    <div class="picture">
+    <a href="https://www.facebook.com/ford.wang.37" target="_blank">
+    <img alt='' src='images/ford_wang.png' class='avatar avatar-150 photo' height='150' width='150' />
+    </a>
+    </div>
+    <div class="info">
+        <h5>Ford Wang</h5>
+        Co-Founder    </div><!-- #founder-info -->
+  </div><br/><br/><br/><br/><br/><br/>
+  
+    <div class="meta">
+    
+    <div class="picture">
+    <a href="https://www.facebook.com/qdxzzz?fref=ts" target="_blank">
+    <img alt='' src='images/dexin_qi.png' class='avatar avatar-150 photo' height='150' width='150' />
+    </a>
+    </div>
+    <div class="info">
+        <h5>Dexin Qi</h5>
+        Co-Founder    </div><!-- #founder-info -->
+  </div><br/><br/><br/><br/><br/><br/>
+			
+			
+	    <div class="meta">
+    <div class="picture"><img alt='' src='images/you.png' class='avatar avatar-150 photo' height='150' width='150' /></div>
+    <div class="info">
+        <h5>You</h5>
+        </div><!-- #founder-info -->
+  </div><br/><br/><br/><br/><br/><br/>		
+			
+			<p>iPassStore enables brands to strengthen relationships with their customers using Apple's Passbook and Android's PassWallet mobile push notification and location-based push notification services to spark exceptional experiences, drive sales and increase customer loyalty and lifetime value. We also design and manage mobile digital loyalty and gift card programs for local businesses and organizations. </p>
+
+<p>
+	As an iPassStore team member, you&#39;ll be immersed with top designers and engineers in town (and we mean that). Our culture is fun and casual, but ambitious. You can expect to work with people who truly care about honing their skills and making a difference through their creations.</p>
+
+<p>
+	iPassStore was founded in May, 2013 and is located in La Jolla, CA. We have 2 co-founders and are preparing ourselves for future VC investments.</p></div>
+		</div>
+	</div>
+</div>
+				</div>
+			</div>
+
+		</div>
+		</div>	
+		</div>
+
+</body>
+</html>
