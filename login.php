@@ -15,7 +15,7 @@ if (isset($_POST['action']) && isset($_POST['username']) && isset($_POST['passwo
 } else if (isset($_POST['action']) && $_POST['action'] == "Logout") {
     $_SESSION = array();
     session_destroy();
-    echo "Logout success!\n";
+    header("Location: secret_new.php");
 } else if (isset($_POST['action']) && $_POST['action'] == "Login") {
     echo "Login failed! in login.php\n";
 } else {
