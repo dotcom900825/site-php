@@ -1,3 +1,25 @@
+$(document).ready( function(){
+        bindSubmit()
+    }
+);
+
+
+function bindSubmit(){
+    // this is the id of the submit button
+    $("#main-form").submit(function() {
+        var url = "/lib/ws/save.php"; // the script where you handle the form input.
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: $("#main-form").serialize(), // serializes the form's elements.
+            success: function(data){
+                alert(data); // show response from the php script.
+            }
+        });
+        return false; // avoid to execute the actual submit of the form.
+    });
+}
+
 //saving the card may not need ajax call?
 function save($par){
     console.log($par);
@@ -46,6 +68,7 @@ function discardChange(){
         success : function(result) {
             $('#main-form').replaceWith($(result).find('#main-form'));
             console.log($(result).find('div.wrapper'));
+            bindSubmit();
         },
         error : function() {
         }

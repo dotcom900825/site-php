@@ -40,7 +40,8 @@ try{
     }
     $jsonObject->setJsonContent($jsonContent);
     $jsonObject->saveJsonToFile();
-    header("Location: ./../../push_panel_new.php?cardId=$cardId&message=saved successfully!");
+    echo "success!";
 }catch(Exception $e){
     DebugLog::WriteLogWithFormat("Exception:".$e->getTraceAsString());
+    echo "Sorry, save failed, please contact the administrator!";
 }
