@@ -1,7 +1,7 @@
 {
     "formatVersion": 1,
     "passTypeIdentifier": "pass.com.ipassstore.cssa",
-    "serialNumber": "111",
+    "serialNumber": "115",
     "teamIdentifier": "3JAYL5R2NX",
     "webServiceURL": "https://www.ipassstore.com/lib/ws/",
     "authenticationToken": "0fa3712aa93334cb9fd2d8bac1bd7f572c26553b",
@@ -12,18 +12,18 @@
         "altText": "活动新闻与会员福利请见背面"
     },
     "locations": [],
-    "organizationName": "TU TCSSA",
-    "description": "TU TCSSA Membership Card",
-    "logoText": "UchiagoCSSA",
-    "foregroundColor": "rgb(255, 255, 255)",
-    "labelColor": "rgb(255, 255, 255)",
-    "backgroundColor": "rgb(0, 51, 26)",
+    "organizationName": "UChicage CSSA",
+    "description": "UChicage CSSA Membership Card",
+    "logoText": "UChicago CSSA",
+    "foregroundColor": "rgb(136, 37, 40)",
+    "labelColor": "rgb(136, 37, 40)",
+    "backgroundColor": "rgb(255, 255, 255)",
     "storeCard": {
         "headerFields": [
             {
                 "key": "header",
-                "label": "Upcoming Event",
-                "value": "Mid-Autumn Fest",
+                "label": "Upcoming Events",
+                "value": "Event Name",
                 "changeMessage": "Event Update: %@"
             }
         ],
@@ -31,24 +31,24 @@
             {
                 "key": "eventTime",
                 "label": "Time",
-                "value": "6:00pm CDT"
+                "value": "Event Time"
             },
             {
                 "key": "eventLocation",
                 "label": "Location",
-                "value": "LBC 212-Qatar Ballroom"
+                "value": "Event Location"
             }
         ],
         "backFields": [
             {
                 "key": "event",
                 "label": "活动新闻",
-                "value": "中秋晚会节目报名正在进行中：http://t.cn/zQXRXNo"
+                "value": "活动新闻细节"
             },
             {
                 "key": "event sponsor",
-                "label": "TCSSA在线",
-                "value": "注册会员：http://eepurl.com/sEn8L\n微博：@TCSSA\n微信：TulaneCSSA\n论坛：http://tcssa.boards.net/\n更多：http://tcssa.tulane.edu/#contact"
+                "label": "CSSA在线",
+                "value": "你们的信息"
             },
             {
                 "key": "contact",
