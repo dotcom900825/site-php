@@ -74,7 +74,8 @@ function discardChange(){
         }
     });
 }
-
+//TODO: add progress icon
+//TODO: handel session expiration problem!
 function loadCardContent(sel){
     var cardId = sel.value;
     console.log(cardId);
