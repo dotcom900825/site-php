@@ -133,8 +133,8 @@
 							$imgText = "Scan the QR code below on your iPhone and open the link in Safari, then the card will be automatically saved to your Passbook.";
 							$imgSource = "image/qrcode.png";
 							$imgLink = "";
-							$imgWidth = "128";
-							$imgHeight = "128";
+							$imgWidth = "140";
+							$imgHeight = "140";
 						}
 
 					?>
