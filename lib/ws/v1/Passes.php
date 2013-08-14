@@ -145,6 +145,16 @@ class Passes
 			$pass = new EventPass(9, "pass.com.ipassstore.georgeAtTheCove", "GeorgeCove", "GeorgeAtTheCove", "GeorgeAtTheCove@ipassstore.com");
 			$pass = $pass->createPassWithExistingSerialNr($error);
 		}
+        else if($cardID == 10){
+            Log::WriteLog("cardID:10");
+            $pass = new EventPass(10, "pass.com.ipassstore.cssa", "UChiago", "University of Chiago", "uchiago_cssa@ipassstore.com");
+            $pass = $pass->createPassWithExistingSerialNr($error);
+        }
+        else if($cardID == 11){
+            Log::WriteLog("cardID:11");
+            $pass = new EventPass(11, "pass.com.ipassstore.cssa", "UTexasAustin", "UTA", "UTexasAustin@ipassstore.com");
+            $pass = $pass->createPassWithExistingSerialNr($error);
+        }
 		else{
 			Log::WriteLog("cardID:other");
 			$pass = new StorePass($keyPath, $sourcePath, $keyPassword, $passTypeID, $cardID);
