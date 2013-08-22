@@ -48,6 +48,7 @@ require_once (dirname(__file__) . "/../lib/class/JsonInterface.php");
         </div>
     </div>
     <?php
+    //TODO: add reset password panel
     if (isset($_GET['message'])){
         $message = $_GET['message'];
         echo "<h4 class=\"warning-message\">$message</h4>";
