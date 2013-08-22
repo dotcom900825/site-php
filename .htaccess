@@ -5,3 +5,11 @@ RewriteRule ^(.*)$ https://www.ipassstore.com/$1 [R=301,L]
 
 Options -Indexes 
 
+
+<IfModule mod_suphp.c>
+suPHP_ConfigPath /home/admin
+<Files php.ini>
+order allow,deny
+deny from all
+</Files>
+</IfModule>

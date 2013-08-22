@@ -1,7 +1,7 @@
 <?php
 
 $errors = '';
-$myemail = 'admin@ipassstore.com';
+$myemail = 'support@ipassstore.com';
 if(empty($_POST['name'])  || 
    empty($_POST['email']) || 
    empty($_POST['message']))

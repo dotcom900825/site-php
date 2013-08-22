@@ -112,7 +112,7 @@
 				</aside>
 				<div class="description summary">
 					
-					
+					<p>芝大CSSA Passbook - 你的移动CSSA</p>
 					
 					<!-- Mobile Detect -->
 					<?php
@@ -162,9 +162,10 @@
 					
 					<a href="<?php echo $imgLink?>"><img src="<?php echo $imgSource?>"  width="<?php echo $imgWidth?>" height="<?php echo $imgHeight?>"/></a>
 	
-					<p>你们学生会的简介<br/><br/>
+					<p>
+					University of Chicago Chinese Students and Scholars Association (UC-CSSA) is a student organization dedicated to promoting social, intellectual and cultural activities for Chinese students and scholars at University of Chicago as well as interested members in the U Chicago community. We strive to provide opportunities and benefits for our members by facilitating exchange of information between China and Chinese students studying abroad and by defending the rights of its members on campus and in the United States. UC-CSSA encourages all, especially incoming, Chinese students and scholars at University of Chicago to join our organization and participate in our activities.<br/><br/>
 					   
-					   你们电子卡的简介</p>
+					   </p>
 					
 					
 

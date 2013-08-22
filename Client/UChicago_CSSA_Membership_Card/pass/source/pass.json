@@ -23,7 +23,7 @@
             {
                 "key": "header",
                 "label": "Upcoming Events",
-                "value": "Event Name",
+                "value": "中国新生BBQ",
                 "changeMessage": "Event Update: %@"
             }
         ],
@@ -31,24 +31,24 @@
             {
                 "key": "eventTime",
                 "label": "Time",
-                "value": "Event Time"
+                "value": "Oct. 5th"
             },
             {
                 "key": "eventLocation",
                 "label": "Location",
-                "value": "Event Location"
+                "value": "Promotory Point Park"
             }
         ],
         "backFields": [
             {
                 "key": "event",
-                "label": "活动新闻",
-                "value": "活动新闻细节"
+                "label": "CSSA 新闻",
+                "value": "芝加哥大学中国学生学者联合会（UC CSSA）7月26日在芝加哥大学校园举办职业发展讲座。此次发展会的主题为“在美中国留学生求职创业”。活动通过由四位在各自领域有所建树的到场嘉宾与同学分享自身求职及创业经历。"
             },
             {
                 "key": "event sponsor",
-                "label": "CSSA在线",
-                "value": "你们的信息"
+                "label": "联系我们",
+                "value": "Email:cssauchicago@gmail.com\n网站：cssa.uchicago.edu\nFacebook @ UC-CSSA\n新浪微博 @芝大CSSA\n人人网 @芝大CSSA"
             },
             {
                 "key": "contact",
