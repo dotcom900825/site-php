@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once (dirname(__file__) . "/../../../lib/class/DebugLog.php");
 require_once (dirname(__file__) . "/../../../lib/class/DataInterface.php");
 require_once (dirname(__file__) . "/../../../lib/class/AmazonSES.php");
@@ -23,12 +23,12 @@ iPassStore.com"
 );
 
 $cardFolder = $_POST['folder'];
-$fullpath = "https://www.ipassstore.com/Client/$cardFolder";
+$fullpath = "./../../Client/$cardFolder";
 
 $no_password_filter = array("UCSD_UTA_Membership_Card_StorePass");
 
 // input validation check
-if (strlen($_POST['first_name']) < 2) {    
+if (strlen($_POST['first_name']) < 2) {
     header("Location: $fullpath/index.php?message=Sorry, please enter a valid first name!");
     exit();
 }
