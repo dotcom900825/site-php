@@ -61,6 +61,7 @@ require_once (dirname(__file__) . "/../lib/class/JsonInterface.php");
                 <?php
                 $options = DataInterface::getCardNamesAndIdByUsername($_SESSION['username']);
                 $cardType = "storeCard";
+                $cardDistributionType = "universal";
                 if ($options == null) {
                     print "<p style=\"text-align:center;\"><strong class=\"warning-message\">No cards created yet!</strong></p>";
                 } else {
@@ -79,14 +80,20 @@ require_once (dirname(__file__) . "/../lib/class/JsonInterface.php");
                     }
                     print "</select>";
                     $cardType = DataInterface::getCardType($defaultCardId);
+                    $cardDistributionType = DataInterface::getCardDistributionType($defaultCardId);
                     $jsonObject = new JsonInterface();
                     $jsonContent = $jsonObject->getJsonArray($defaultCardId);
 
+                }
+                $startIndex = 0;
+                if($cardDistributionType == "unique"){
+                    $startIndex = 1;
                 }
                 ?>
             </div>
         </div>
         <div class="absolute-wrapper-outer">
+            <?php echo "<p style=\"display:none\">$cardType </p>";?>
             <div id="storecard-front-lengend-wrapper" class="absolute-wrapper-inner">
                 <div id="logo-wrapper">
                     <label class="lengend-label" for="">Logo</label>
@@ -135,29 +142,29 @@ require_once (dirname(__file__) . "/../lib/class/JsonInterface.php");
                 <div id="auxiliaryField0_label-wrapper">
                     <label class="lengend-label" for="">Section 1 Label</label>
                     <?php
-                    $auxiliaryFields_0_label = $jsonContent["$cardType"]["auxiliaryFields"][0]["label"];
-                    print " <input class=\"content-input\" type=\"text\" name=\"json_".$cardType."_auxiliaryFields_0_label\" value=\"$auxiliaryFields_0_label\"/>";
+                    $auxiliaryFields_0_label = $jsonContent["$cardType"]["auxiliaryFields"][$startIndex]["label"];
+                    print " <input class=\"content-input\" type=\"text\" name=\"json_".$cardType."_auxiliaryFields_".$startIndex."_label\" value=\"$auxiliaryFields_0_label\"/>";
                     ?>
                 </div>
                 <div id="auxiliaryField0_value-wrapper">
                     <label class="lengend-label" for="">Section 1 Content</label>
                     <?php
-                    $auxiliaryFields_0_value = $jsonContent["$cardType"]["auxiliaryFields"][0]["value"];
-                    print " <input class=\"content-input\" type=\"text\" name=\"json_".$cardType."_auxiliaryFields_0_value\" value=\"$auxiliaryFields_0_value\"/>";
+                    $auxiliaryFields_0_value = $jsonContent["$cardType"]["auxiliaryFields"][$startIndex]["value"];
+                    print " <input class=\"content-input\" type=\"text\" name=\"json_".$cardType."_auxiliaryFields_".$startIndex."_value\" value=\"$auxiliaryFields_0_value\"/>";
                     ?>
                 </div>
                 <div id="auxiliaryField1_label-wrapper">
                     <label class="lengend-label" for="">Section 2 Label</label>
                     <?php
-                    $auxiliaryFields_1_label = $jsonContent["$cardType"]["auxiliaryFields"][1]["label"];
-                    print " <input class=\"content-input\" type=\"text\" name=\"json_".$cardType."_auxiliaryFields_1_label\" value=\"$auxiliaryFields_1_label\"/>";
+                    $auxiliaryFields_1_label = $jsonContent["$cardType"]["auxiliaryFields"][$startIndex+1]["label"];
+                    print " <input class=\"content-input\" type=\"text\" name=\"json_".$cardType."_auxiliaryFields_".($startIndex+1)."_label\" value=\"$auxiliaryFields_1_label\"/>";
                     ?>
                 </div>
                 <div id="auxiliaryField1_value-wrapper">
                     <label class="lengend-label" for="">Section 2 Content</label>
                     <?php
-                    $auxiliaryFields_1_value = $jsonContent["$cardType"]["auxiliaryFields"][1]["value"];
-                    print " <input class=\"content-input\" type=\"text\" name=\"json_".$cardType."_auxiliaryFields_1_value\" value=\"$auxiliaryFields_1_value\"/>";
+                    $auxiliaryFields_1_value = $jsonContent["$cardType"]["auxiliaryFields"][$startIndex+1]["value"];
+                    print " <input class=\"content-input\" type=\"text\" name=\"json_".$cardType."_auxiliaryFields_".($startIndex+1)."_value\" value=\"$auxiliaryFields_1_value\"/>";
                     ?>
                 </div>
                 <div id="barcode_message-wrapper">
