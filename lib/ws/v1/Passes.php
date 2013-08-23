@@ -135,11 +135,11 @@ class Passes
 			$pass = new EventPass(7, "pass.com.ipassstore.tucssa", "TU_CSSA", "tucssa",	"admin@ipassstore.com");
 			$pass = $pass->createPassWithExistingSerialNr($error);
 		}
-		else if($cardID == 8){
-			Log::WriteLog("cardID:8");
-			$pass = new EventPass(8, "pass.com.ipassstore.ucsdcssa", "UCSD_CSSA", "UCSD_CSSA", "qdxaaa@gmail.com");
-			$pass = $pass->createPassWithExistingSerialNr($error);
-		}
+//		else if($cardID == 8){
+//			Log::WriteLog("cardID:8");
+//			$pass = new EventPass(8, "pass.com.ipassstore.ucsdcssa", "UCSD_CSSA", "UCSD_CSSA", "qdxaaa@gmail.com");
+//			$pass = $pass->createPassWithExistingSerialNr($error);
+//		}
 		else if($cardID == 9){
 			Log::WriteLog("cardID:9");
 			$pass = new EventPass(9, "pass.com.ipassstore.georgeAtTheCove", "GeorgeCove", "GeorgeAtTheCove", "GeorgeAtTheCove@ipassstore.com");
