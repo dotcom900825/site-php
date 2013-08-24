@@ -144,7 +144,7 @@ if ($card != null) {
 Now you can get real time information update from this digital card! 
 Congratulations and enjoy your card! ;)\n\n
 Best Regards
-iPassStore.com";
+iPassStore Team";
 
     //************************************************************************************
 	
