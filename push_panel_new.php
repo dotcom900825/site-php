@@ -68,7 +68,7 @@ require_once (dirname(__file__) . "/../lib/class/JsonInterface.php");
                     $defaultCardId = -1;
                     if(isset($_REQUEST['cardId']) && $_REQUEST['cardId'] != "" && in_array($_REQUEST['cardId'], $options))
                         $defaultCardId = $_REQUEST['cardId'];
-                    print "<select name='cardId' onChange=\"loadCardContent(this)\">";
+                    print "<select id='selectCardId' name='cardId' onChange=\"loadCardContent(this)\">";
                     foreach ($options as $cardName => $cardId) {
                         if($defaultCardId == -1){
                             $defaultCardId = $cardId;
