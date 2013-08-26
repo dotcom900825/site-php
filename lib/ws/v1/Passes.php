@@ -122,7 +122,7 @@ class Passes
 		Log::WriteLog("keyPath:$keyPath \n sourcePath:$sourcePath \n keyPassword:$keyPassword \n passTypeID:$passTypeID \n cardID:$cardID");
 		if($cardID == 3){
 			Log::WriteLog("cardID:3");
-			$pass = new EventPass(3, "pass.com.ipassstore.ucsdcssa", "iPassStore", "iPassStore", "org@ipassstore.com");
+			$pass = new EventPass(3, "pass.com.ipassstore.dev", "iPassStore", "iPassStore", "org@ipassstore.com");
 			$pass = $pass->createPassWithExistingSerialNr($error);
 		}
 		else if($cardID == 4){

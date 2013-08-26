@@ -5,13 +5,13 @@ require_once (dirname(__file__) . "/../../../lib/class/EventPass.php");
 
 // After creating the pass for the first time the following 3 lines of
 // code is enough to function
-$card = new EventPass(3, "pass.com.ipassstore.dev", "iPassStore", "iPassStore",
-"org@ipassstore.com");
-$card = $card->createPassWithExistingSerialNr($error);
-$card->outputPassBundleAsWebDownload();
+//$card = new EventPass(3, "pass.com.ipassstore.dev", "iPassStore", "iPassStore",
+//"org@ipassstore.com");
+//$card = $card->createPassWithExistingSerialNr($error);
+//$card->outputPassBundleAsWebDownload();
 
 
-/*
+
 //When you creat the card for the first time, you need to uncomment all
 //the following code, make the bottom part html, and press create button
 //on this page, after that, you can comment them out, and have the three
@@ -29,7 +29,7 @@ $card->outputPassBundleAsWebDownload();
 }
 
 
-
+?>
 
 
 <!DOCTYPE HTML>
@@ -49,8 +49,8 @@ $card->outputPassBundleAsWebDownload();
 </form>
 </body>
 </html>
-*/
-?>
+
+
 
 
 
