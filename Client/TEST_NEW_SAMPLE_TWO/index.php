@@ -5,7 +5,7 @@ require_once (dirname(__file__) . "/../../../lib/class/EventPass.php");
 
 // After creating the pass for the first time the following 3 lines of
 // code is enough to function
-$card = new EventPass(3, "pass.com.ipassstore.ucsdcssa", "iPassStore", "iPassStore",
+$card = new EventPass(3, "pass.com.ipassstore.dev", "iPassStore", "iPassStore",
 "org@ipassstore.com");
 $card = $card->createPassWithExistingSerialNr($error);
 $card->outputPassBundleAsWebDownload();
@@ -17,7 +17,7 @@ $card->outputPassBundleAsWebDownload();
 //on this page, after that, you can comment them out, and have the three
 //lines of code above to handle everything.
 if (isset($_GET['action'])) {
-$card = new EventPass(3, "pass.com.ipassstore.ucsdcssa", "iPassStore", "iPassStore",
+$card = new EventPass(3, "pass.com.ipassstore.dev", "iPassStore", "iPassStore",
 "org@ipassstore.com");
 $action = $_GET["action"];
 if ($action == "create") {
