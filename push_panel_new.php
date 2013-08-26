@@ -210,6 +210,7 @@ require_once (dirname(__file__) . "/../lib/class/JsonInterface.php");
                     ?>
                 </div>
                 <img class="lengend-sample-picture" src="resource/image/storecard-front-lengend.png" alt="" style="width:800px;" />
+                <div id="SampleLabel"><label>Sample</label></div>
             </div>
         </div>
         <div id="operation-panel" class="panel">

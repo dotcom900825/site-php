@@ -113,6 +113,15 @@ div#barcode_altText-wrapper{
     margin-left:642px;
     margin-top:500px;
 }
+div#SampleLabel{
+    position:absolute;
+    margin-left:360px;
+    margin-top:380px;
+    color:red;
+}
+div#SampleLabel>label{
+    font-size:30px;
+}
 
 /*normal*/
 input#push-button{
