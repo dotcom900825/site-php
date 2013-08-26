@@ -1152,6 +1152,33 @@ footer .notice p {
 	margin-top: 40px;
 }
 
+#globalfooter ul.piped a { 
+	padding: 0 0 0 1.5em; 
+	margin-left: 1.5em; 
+	border-left: 1px solid #d0d0d0; 
+}
+
+#globalfooter .gf-links { 
+	float: right; 
+	margin: 18px 3px 9px 0; 
+}
+
+#globalfooter .gf-sosumi { 
+	clear: both; 
+	idth: 100%; 
+	border-top: 1px solid #ddd; 
+	padding-top: 9px; 
+}
+
+#globalfooter .gf-sosumi a { 
+	padding: 0 10px; 
+}
+
+#globalfooter .gf-sosumi p { 
+	float: left; 
+	margin-left: 3px; 
+}
+
 /* @end */
 
 #fancybox-close {

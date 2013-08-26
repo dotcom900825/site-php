@@ -115,16 +115,21 @@ class Passes
         // absolute path to pass files
         $keyPath = dirname(__file__) . DataInterface::getPathByOrgIdAndCardId($passTypeID,
             $cardID);
-        //TODO: start attacking the bug here
+
         // absolute path to pass source files
         $sourcePath = $keyPath . "/source";
         //###########################################################
 		Log::WriteLog("keyPath:$keyPath \n sourcePath:$sourcePath \n keyPassword:$keyPassword \n passTypeID:$passTypeID \n cardID:$cardID");
-		if($cardID == 4){
+		if($cardID == 3){
+			Log::WriteLog("cardID:3");
+			$pass = new EventPass(3, "pass.com.ipassstore.ucsdcssa", "iPassStore", "iPassStore", "org@ipassstore.com");
+			$pass = $pass->createPassWithExistingSerialNr($error);
+		}
+		else if($cardID == 4){
 			Log::WriteLog("cardID:4");
 			$pass = new GenericPass(4, "pass.com.ipassstore.dailyFreeAppGame", ".com", "iPassStore", "admin@iPassStore.com");
 			$pass = $pass->createPassWithExistingSerialNr($error);
-		}
+		}		
         else if($cardID == 6){
             Log::WriteLog("cardID:6");
             $pass = new EventPass(6, "pass.com.ipassstore.ucsduta", "UTA", "UCSD UTA", "tmp@gmail.com");

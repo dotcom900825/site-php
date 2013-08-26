@@ -149,6 +149,18 @@
 
 				<!-- * Social Box Starts-->
 				<div class='social_box'>
+				
+					<!-- Facebook JavaScript SDK BEGIN -->
+					<div id="fb-root"></div>
+					<script>(function(d, s, id) {
+						var js, fjs = d.getElementsByTagName(s)[0];
+						if (d.getElementById(id)) return;
+						js = d.createElement(s); js.id = id;
+						js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=434872899943225";
+						fjs.parentNode.insertBefore(js, fjs);
+						}(document, 'script', 'facebook-jssdk'));
+					</script>
+					<!-- Facebook JS SDK END -->
 
 					<!-- * Facebook Like Button-->
 					<div class="fb-like" data-href="https://www.ipassstore.com/Client/UCSD_CSSA_Membership_Card/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
@@ -361,35 +373,23 @@
 </section>
 
 
-
 		<footer>
 			<nav>
 				<ul>
 					<li><a href="" title="Login and manage your passes">Developer Login</a></li>
 				</ul>
 			</nav>
-			<section class="notice">
-				<p><strong>Notice:</strong> iPassStore is providing links to these Passes as a courtesy, and makes no representations regarding the Passes or any information related thereto. Any questions, complaints or claims regarding the Pass contents must be directed to the appropriate Pass vendor.</p>
-			</section>
+			<div class="gf-sosumi">
+				<p>Copyright © 2013 iPassStore.com. All rights reserved.</p>
+				<ul class="piped">
+					<li><a href="terms.html" target="_blank" class="first">Terms of Use</a></li>
+				</ul>
+			</div>										
 		</footer>
-
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.js"></script>
 	<script type="text/javascript" src="../../src/scripts/html5.js"></script>
 <script type="text/javascript" src="../../src/scripts/store.js"></script>
-
-
-<!-- Facebook JavaScript SDK BEGIN -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=434872899943225";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
-<!-- Facebook JS SDK END -->
 
 
 </body>

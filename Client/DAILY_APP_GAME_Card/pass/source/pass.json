@@ -5,7 +5,7 @@
     "teamIdentifier": "3JAYL5R2NX",
     "webServiceURL": "https://www.ipassstore.com/lib/ws/",
     "associatedStoreIdentifiers": [
-        601538051
+        645949180
     ],
     "authenticationToken": "333c2f02a58b9f19b6d9de5e6be8beddf7c8ed63",
     "barcode": {
@@ -26,7 +26,7 @@
             {
                 "key": "app_name",
                 "label": "App of the Day",
-                "value": "Amateur Surgeon 3",
+                "value": "Jelly Splash",
                 "changeMessage": "Your daily free App is here: %@"
             }
         ],
@@ -34,7 +34,7 @@
             {
                 "key": "developer",
                 "label": "Developer",
-                "value": "[adult swim]"
+                "value": "wooga"
             }
         ],
         "auxiliaryFields": [

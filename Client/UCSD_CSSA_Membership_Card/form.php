@@ -57,7 +57,7 @@
 
             <div data-role="fieldcontain" class="InputContainer">
                 <fieldset data-role="controlgroup">
-                    <legend><a href="multipage.html" rel="external">Terms and Conditions</a></legend>
+                    <legend><a href="../../terms.html" target="_blank" rel="external">Terms and Conditions</a></legend>
                     <label><input type="checkbox" name="checkbox-1"/>I agree</label>
                 </fieldset>
             </div>
