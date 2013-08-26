@@ -33,8 +33,8 @@ function validator(name, value){
     }
 }
 function push(){
-    console.log("push");
-    var cardId = $('form>select').val();
+    var cardId = $('#selectCardId').val();
+    console.log("push:"+cardId);
     $.ajax({
         type : 'POST',
         url : "./../../lib/ws/push.php",
