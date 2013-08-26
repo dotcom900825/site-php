@@ -7,7 +7,7 @@
     <title>iPass Store - Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../src/jquery.mobile/jquery.mobile-1.3.2.min.css"/>
-    <script src="../../src/scripts/jquery-1.9.1.min.js"></script>
+    <script src="../../src/scripts/jquery.min.js"></script>
     <script src="../../src/jquery.mobile/jquery.mobile-1.3.2.min.js"></script>
 
 </head>

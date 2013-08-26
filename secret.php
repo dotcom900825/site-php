@@ -7,7 +7,7 @@ session_start();
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<script src="src/scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+		<script src="src/scripts/jquery.min.js" type="text/javascript"></script>
 		<script type="text/javascript" src="src/scripts/fancybox/jquery.fancybox-1.3.4_patch.js"></script>
 		<link rel="stylesheet" href="src/scripts/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
 		<script src="src/scripts/index.js" type="text/javascript"></script>

@@ -13,7 +13,7 @@ require_once (dirname(__file__) . "/../lib/class/JsonInterface.php");
     <title></title>
     <link rel="stylesheet" href="src/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="src/bootstrap/css/bootstrap-fileupload.min.css" />
-    <script type="text/javascript" src="src/scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="src/scripts/jquery.min.js"></script>
     <script type="text/javascript" src="src/bootstrap/js/bootstrap-fileupload.min.js"></script>
     <script type="text/javascript" src="src/scripts/push_panel.js"></script>
     <!-- include BlockUI -->
