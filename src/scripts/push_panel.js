@@ -67,7 +67,6 @@ function discardChange(){
         },
         success : function(result) {
             $('#main-form').replaceWith($(result).find('#main-form'));
-            console.log($(result).find('div.wrapper'));
             bindSubmit();
         },
         error : function() {
@@ -87,7 +86,7 @@ function loadCardContent(sel){
         },
         success : function(result) {
             $('#main-form').replaceWith($(result).find('#main-form'));
-            console.log($(result).find('div.wrapper'));
+            bindSubmit();
         },
         error : function() {
         }
