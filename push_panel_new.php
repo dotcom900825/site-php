@@ -33,9 +33,12 @@ require_once (dirname(__file__) . "/../lib/class/JsonInterface.php");
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-
                 <!-- Be sure to leave the brand out there if you want it shown -->
-                <a class="brand" href="index.html">iPassStore</a>
+                <ul class="nav"><li class="active"><a class="brand" href="index.html">iPassStore</a></li></ul>
+                <ul class="nav">
+                    <li><a href="./PassDesigner/index.php">PassDesigner</a></li>
+                </ul>
+
                 <ul class="pull-right">
                     <form action="login.php" class="navbar-form" method="post">
                         <input name="action" value="Logout" type="submit" class="btn btn-primary"/>
