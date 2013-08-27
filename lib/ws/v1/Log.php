@@ -1,7 +1,10 @@
 <?php
+require_once (dirname(__file__) . "/../../../../lib/class/config.php");
 class Log {
     //takes in the request URL parameters and creates a response
     function __construct($params) {
+        $this->emailTo = configs::$errorReportEmail;
+        $this->emailFrom = configs::$errorReportEmailFrom;
         $method = strtolower($_SERVER['REQUEST_METHOD']);
         switch ($method) {
             //save a message to the log 
@@ -40,12 +43,10 @@ class Log {
 
         //validate the input
         if ($payload && $payload['logs']) { 
-            $emailFrom = "noreply@ipassstore.com";
-            $emailTo = "admin@ipassstore.com";
-            mail($emailTo,
+            mail($this->emailTo,
                 "Apple Pass Service Log",
                 "Log message on ".date("Y-m-d H:i:s")."\n".
-                print_r($payload['logs'],true), "From: ".$emailFrom);
+                print_r($payload['logs'],true), "From: ".($this->emailFrom));
         }
         $this->WriteLog(print_r($payload,true));
     }
