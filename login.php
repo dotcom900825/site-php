@@ -15,7 +15,7 @@ if (isset($_POST['action']) && isset($_POST['username']) && isset($_POST['passwo
     session_destroy();
     header("Location: login_panel.php");
 } else if (isset($_POST['action']) && $_POST['action'] == "Login") {
-    echo "Login failed!\n";
+    header("Location: login_panel.php?error_message=Sorry, login failed. Please double check your account information.");
 } else {
     echo "Unexpected error\n";
 }

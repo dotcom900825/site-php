@@ -11,8 +11,8 @@ if (isset($_SESSION['status']) && $_SESSION['status'] == "In") {
     <meta charset="UTF-8">
     <script src="src/scripts/jquery.min.js" type="text/javascript"></script>
     <script src="src/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-    <link media="all" rel="stylesheet" href="src/bootstrap/css/bootstrap.min.css" type="text/css" />
-    <link media="all" rel="stylesheet" href="src/style/secret_new.css" type="text/css" />
+    <link media="all" rel="stylesheet" href="src/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link media="all" rel="stylesheet" href="src/style/secret_new.css" type="text/css"/>
     <title>iPass Store</title>
 </head>
 <body>
@@ -20,11 +20,12 @@ if (isset($_SESSION['status']) && $_SESSION['status'] == "In") {
 <div class="Wrapper container">
     <div class="LoginPanel">
     </div>
-    <div class="row" >
+    <div class="row">
         <h1 class="welcome-message">iPass Store</h1>
         <h4 class="welcome-message">Welcom to the iPassStore admin panel</h4>
-        <div id="login-panel" class="container" >
-            <form class="form-signin" name="login" action="login.php?test=new" method="post" >
+
+        <div id="login-panel" class="container">
+            <form class="form-signin" name="login" action="login.php?test=new" method="post">
                 <h3 class="form-signin-heading">Please sign in</h3>
                 <input type="text" name="username" class="input-block-level" placeholder="UserName">
                 <input type="password" name="password" class="input-block-level" placeholder="Password">
@@ -35,6 +36,13 @@ if (isset($_SESSION['status']) && $_SESSION['status'] == "In") {
             </form>
         </div>
     </div>
+    <?php if (isset($_REQUEST['error_message'])) {
+        echo "<div class=\"alert alert-error\">";
+    } else {
+        echo "<div class=\"alert alert-error\" style='display:none'>";
+    }?>
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <?php  echo "<strong>Error:</strong>   " . $_REQUEST['error_message']  ?>
+    </div>
 </div>
-
 </body>
