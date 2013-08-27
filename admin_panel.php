@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['status']) || $_SESSION['status'] != "In") {
-    header("Location: secret_new.php");
+    header("Location: login_panel.php");
 }
 require_once (dirname(__file__) . "/../lib/class/DataInterface.php");
 require_once (dirname(__file__) . "/../lib/class/JsonInterface.php");

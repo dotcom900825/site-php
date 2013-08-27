@@ -1,8 +1,8 @@
 <?php
 
 session_start();
-if (isset($_SESSION['status']) && $_SESSION['status'] != "In") {
-    header("Location: push_panel_new.php");
+if (isset($_SESSION['status']) && $_SESSION['status'] == "In") {
+    header("Location: admin_panel.php");
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
