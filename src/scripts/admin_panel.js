@@ -83,7 +83,7 @@ function discardChange() {
     console.log(cardId);
     $.ajax({
         type: 'POST',
-        url: "./../../admin_panel.php",
+        url: "./../../admin.php",
         data: {'cardId': cardId},
         beforeSend: function () {
             blockUI();
@@ -106,7 +106,7 @@ function loadCardContent(sel) {
     console.log(cardId);
     $.ajax({
         type: 'POST',
-        url: "./../../admin_panel.php",
+        url: "./../../admin.php",
         data: {'cardId': cardId},
         beforeSend: function () {
             blockUI();

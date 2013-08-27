@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['status']) || $_SESSION['status'] != "In") {
-    header("Location: ../login_panel.php");
+    header("Location: ../login.php");
 }
 ?>
 <!DOCTYPE html>

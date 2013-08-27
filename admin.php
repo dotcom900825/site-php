@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['status']) || $_SESSION['status'] != "In") {
-    header("Location: login_panel.php");
+    header("Location: login.php");
 }
 require_once (dirname(__file__) . "/../lib/class/DataInterface.php");
 require_once (dirname(__file__) . "/../lib/class/JsonInterface.php");
@@ -40,7 +40,7 @@ require_once (dirname(__file__) . "/../lib/class/JsonInterface.php");
                 </ul>
 
                 <ul class="pull-right">
-                    <form action="login.php" class="navbar-form" method="post">
+                    <form action="lib/ws/login.php" class="navbar-form" method="post">
                         <input name="action" value="Logout" type="submit" class="btn btn-primary"/>
                     </form>
                 </ul>
