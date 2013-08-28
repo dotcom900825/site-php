@@ -6,21 +6,17 @@ require_once (dirname(__file__) . "/../../../lib/class/StorePass.php");
 DebugLog::WriteLogWithFormat(dirname(__file__)."/getpass.php");
 
 $emailSubject = array("UCSD_UTA_Membership_Card" => "Your UCSD UTA membership card has arrived",
-					"UCSD_CSSA_Membership_Card" => "Your UCSD CSSA membership card has arrived"
-);
-$emailContent = array("UCSD_UTA_Membership_Card" => "Thank you for participating! 
-Now you can get real time information update and all the benefits of members!
-Congratulations again, now you are a true UTA fan and loyal member, 
-enjoy your digital membership card! ;)\n\n
-Best Regards
-iPassStore.com",
-"UCSD_CSSA_Membership_Card" => "Thank you for participating! 
-Now you can use this discount card at stores listed in the back of this card.
-Congratulations again, now you are a true CSSA fan and loyal member, 
-enjoy your free membership discount card. :)\n\n
-Best Regards
-iPassStore.com"
-);
+					"UCSD_CSSA_Membership_Card" => "Your UCSD CSSA membership card has arrived" );
+$emailContent = array("UCSD_UTA_Membership_Card" => ", Thank you for participating! \n"
+."Now you can get real time information update and all the benefits of members!\n"
+."Congratulations again, now you are a true UTA fan and loyal member,"
+."enjoy your digital membership card! ;)\n\n" ."Best Regards\n" ."iPassStore.com\n",
+"UCSD_CSSA_Membership_Card" => ", Thank you for participating! \n"
+."Now you can use this discount card at stores listed in the back of this card.\n"
+."Congratulations again, now you are a true CSSA fan and loyal member, "
+."enjoy your free membership discount card. :)\n\n"
+."Best Regards\n"
+."iPassStore.com\n" );
 $instructions = "\n\nInstructions:\n If you are iPhone/iPod Touch user, please view this email in the \"Mail\" "
 ."application on your device, download the attachment and your device will automatically recognize your pass.\n\n"
 ."If you are android user, please download the \"PassWallet\" app from play store, then view this email on "
