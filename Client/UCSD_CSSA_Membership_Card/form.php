@@ -50,7 +50,7 @@
                 <label for="email">Email</label>
                 <input id="email" name="user_email" type="text"/>
             </div>
-            <div data-role="fieldcontain" class="InputContainer">
+            <div data-role="fieldcontain" class="InputContainer" style="display:none;">
                 <label for="password">Password:</label>
                 <input type="password" name="password" id="password" value=""/>
             </div>
