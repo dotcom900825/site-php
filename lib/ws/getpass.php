@@ -21,11 +21,19 @@ enjoy your free membership discount card. :)\n\n
 Best Regards
 iPassStore.com"
 );
+$instructions = "\n\nInstructions:\n If you are iPhone/iPod Touch user, please view this email in the \"Mail\" "
+."application on your device, download the attachment and your device will automatically recognize your pass.\n\n"
+."If you are android user, please download the \"PassWallet\" app from play store, then view this email on "
+."your device and download the attachment, PassWallet will automatically recognize your pass.\n\n"
+."We worked really hard to put everything together, and we definitely want you to have a great"
+."user experience. Your feedback is extremely valuable to us. Please let us know about any problems "
+."you might have in the future, we are here to help. For Passbook related feedback or question, feel "
+."free to send an email to: support@ipassstore.com.";
 
 $cardFolder = $_POST['folder'];
 $fullpath = "./../../Client/$cardFolder";
 
-$no_password_filter = array("UCSD_UTA_Membership_Card_StorePass");
+$no_password_filter = array("UCSD_CSSA_Membership_Card");
 
 // input validation check
 if (strlen($_POST['first_name']) < 2) {
@@ -150,7 +158,7 @@ iPassStore Team";
 	
 	if(array_key_exists($cardFolder,$emailSubject)){
 		$subject = $emailSubject[$cardFolder];
-		$message = $emailContent[$cardFolder];
+		$message = $firstName.$emailContent[$cardFolder].$instructions;
 	}
 	
     //send it over to the user
