@@ -29,17 +29,17 @@ $no_password_filter = array("UCSD_UTA_Membership_Card_StorePass");
 
 // input validation check
 if (strlen($_POST['first_name']) < 2) {
-    header("Location: $fullpath/index.php?message=Sorry, please enter a valid first name!");
+    header("Location: $fullpath/form.php?message=Sorry, please enter a valid first name!");
     exit();
 }
 if (strlen($_POST['last_name']) < 2) {
-    header("Location: $fullpath/index.php?message=Sorry, please enter a valid last name");
+    header("Location: $fullpath/form.php?message=Sorry, please enter a valid last name");
     exit();
 }
 // email address validation
 
 if (!filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL)) {
-    header("Location: $fullpath/index.php?message=Sorry, please enter a valid email");
+    header("Location: $fullpath/form.php?message=Sorry, please enter a valid email");
     exit();
 }
 
@@ -47,7 +47,7 @@ if (!filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL)) {
 // password check
 if(! in_array($cardFolder,$no_password_filter)){
 	if ($_POST['password'] != "aaa") {
-		header("Location: $fullpath/index.php?message=Oops! Password did not match! Try again.");
+		header("Location: $fullpath/form.php?message=Oops! Password did not match! Try again.");
 		exit();
 	}
 }
@@ -98,7 +98,7 @@ $userEmail = $_POST['user_email'];
 
 if (!DataInterface::ifRegistered($userEmail, $cardID)) {
     //no pass was found
-    header("Location: $fullpath/index.php?message=Sorry, this email address has already been registered.");
+    header("Location: $fullpath/form.php?message=Sorry, this email address has already been registered.");
     exit();
 }
 
@@ -158,7 +158,7 @@ iPassStore Team";
     //$card->outputPassBundleAsWebDownload();
 
     //show thank you message
-    header("Location: $fullpath/index.php?message=Congratulations! Your membership card has been sent to " .
+    header("Location: $fullpath/form.php?message=Congratulations! Your membership card has been sent to " .
         $_POST['user_email']);
 
 } else {
