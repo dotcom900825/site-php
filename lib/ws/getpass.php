@@ -47,6 +47,11 @@ if (!filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL)) {
     exit();
 }
 
+if($_POST['checkTerms'] == false){
+    header("Location: $fullpath/form.php?message=You can't proceed without agreeing to the terms and conditions.");
+    exit();
+}
+
 //**********************************************************************************
 // password check
 if(! in_array($cardFolder,$no_password_filter)){

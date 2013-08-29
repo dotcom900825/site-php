@@ -11,7 +11,17 @@
     <script src="../../src/jquery.mobile/jquery.mobile-1.3.2.min.js"></script>
 
 </head>
+<script>
+    function checkTerm(){
+        if($("input#checkTerms").is(':checked')){
+            $("button#submitButton").button('enable');
+        }
+        else{
+            $("button#submitButton").button('disable');
+        }
+    }
 
+</script>
 <!--Error Message Style-->
 <style>
     div.InputContainer>label {
@@ -58,12 +68,12 @@
             <div data-role="fieldcontain" class="InputContainer">
                 <fieldset data-role="controlgroup">
                     <legend><a href="../../terms.html" target="_blank" rel="external">Terms and Conditions</a></legend>
-                    <label><input type="checkbox" name="checkbox-1"/>I agree</label>
+                    <label><input id="checkTerms" type="checkbox" name="checkTerms" onchange="checkTerm()">I agree</label>
                 </fieldset>
             </div>
             <input type="hidden" name="folder" value="UCSD_CSSA_Membership_Card"/>
             <input type="hidden" name="id" value="8"/>
-            <button type="submit" value="Submit Values">Submit</button>
+            <button type="submit" value="Submit Values" id="submitButton" disabled>Submit</button>
             <div>
                 <h3 class="error">
                     <?php
