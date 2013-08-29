@@ -25,11 +25,11 @@
 	<meta property="og:type"  content="website" />
 	<meta property="og:url" content="https://www.ipassstore.com/Client/UCSD_CSSA_Membership_Card/"/>
 	<meta property="og:image" content="https://www.ipassstore.com/resource/image/iPassStore_icon.png"/>
-	<meta property="og:description" content="UCSD CSSA Digital Membership Card Program"/>
+	<meta property="og:description" content="SD CSSA Digital Membership Card Program"/>
 
 
 	<!-- * Title-->
-	<title>iPassStore - UCSD CSSA</title>
+	<title>iPassStore - SD CSSA</title>
 
 
 	<link type="text/css" href="../../src/style/store.css" rel="stylesheet" />
@@ -87,7 +87,7 @@
 	<!-- * Pass Info-->
 	<section id="product-info" class="collection">
 		<header>
-			<h2>UCSD Chinese Students & Scholars Association</h2>
+			<h2>SD Chinese Students & Scholars Association</h2>
 		</header>
 
 		<div class="product-info-wrapper stacks">
@@ -118,9 +118,7 @@
 
 
 
-					<p>CSSA全称是Chinese Student and Scholar Association，中文叫做中国学生学者联合会。UCSD的CSSA是洛杉矶中国大使馆的下属机构，是面向UCSD全体华人留学生和学者的，以服务为宗旨的公益组织。 <br/><br/>
-
-					   With our digital membership card, members can get latest event information, announcements as well as discount updates.</p>
+					<p>CSSA全称是Chinese Student and Scholar Association，中文叫做中国学生学者联合会。圣地亚哥地区三所大学(SDSU, UCSD, USD)的中国学生学者联合会(CSSA)强强联合，共同打造圣地亚哥地区最大最好最权威的华人学生学者组织——大圣地亚哥学联(SDCSSA)！会员打折实体卡即将在九月正式发布，囊括圣地亚哥地区数十几家校内外餐厅折扣！配套Passbook电子会员卡同步发布，敬请期待！  <br/><br/>
 
 					  <p>Send this card to my email:</p>
 
