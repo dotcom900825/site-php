@@ -153,13 +153,17 @@ div.control-group{
 }
 
 /*normal*/
-input#push-button{
+input#push_button {
     float:right;
     /*margin-left:50px;*/
 }
+input#save_button{
+    float:right;
+    margin-right:3px;
+}
 div#operation-panel{
     display:block;
-    margin-top:10px;
+    margin-bottom:10px;
     width:821px;
     margin-left:auto;
     margin-right:auto;
