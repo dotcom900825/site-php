@@ -3,6 +3,7 @@ div.absolute-wrapper-inner{
     position:absolute;
 }
 div.absolute-wrapper-outer {
+    overflow-y: scroll;/*not sure about this*/
     position:relative;
     z-index:0;
     padding:15px;
@@ -125,14 +126,30 @@ div#SampleLabel>label{
 
 /*back*/
 div#storecard-back-wrapper div.item{
+    width:460px;
+    display:inline-block;
     margin-left: 110px;
     margin-right: 60px;
-    background-color: #808080;
+    margin-top: 15px;
+    background-color: #F2F2F2;
     padding:5px;
     -moz-border-radius: 5px;
     -khtml-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
+}
+div#storecard-back-wrapper div.content-wrapper{
+    display: inline-block;
+}
+button.content-delete{
+    float:right;
+}
+button.form-operation{
+    float:right;
+    margin-left:5px;
+}
+div.control-group{
+    margin-left:-60px;
 }
 
 /*normal*/

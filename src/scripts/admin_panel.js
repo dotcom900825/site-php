@@ -122,3 +122,28 @@ function loadCardContent(sel) {
         }
     });
 }
+
+
+function addContentGroup(){
+    var maxCounter = $("#back_max_counter").val();
+    var newItem = $("#hidden_item").clone();
+    console.log(newItem);
+
+    $(newItem).attr('style','');
+    $(newItem).attr('id','');
+
+    var labelName = $(newItem).find("input.item-label-input").attr("name");
+    var newLabelName = labelName.split(":").join(maxCounter);
+    $(newItem).find("input.item-label-input").attr("name","backjson_"+newLabelName);
+
+    var contentName = $(newItem).find("textarea.item-content-input").attr("name");
+    var newContentName = contentName.split(":").join(maxCounter);
+    $(newItem).find("textarea.item-content-input").attr("name","backjson_"+newContentName);
+
+    $("#hidden_item").before(newItem);
+    $("#back_max_counter").val(++maxCounter);
+}
+
+function deleteContentGroup(self){
+    $(self).parent().remove();
+}
