@@ -53,6 +53,8 @@ function blockUI() {
 
 function bindSubmit() {
     bindFlip();
+    bindColorPicker($('div#foreground_color_picker_placeholder'),$("input#json_foregroundColor_input"));
+    bindColorPicker($('div#background_color_picker_placeholder'),$("input#json_backgroundColor_input"));
     // this is the id of the submit button
     $("#main-form").submit(function () {
         var url = "/lib/ws/save.php"; // the script where you handle the form input.
