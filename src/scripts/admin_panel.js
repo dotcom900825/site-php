@@ -118,7 +118,7 @@ function saveAndPush() {
 
 function discardChange() {
     console.log("abandon change");
-    var cardId = $('form>select').val();
+    var cardId = $('select#selectCardId').val();
     console.log(cardId);
     $.ajax({
         type: 'POST',
