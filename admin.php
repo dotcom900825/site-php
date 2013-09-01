@@ -265,36 +265,35 @@ if (isset($_GET['message'])) {
 </div>
 <div id="storecard-back-wrapper" class="form-horizontal" style="display:none;">
     <?php
-    $backFields = $jsonContent[$cardType]["backFields"];
-    $numOfBackContentGroups = count($backFields);
-    print "<input name=\"back_max_counter\" id=\"back_max_counter\" type=\"hidden\" value=\""
-        . $numOfBackContentGroups . "\"/>";
-    $counter = 0;
-    foreach ($backFields as $contentGroup) {
-        print "<div class=\"item\">";
-        print "    <div class=\"content-wrapper\">";
-        print "        <div class=\"control-group\">";
-        print "            <label class=\"control-label lengend-label\">Item Label</label>";
-        print "            <div class=\"controls\">";
-        print "                <input class=\"item-label-input\" type=\"text\" name=\"backjson_"
-            . $cardType . "_backFields_" . $counter . "_label\" value=\""
-            . $contentGroup["label"] . "\"/>";
-        print "            </div>";
-        print "        </div>";
-        print "        <div class=\"control-group\">";
-        print "            <label class=\"control-label lengend-label\">Content</label>";
-        print "            <div class=\"controls\">";
-        print "               <textarea class=\"item-content-input\" name=\"backjson_"
-            . $cardType . "_backFields_" . $counter . "_value\" rows=\"2\" cols=\"30\">"
-            . $contentGroup["value"] . "</textarea>";
-        print "            </div>";
-        print "        </div>";
-        print "    </div>";
-        if ($counter > 0) {
+    if (isset($jsonContent[$cardType]["backFields"])) {
+        $backFields = $jsonContent[$cardType]["backFields"];
+        $numOfBackContentGroups = count($backFields);
+        print "<input name=\"back_max_counter\" id=\"back_max_counter\" type=\"hidden\" value=\""
+            . $numOfBackContentGroups . "\"/>";
+        foreach ($backFields as $contentGroup) {
+            print "<div class=\"item\">";
+            print "    <div class=\"content-wrapper\">";
+            print "        <div class=\"control-group\">";
+            print "            <label class=\"control-label lengend-label\">Item Label</label>";
+            print "            <div class=\"controls\">";
+            print "                <input class=\"item-label-input\" type=\"text\" name=\"backjson_"
+                . $cardType . "_backFields_" . $counter . "_label\" value=\""
+                . $contentGroup["label"] . "\"/>";
+            print "            </div>";
+            print "        </div>";
+            print "        <div class=\"control-group\">";
+            print "            <label class=\"control-label lengend-label\">Content</label>";
+            print "            <div class=\"controls\">";
+            print "               <textarea class=\"item-content-input\" name=\"backjson_"
+                . $cardType . "_backFields_" . $counter . "_value\" rows=\"2\" cols=\"30\">"
+                . $contentGroup["value"] . "</textarea>";
+            print "            </div>";
+            print "        </div>";
+            print "    </div>";
             print "<button class=\"btn btn-danger content-delete\" type=\"button\" onclick=\"deleteContentGroup(this)\">Delete</button>";
+            print "</div>";
+            $counter++;
         }
-        print "</div>";
-        $counter++;
     }
     ?>
     <div class="item" id="hidden_item" style="display:none;">
