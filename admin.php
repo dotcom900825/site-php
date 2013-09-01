@@ -70,7 +70,7 @@ if (isset($_GET['message'])) {
 ?>
 <form id="main_form" action="/lib/ws/save.php" method="post">
 
-
+<div id="top_wrapper">
     <div id="select_card_wrapper">
         <div id="select_card">
             <label class="lengend-label">My cards:</label>
@@ -78,6 +78,7 @@ if (isset($_GET['message'])) {
             $options = DataInterface::getCardNamesAndIdByUsername($_SESSION['username']);
             $cardType = "storeCard";
             $cardDistributionType = "universal";
+            $jsonContent = array();
             if ($options == null) {
                 print "<p style=\"text-align:center;\"><strong class=\"warning-message\">No cards created yet!</strong></p>";
             } else {
@@ -108,163 +109,169 @@ if (isset($_GET['message'])) {
             ?>
         </div>
     </div>
-    <div id="">
-
+    <div id="change_message_wrapper">
+        <label class="lengend-label">Push Message</label>
+        <?php
+        $changeMessage = substr($jsonContent[$cardType]["headerFields"][0]["changeMessage"], 0, -2);
+        print "<input id=\"change_message_input\" type=\"text\" name=\"json_" . $cardType
+            . "_headerFields_0_changeMessage\" value=\"" . $changeMessage . "\"/>";
+        ?>
     </div>
-    <div id="operation_panel" class="panel">
-        <button type="button" class="btn btn-info" id="flip_card_button">Flip Card</button>
-        <input type="button" value="Discard Change" class="btn btn-warning" onClick="discardChange()"/>
-        <input id="push_button" type="button" value="Push" class="btn btn-primary" onClick="push()"/>
-        <input id="save_button" type="submit" value="Save" class="btn btn-primary"/>
-    </div>
-    <div class="absolute-wrapper-outer">
-        <?php echo "<input name=\"cardType\" type=\"hidden\" value=\"" . $cardType . "\" />";?>
-        <div id="storecard_front_lengend_wrapper" class="absolute-wrapper-inner">
-            <div id="logo_wrapper">
-                <label class="lengend-label" for="">Logo</label>
-                <!--                    <input type="file" name="pic_logo" disabled />-->
-                <div class="fileupload fileupload-new" data-provides="fileupload">
+</div>
+<div id="operation_panel" class="panel">
+    <button type="button" class="btn btn-info" id="flip_card_button">Flip Card</button>
+    <input type="button" value="Discard Change" class="btn btn-warning" onClick="discardChange()"/>
+    <input id="push_button" type="button" value="Push" class="btn btn-primary" onClick="push()"/>
+    <input id="save_button" type="submit" value="Save" class="btn btn-primary"/>
+</div>
+<div class="absolute-wrapper-outer">
+    <?php echo "<input name=\"cardType\" type=\"hidden\" value=\"" . $cardType . "\" />";?>
+    <div id="storecard_front_lengend_wrapper" class="absolute-wrapper-inner">
+        <div id="logo_wrapper">
+            <label class="lengend-label" for="">Logo</label>
+            <!--                    <input type="file" name="pic_logo" disabled />-->
+            <div class="fileupload fileupload-new" data-provides="fileupload">
                         <span class="btn btn-file disabled">
                             <span class="fileupload-new">Select file</span>
                             <span class="fileupload-exists">Change</span>
                             <input type="file" disabled/></span>
-                    <span class="fileupload-preview"></span>
-                    <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
-                </div>
-            </div>
-            <div id="logoText_wrapper">
-                <label class="lengend-label" for="">Logo Text</label>
-                <?php
-                $logoText = $jsonContent["logoText"];
-                print " <input class=\"content-input\" type=\"text\" name=\"json_logoText\" value=\"$logoText\"/>";
-                ?>
-            </div>
-            <div id="foreground_color_picker_wrapper">
-                <label class="lengend-label color-picker-label">Foreground color:</label>
-                <?php
-                $foregroundColorStr = $jsonContent["foregroundColor"];
-                $fColor = Utils::rgb2Html(Utils::extractRgbFromString($foregroundColorStr));
-                print "<input id=\"json_foregroundColor_input\" type=\"hidden\" name=\"json_foregroundColor\" value=\"" . $fColor . "\"/>";
-                print "<div id=\"foreground_color_picker_placeholder\" class=\"color-picker\" style=\"background-color: " . $fColor . ";\">";
-                ?>
-                <div></div>
+                <span class="fileupload-preview"></span>
+                <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
             </div>
         </div>
-        <div id="background_color_picker_wrapper">
-            <label class="lengend-label color-picker-label">Background color:</label>
+        <div id="logoText_wrapper">
+            <label class="lengend-label" for="">Logo Text</label>
             <?php
-            $backgroundColor = $jsonContent["backgroundColor"];
-            $bColor = Utils::rgb2Html(Utils::extractRgbFromString($backgroundColor));
-            print "<input id=\"json_backgroundColor_input\" type=\"hidden\" name=\"json_backgroundColor\" value=\"" . $bColor . "\"/>";
-            print "<div id=\"background_color_picker_placeholder\" class=\"color-picker\" style=\"background-color: " . $bColor . ";\">";
+            $logoText = $jsonContent["logoText"];
+            print " <input class=\"content-input\" type=\"text\" name=\"json_logoText\" value=\"$logoText\"/>";
+            ?>
+        </div>
+        <div id="foreground_color_picker_wrapper">
+            <label class="lengend-label color-picker-label">Foreground color:</label>
+            <?php
+            $foregroundColorStr = $jsonContent["foregroundColor"];
+            $fColor = Utils::rgb2Html(Utils::extractRgbFromString($foregroundColorStr));
+            print "<input id=\"json_foregroundColor_input\" type=\"hidden\" name=\"json_foregroundColor\" value=\"" . $fColor . "\"/>";
+            print "<div id=\"foreground_color_picker_placeholder\" class=\"color-picker\" style=\"background-color: " . $fColor . ";\">";
             ?>
             <div></div>
         </div>
     </div>
-    <div id="headerFields_label_wrapper">
-        <label class="lengend-label" for="">Title Label</label>
+    <div id="background_color_picker_wrapper">
+        <label class="lengend-label color-picker-label">Background color:</label>
         <?php
-        $headerFields_label = $jsonContent["$cardType"]["headerFields"][0]["label"];
-        print " <input class=\"content-input\" type=\"text\" name=\"json_"
-            . $cardType . "_headerFields_0_label\" value=\"$headerFields_label\"/>";
+        $backgroundColor = $jsonContent["backgroundColor"];
+        $bColor = Utils::rgb2Html(Utils::extractRgbFromString($backgroundColor));
+        print "<input id=\"json_backgroundColor_input\" type=\"hidden\" name=\"json_backgroundColor\" value=\"" . $bColor . "\"/>";
+        print "<div id=\"background_color_picker_placeholder\" class=\"color-picker\" style=\"background-color: " . $bColor . ";\">";
         ?>
+        <div></div>
     </div>
-    <div id="headerFields_value_wrapper">
-        <label class="lengend-label" for="">Title Content</label>
-        <?php
-        $headerFields_value = $jsonContent["$cardType"]["headerFields"][0]["value"];
-        print " <input class=\"content-input\" type=\"text\" name=\"json_"
-            . $cardType . "_headerFields_0_value\" value=\"$headerFields_value\"/>";
-        ?>
-    </div>
-    <div id="strip_wrapper">
-        <label class="lengend-label" for="">Main Picture</label>
+</div>
+<div id="headerFields_label_wrapper">
+    <label class="lengend-label" for="">Title Label</label>
+    <?php
+    $headerFields_label = $jsonContent["$cardType"]["headerFields"][0]["label"];
+    print " <input class=\"content-input\" type=\"text\" name=\"json_"
+        . $cardType . "_headerFields_0_label\" value=\"$headerFields_label\"/>";
+    ?>
+</div>
+<div id="headerFields_value_wrapper">
+    <label class="lengend-label" for="">Title Content</label>
+    <?php
+    $headerFields_value = $jsonContent["$cardType"]["headerFields"][0]["value"];
+    print " <input class=\"content-input\" type=\"text\" name=\"json_"
+        . $cardType . "_headerFields_0_value\" value=\"$headerFields_value\"/>";
+    ?>
+</div>
+<div id="strip_wrapper">
+    <label class="lengend-label" for="">Main Picture</label>
 
-        <div class="fileupload fileupload-new" data-provides="fileupload">
+    <div class="fileupload fileupload-new" data-provides="fileupload">
                         <span class="btn btn-file disabled">
                             <span class="fileupload-new">Select file</span>
                             <span class="fileupload-exists">Change</span>
                             <input type="file" disabled/></span>
-            <span class="fileupload-preview"></span>
-            <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
-        </div>
+        <span class="fileupload-preview"></span>
+        <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
     </div>
-    <div id="auxiliaryField0_label_wrapper">
-        <label class="lengend-label" for="">Section 1 Label</label>
+</div>
+<div id="auxiliaryField0_label_wrapper">
+    <label class="lengend-label" for="">Section 1 Label</label>
+    <?php
+    $auxiliaryFields_0_label = $jsonContent["$cardType"]["auxiliaryFields"][$startIndex]["label"];
+    print " <input class=\"content-input\" type=\"text\" name=\"json_"
+        . $cardType . "_auxiliaryFields_" . $startIndex . "_label\" value=\"$auxiliaryFields_0_label\"/>";
+    ?>
+</div>
+<div id="auxiliaryField0_value_wrapper">
+    <label class="lengend-label" for="">Section 1 Content</label>
+    <?php
+    $auxiliaryFields_0_value = $jsonContent["$cardType"]["auxiliaryFields"][$startIndex]["value"];
+    print " <input class=\"content-input\" type=\"text\" name=\"json_"
+        . $cardType . "_auxiliaryFields_" . $startIndex . "_value\" value=\"$auxiliaryFields_0_value\"/>";
+    ?>
+</div>
+<div id="auxiliaryField1_label_wrapper">
+    <label class="lengend-label" for="">Section 2 Label</label>
+    <?php
+    $auxiliaryFields_1_label = $jsonContent["$cardType"]["auxiliaryFields"][$startIndex + 1]["label"];
+    print " <input class=\"content-input\" type=\"text\" name=\"json_"
+        . $cardType . "_auxiliaryFields_" . ($startIndex + 1) . "_label\" value=\"$auxiliaryFields_1_label\"/>";
+    ?>
+</div>
+<div id="auxiliaryField1_value_wrapper">
+    <label class="lengend-label" for="">Section 2 Content</label>
+    <?php
+    $auxiliaryFields_1_value = $jsonContent["$cardType"]["auxiliaryFields"][$startIndex + 1]["value"];
+    print " <input class=\"content-input\" type=\"text\" name=\"json_"
+        . $cardType . "_auxiliaryFields_" . ($startIndex + 1) . "_value\" value=\"$auxiliaryFields_1_value\"/>";
+    ?>
+</div>
+<div id="barcode_message_wrapper">
+    <label class="lengend-label" for="">Barcode Content</label>
+    <?php
+    $barcode_message = $jsonContent["barcode"]["message"];
+    print " <input class=\"content-input\" type=\"text\" name=\"json_barcode_message\" value=\"$barcode_message\"/>";
+    ?>
+</div>
+<div id="barcode_format_wrapper">
+    <label class="lengend-label" for="">Barcode format</label>
+    <select id="barcode_select" name="json_barcode_format" onChange="save(this.value)">
         <?php
-        $auxiliaryFields_0_label = $jsonContent["$cardType"]["auxiliaryFields"][$startIndex]["label"];
-        print " <input class=\"content-input\" type=\"text\" name=\"json_"
-            . $cardType . "_auxiliaryFields_" . $startIndex . "_label\" value=\"$auxiliaryFields_0_label\"/>";
-        ?>
-    </div>
-    <div id="auxiliaryField0_value_wrapper">
-        <label class="lengend-label" for="">Section 1 Content</label>
-        <?php
-        $auxiliaryFields_0_value = $jsonContent["$cardType"]["auxiliaryFields"][$startIndex]["value"];
-        print " <input class=\"content-input\" type=\"text\" name=\"json_"
-            . $cardType . "_auxiliaryFields_" . $startIndex . "_value\" value=\"$auxiliaryFields_0_value\"/>";
-        ?>
-    </div>
-    <div id="auxiliaryField1_label_wrapper">
-        <label class="lengend-label" for="">Section 2 Label</label>
-        <?php
-        $auxiliaryFields_1_label = $jsonContent["$cardType"]["auxiliaryFields"][$startIndex + 1]["label"];
-        print " <input class=\"content-input\" type=\"text\" name=\"json_"
-            . $cardType . "_auxiliaryFields_" . ($startIndex + 1) . "_label\" value=\"$auxiliaryFields_1_label\"/>";
-        ?>
-    </div>
-    <div id="auxiliaryField1_value_wrapper">
-        <label class="lengend-label" for="">Section 2 Content</label>
-        <?php
-        $auxiliaryFields_1_value = $jsonContent["$cardType"]["auxiliaryFields"][$startIndex + 1]["value"];
-        print " <input class=\"content-input\" type=\"text\" name=\"json_"
-            . $cardType . "_auxiliaryFields_" . ($startIndex + 1) . "_value\" value=\"$auxiliaryFields_1_value\"/>";
-        ?>
-    </div>
-    <div id="barcode_message_wrapper">
-        <label class="lengend-label" for="">Barcode Content</label>
-        <?php
-        $barcode_message = $jsonContent["barcode"]["message"];
-        print " <input class=\"content-input\" type=\"text\" name=\"json_barcode_message\" value=\"$barcode_message\"/>";
-        ?>
-    </div>
-    <div id="barcode_format_wrapper">
-        <label class="lengend-label" for="">Barcode format</label>
-        <select id="barcode_select" name="json_barcode_format" onChange="save(this.value)">
-            <?php
-            $tmpVar = $jsonContent["barcode"]["format"];
+        $tmpVar = $jsonContent["barcode"]["format"];
 
-            $barcode_format_map = array("PKBarcodeFormatQR" => "",
-                "PKBarcodeFormatPDF417" => "",
-                "PKBarcodeFormatAztec" => "",
-                "None" => "");
-            if (array_key_exists($tmpVar, $barcode_format_map)) {
-                $barcode_format_map[$tmpVar] = "selected";
-            } else {
-                $barcode_format_map["None"] = "selected";
-            }
-            $qr = $barcode_format_map["PKBarcodeFormatQR"];
-            print "<option value=\"PKBarcodeFormatQR\" $qr>QR</option>";
-            $PDF417 = $barcode_format_map["PKBarcodeFormatPDF417"];
-            print "<option value=\"PKBarcodeFormatPDF417\" $PDF417>PDF417</option>";
-            $Aztec = $barcode_format_map["PKBarcodeFormatAztec"];
-            print "<option value=\"PKBarcodeFormatAztec\" $Aztec>Aztec</option>";
-            $None = $barcode_format_map["None"];
-            print "<option value=\"None\" $None>None</option>";
-            ?>
-        </select>
-    </div>
-    <div id="barcode_altText_wrapper">
-        <label class="lengend-label" for="">Info</label>
-        <?php
-        $barcode_altText = $jsonContent["barcode"]["altText"];
-        print " <input class=\"content-input\" type=\"text\" name=\"json_barcode_altText\" value=\"$barcode_altText\"/>";
+        $barcode_format_map = array("PKBarcodeFormatQR" => "",
+            "PKBarcodeFormatPDF417" => "",
+            "PKBarcodeFormatAztec" => "",
+            "None" => "");
+        if (array_key_exists($tmpVar, $barcode_format_map)) {
+            $barcode_format_map[$tmpVar] = "selected";
+        } else {
+            $barcode_format_map["None"] = "selected";
+        }
+        $qr = $barcode_format_map["PKBarcodeFormatQR"];
+        print "<option value=\"PKBarcodeFormatQR\" $qr>QR</option>";
+        $PDF417 = $barcode_format_map["PKBarcodeFormatPDF417"];
+        print "<option value=\"PKBarcodeFormatPDF417\" $PDF417>PDF417</option>";
+        $Aztec = $barcode_format_map["PKBarcodeFormatAztec"];
+        print "<option value=\"PKBarcodeFormatAztec\" $Aztec>Aztec</option>";
+        $None = $barcode_format_map["None"];
+        print "<option value=\"None\" $None>None</option>";
         ?>
-    </div>
-    <img class="lengend-sample-picture" src="resource/image/storecard-front-lengend.png" alt=""
-         style="width:800px;"/>
+    </select>
+</div>
+<div id="barcode_altText_wrapper">
+    <label class="lengend-label" for="">Info</label>
+    <?php
+    $barcode_altText = $jsonContent["barcode"]["altText"];
+    print " <input class=\"content-input\" type=\"text\" name=\"json_barcode_altText\" value=\"$barcode_altText\"/>";
+    ?>
+</div>
+<img class="lengend-sample-picture" src="resource/image/storecard-front-lengend.png" alt=""
+     style="width:800px;"/>
 
-    <div id="sample_label"><label>Sample</label></div>
+<div id="sample_label"><label>Sample</label></div>
 </div>
 <div id="storecard_back_wrapper" class="form-horizontal" style="display:none;">
     <?php

@@ -45,7 +45,11 @@ try {
             $path = explode('_', $key);
             $path = array_slice($path, 1);
             $path = implode('_', $path);
-            Utils::arrayAccessSetter($jsonContent, $path, $value);
+            if (Utils::endsWith($path, "changeMessage")) {
+                Utils::arrayAccessSetter($jsonContent, $path, "$value"."%@");
+            } else {
+                Utils::arrayAccessSetter($jsonContent, $path, $value);
+            }
         }
     }
     ksort($backContent);

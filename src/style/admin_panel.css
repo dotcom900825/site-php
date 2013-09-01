@@ -71,11 +71,19 @@ div.fileupload{
 #barcode_select {
     width:150px;
 }
-div#select_card {
-    width:830px;
-    margin-left:auto;
-    margin-right:auto;
-    display:block;
+div#top_wrapper {
+    width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+}
+div#select_card_wrapper {
+    display:inline-block;
+}
+div#change_message_wrapper{
+    display:inline-block;
+}
+input#change_message_input{
+    width:410px;
 }
 div#logoText_wrapper {
     margin-bottom: -7px;
