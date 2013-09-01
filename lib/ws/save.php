@@ -19,13 +19,13 @@ try {
     foreach ($_POST as $key => $value) {
         if (Utils::startsWith($key, "json")) {
             $frontContent[$key] = $value;
-        }else if(Utils::startsWith($key, "backjson")){
-            $splitName = explode("_",$key);
+        } else if (Utils::startsWith($key, "backjson")) {
+            $splitName = explode("_", $key);
             $num = $splitName[3];
             $field = $splitName[4];
-            if(isset($backContent[$num])){
+            if (isset($backContent[$num])) {
                 $backContent[$num][$field] = $value;
-            }else{
+            } else {
                 $backContent[$num] = array($field => $value);
             }
         }
@@ -36,15 +36,22 @@ try {
     $jsonContent = $jsonObject->getJsonContent();
 
     foreach ($frontContent as $key => $value) {
-        $path = explode('_', $key);
-        $path = array_slice($path, 1);
-        $path = implode('_', $path);
-        Utils::arrayAccessSetter($jsonContent, $path, $value);
+        if ($key == "json_foregroundColor" || $key == "json_backgroundColor") {
+            $nameExplode = explode('_', $key);
+            $fieldName = $nameExplode[1];
+            $rgbColorArray = Utils::html2Rgb($value);
+            $jsonContent[$fieldName] = Utils::convertIntRgbIntoString($rgbColorArray);
+        } else {
+            $path = explode('_', $key);
+            $path = array_slice($path, 1);
+            $path = implode('_', $path);
+            Utils::arrayAccessSetter($jsonContent, $path, $value);
+        }
     }
     ksort($backContent);
     $counter = 0;
     $jsonContent[$cardType]["backFields"] = array();
-    foreach($backContent as $key => $value){
+    foreach ($backContent as $key => $value) {
         $insertValue = $value;
         $insertValue["key"] = $counter;
         $jsonContent[$cardType]["backFields"][] = $insertValue;
