@@ -6,7 +6,6 @@ $(document).ready(function () {
 
 function bindColorPicker(placeholder, target) {
     placeholder.ColorPicker({
-        color: '#EFEFEF',
         onShow: function (colpkr) {
             $(colpkr).fadeIn(300);
             return false;
@@ -25,8 +24,8 @@ function bindColorPicker(placeholder, target) {
 function bindFlip() {
     $("div.absolute-wrapper-outer").attr("style", "overflow:hidden;");
     $("button#flip_card_button").bind("click", function () {
-        var front = $("div#storecard-front-lengend-wrapper");
-        var back = $("div#storecard-back-wrapper");
+        var front = $("div#storecard_front_lengend_wrapper");
+        var back = $("div#storecard_back_wrapper");
         if (front.css('display') == 'none' && back.css('display') != 'none') {
             $("div.absolute-wrapper-outer").attr("style", "overflow:hidden;");
         } else if (front.css('display') != 'none' && back.css('display') == 'none') {
@@ -56,12 +55,12 @@ function bindSubmit() {
     bindColorPicker($('div#foreground_color_picker_placeholder'), $("input#json_foregroundColor_input"));
     bindColorPicker($('div#background_color_picker_placeholder'), $("input#json_backgroundColor_input"));
     // this is the id of the submit button
-    $("#main-form").submit(function () {
+    $("#main_form").submit(function () {
         var url = "/lib/ws/save.php"; // the script where you handle the form input.
         $.ajax({
             type: "POST",
             url: url,
-            data: $("#main-form").serialize(), // serializes the form's elements.
+            data: $("#main_form").serialize(), // serializes the form's elements.
             beforeSend: function () {
                 blockUI();
             },
@@ -132,7 +131,7 @@ function discardChange() {
                 blockUI();
             },
             success: function (result) {
-                $('#main-form').replaceWith($(result).find('#main-form'));
+                $('#main_form').replaceWith($(result).find('#main_form'));
                 bindSubmit();
                 $.unblockUI();
             },
@@ -156,7 +155,7 @@ function loadCardContent(sel) {
             blockUI();
         },
         success: function (result) {
-            $('#main-form').replaceWith($(result).find('#main-form'));
+            $('#main_form').replaceWith($(result).find('#main_form'));
             bindSubmit();
             $.unblockUI();
         },

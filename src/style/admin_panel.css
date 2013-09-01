@@ -68,16 +68,16 @@ div.fileupload{
     width:160px;
 }
 /*absolute positioning*/
-#barcode-select{
+#barcode_select {
     width:150px;
 }
-div#select-card{
+div#select_card {
     width:830px;
     margin-left:auto;
     margin-right:auto;
     display:block;
 }
-div#logoText-wrapper{
+div#logoText_wrapper {
     margin-bottom: -7px;
 }
 div#foreground_color_picker_wrapper {
@@ -89,70 +89,70 @@ div#background_color_picker_wrapper {
     margin-top: 130px;
 }
 
-div#logo-wrapper{
+div#logo_wrapper {
     position:absolute;
     margin-top:41px;
 }
-div#headerFields_label-wrapper{
+div#headerFields_label_wrapper {
     position:absolute;   
     width:300px;
     margin-left:555px;
     margin-top:-33px;
 }
-div#headerFields_value-wrapper{
+div#headerFields_value_wrapper {
     position:absolute;   
     margin-left:642px;
     margin-top:43px;
 }
-div#strip-wrapper{
+div#strip_wrapper {
     position:absolute;
     margin-left:642px;
     margin-top:134px;
 }
-div#auxiliaryField0_label-wrapper{
+div#auxiliaryField0_label_wrapper {
     position:absolute;   
     margin-top:245px;
 }
-div#auxiliaryField0_value-wrapper{
+div#auxiliaryField0_value_wrapper {
     position:absolute;   
     margin-top:341px;
 }
-div#auxiliaryField1_label-wrapper{
+div#auxiliaryField1_label_wrapper {
     position:absolute;   
     margin-left:642px;
     margin-top:245px;
 }
-div#auxiliaryField1_value-wrapper{
+div#auxiliaryField1_value_wrapper {
     position:absolute;   
     margin-left:642px;
     margin-top:341px;
 }
-div#barcode_message-wrapper{
+div#barcode_message_wrapper {
     position:absolute;   
     margin-top:435px;
 }
-div#barcode_format-wrapper{
+div#barcode_format_wrapper {
     position:absolute;   
     margin-top:488px;
     width:200px;
 }
-div#barcode_altText-wrapper{
+div#barcode_altText_wrapper {
     position:absolute;   
     margin-left:642px;
     margin-top:500px;
 }
-div#SampleLabel{
+div#sample_label {
     position:absolute;
     margin-left:360px;
     margin-top:380px;
     color:red;
 }
-div#SampleLabel>label{
+div#sample_label>label{
     font-size:30px;
 }
 
 /*back*/
-div#storecard-back-wrapper div.item{
+div#storecard_back_wrapper div.item{
     width:460px;
     display:inline-block;
     margin-left: 110px;
@@ -165,7 +165,7 @@ div#storecard-back-wrapper div.item{
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
-div#storecard-back-wrapper div.content-wrapper{
+div#storecard_back_wrapper div.content-wrapper{
     display: inline-block;
 }
 button.content-delete{
@@ -188,7 +188,7 @@ input#save_button{
     float:right;
     margin-right:3px;
 }
-div#operation-panel{
+div#operation_panel {
     display:block;
     margin-bottom:10px;
     width:821px;
@@ -204,7 +204,4 @@ div#operation-panel{
     -moz-box-shadow: 3px 3px 4px #B9B9B9;
     -webkit-box-shadow: 3px 3px 4px #B9B9B9;
     filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
-}
-#logout-button{
-
 }

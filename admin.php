@@ -68,11 +68,11 @@ if (isset($_GET['message'])) {
     echo "<h4 class=\"warning-message\">$message</h4>";
 }
 ?>
-<form id="main-form" action="/lib/ws/save.php" method="post">
+<form id="main_form" action="/lib/ws/save.php" method="post">
 
 
-    <div id="select-card-wrapper">
-        <div id="select-card">
+    <div id="select_card_wrapper">
+        <div id="select_card">
             <label class="lengend-label">My cards:</label>
             <?php
             $options = DataInterface::getCardNamesAndIdByUsername($_SESSION['username']);
@@ -108,7 +108,10 @@ if (isset($_GET['message'])) {
             ?>
         </div>
     </div>
-    <div id="operation-panel" class="panel">
+    <div id="">
+
+    </div>
+    <div id="operation_panel" class="panel">
         <button type="button" class="btn btn-info" id="flip_card_button">Flip Card</button>
         <input type="button" value="Discard Change" class="btn btn-warning" onClick="discardChange()"/>
         <input id="push_button" type="button" value="Push" class="btn btn-primary" onClick="push()"/>
@@ -116,8 +119,8 @@ if (isset($_GET['message'])) {
     </div>
     <div class="absolute-wrapper-outer">
         <?php echo "<input name=\"cardType\" type=\"hidden\" value=\"" . $cardType . "\" />";?>
-        <div id="storecard-front-lengend-wrapper" class="absolute-wrapper-inner">
-            <div id="logo-wrapper">
+        <div id="storecard_front_lengend_wrapper" class="absolute-wrapper-inner">
+            <div id="logo_wrapper">
                 <label class="lengend-label" for="">Logo</label>
                 <!--                    <input type="file" name="pic_logo" disabled />-->
                 <div class="fileupload fileupload-new" data-provides="fileupload">
@@ -129,7 +132,7 @@ if (isset($_GET['message'])) {
                     <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
                 </div>
             </div>
-            <div id="logoText-wrapper">
+            <div id="logoText_wrapper">
                 <label class="lengend-label" for="">Logo Text</label>
                 <?php
                 $logoText = $jsonContent["logoText"];
@@ -152,13 +155,13 @@ if (isset($_GET['message'])) {
             <?php
             $backgroundColor = $jsonContent["backgroundColor"];
             $bColor = Utils::rgb2Html(Utils::extractRgbFromString($backgroundColor));
-            print "<input id=\"json_backgroundColor_input\" type=\"hidden\" name=\"json_backgroundColor\" value=\"" . $fColor . "\"/>";
+            print "<input id=\"json_backgroundColor_input\" type=\"hidden\" name=\"json_backgroundColor\" value=\"" . $bColor . "\"/>";
             print "<div id=\"background_color_picker_placeholder\" class=\"color-picker\" style=\"background-color: " . $bColor . ";\">";
             ?>
             <div></div>
         </div>
     </div>
-    <div id="headerFields_label-wrapper">
+    <div id="headerFields_label_wrapper">
         <label class="lengend-label" for="">Title Label</label>
         <?php
         $headerFields_label = $jsonContent["$cardType"]["headerFields"][0]["label"];
@@ -166,7 +169,7 @@ if (isset($_GET['message'])) {
             . $cardType . "_headerFields_0_label\" value=\"$headerFields_label\"/>";
         ?>
     </div>
-    <div id="headerFields_value-wrapper">
+    <div id="headerFields_value_wrapper">
         <label class="lengend-label" for="">Title Content</label>
         <?php
         $headerFields_value = $jsonContent["$cardType"]["headerFields"][0]["value"];
@@ -174,7 +177,7 @@ if (isset($_GET['message'])) {
             . $cardType . "_headerFields_0_value\" value=\"$headerFields_value\"/>";
         ?>
     </div>
-    <div id="strip-wrapper">
+    <div id="strip_wrapper">
         <label class="lengend-label" for="">Main Picture</label>
 
         <div class="fileupload fileupload-new" data-provides="fileupload">
@@ -186,7 +189,7 @@ if (isset($_GET['message'])) {
             <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
         </div>
     </div>
-    <div id="auxiliaryField0_label-wrapper">
+    <div id="auxiliaryField0_label_wrapper">
         <label class="lengend-label" for="">Section 1 Label</label>
         <?php
         $auxiliaryFields_0_label = $jsonContent["$cardType"]["auxiliaryFields"][$startIndex]["label"];
@@ -194,7 +197,7 @@ if (isset($_GET['message'])) {
             . $cardType . "_auxiliaryFields_" . $startIndex . "_label\" value=\"$auxiliaryFields_0_label\"/>";
         ?>
     </div>
-    <div id="auxiliaryField0_value-wrapper">
+    <div id="auxiliaryField0_value_wrapper">
         <label class="lengend-label" for="">Section 1 Content</label>
         <?php
         $auxiliaryFields_0_value = $jsonContent["$cardType"]["auxiliaryFields"][$startIndex]["value"];
@@ -202,7 +205,7 @@ if (isset($_GET['message'])) {
             . $cardType . "_auxiliaryFields_" . $startIndex . "_value\" value=\"$auxiliaryFields_0_value\"/>";
         ?>
     </div>
-    <div id="auxiliaryField1_label-wrapper">
+    <div id="auxiliaryField1_label_wrapper">
         <label class="lengend-label" for="">Section 2 Label</label>
         <?php
         $auxiliaryFields_1_label = $jsonContent["$cardType"]["auxiliaryFields"][$startIndex + 1]["label"];
@@ -210,7 +213,7 @@ if (isset($_GET['message'])) {
             . $cardType . "_auxiliaryFields_" . ($startIndex + 1) . "_label\" value=\"$auxiliaryFields_1_label\"/>";
         ?>
     </div>
-    <div id="auxiliaryField1_value-wrapper">
+    <div id="auxiliaryField1_value_wrapper">
         <label class="lengend-label" for="">Section 2 Content</label>
         <?php
         $auxiliaryFields_1_value = $jsonContent["$cardType"]["auxiliaryFields"][$startIndex + 1]["value"];
@@ -218,16 +221,16 @@ if (isset($_GET['message'])) {
             . $cardType . "_auxiliaryFields_" . ($startIndex + 1) . "_value\" value=\"$auxiliaryFields_1_value\"/>";
         ?>
     </div>
-    <div id="barcode_message-wrapper">
+    <div id="barcode_message_wrapper">
         <label class="lengend-label" for="">Barcode Content</label>
         <?php
         $barcode_message = $jsonContent["barcode"]["message"];
         print " <input class=\"content-input\" type=\"text\" name=\"json_barcode_message\" value=\"$barcode_message\"/>";
         ?>
     </div>
-    <div id="barcode_format-wrapper">
+    <div id="barcode_format_wrapper">
         <label class="lengend-label" for="">Barcode format</label>
-        <select id="barcode-select" name="json_barcode_format" onChange="save(this.value)">
+        <select id="barcode_select" name="json_barcode_format" onChange="save(this.value)">
             <?php
             $tmpVar = $jsonContent["barcode"]["format"];
 
@@ -251,7 +254,7 @@ if (isset($_GET['message'])) {
             ?>
         </select>
     </div>
-    <div id="barcode_altText-wrapper">
+    <div id="barcode_altText_wrapper">
         <label class="lengend-label" for="">Info</label>
         <?php
         $barcode_altText = $jsonContent["barcode"]["altText"];
@@ -261,9 +264,9 @@ if (isset($_GET['message'])) {
     <img class="lengend-sample-picture" src="resource/image/storecard-front-lengend.png" alt=""
          style="width:800px;"/>
 
-    <div id="SampleLabel"><label>Sample</label></div>
+    <div id="sample_label"><label>Sample</label></div>
 </div>
-<div id="storecard-back-wrapper" class="form-horizontal" style="display:none;">
+<div id="storecard_back_wrapper" class="form-horizontal" style="display:none;">
     <?php
     if (isset($jsonContent[$cardType]["backFields"])) {
         $backFields = $jsonContent[$cardType]["backFields"];
