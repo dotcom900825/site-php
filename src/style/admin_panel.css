@@ -38,6 +38,24 @@ img.lengend-sample-picture{
     position:absolute;   
     z-index:-1;
 }
+label.color-picker-label{
+    line-height: 30px;
+    vertical-align: top;
+}
+div.color-picker {
+    display:inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left:10px;
+}
+div.color-picker div{
+    background: url(../../resource/color-picker-images/select.png) center;
+    margin-left: -3px;
+    margin-top: -3px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+}
 .warning-message{
     color:#CB1000;
     font-family:"Arial", Arial, Sans-serif;
@@ -46,13 +64,13 @@ img.lengend-sample-picture{
 .content-input{
     width:150px;
 }
-#barcode-select{
-    width:150px;
-}
 div.fileupload{
     width:160px;
 }
 /*absolute positioning*/
+#barcode-select{
+    width:150px;
+}
 div#select-card{
     width:830px;
     margin-left:auto;
@@ -62,6 +80,15 @@ div#select-card{
 div#logoText-wrapper{
     margin-bottom: -7px;
 }
+div#foreground_color_picker_wrapper {
+    position:absolute;
+    margin-top: 80px;
+}
+div#background_color_picker_wrapper {
+    position:absolute;
+    margin-top: 130px;
+}
+
 div#logo-wrapper{
     position:absolute;
     margin-top:41px;

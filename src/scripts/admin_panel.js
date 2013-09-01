@@ -1,7 +1,26 @@
 $(document).ready(function () {
-        bindSubmit();
-    }
-);
+    bindColorPicker($('div#foreground_color_picker_placeholder'),$("input#json_foregroundColor_input"));
+    bindColorPicker($('div#background_color_picker_placeholder'),$("input#json_backgroundColor_input"));
+    bindSubmit();
+});
+
+function bindColorPicker(placeholder,target) {
+    placeholder.ColorPicker({
+        color: '#EFEFEF',
+        onShow: function (colpkr) {
+            $(colpkr).fadeIn(300);
+            return false;
+        },
+        onHide: function (colpkr) {
+            $(colpkr).fadeOut(300);
+            return false;
+        },
+        onChange: function (hsb, hex, rgb) {
+            target.val('#' + hex);
+            placeholder.css('backgroundColor', '#' + hex);
+        }
+    });
+}
 
 function bindFlip() {
     $("div.absolute-wrapper-outer").attr("style", "overflow:hidden;");
