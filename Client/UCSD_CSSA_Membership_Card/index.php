@@ -21,7 +21,7 @@
 
 	<!-- * Facebook Share Preview Optimization-->
 	<meta property="fb:app_id" content="434872899943225" />
-	<meta property="og:title" content="iPassStore - UCSD CSSA"/>
+	<meta property="og:title" content="iPassStore - SD CSSA"/>
 	<meta property="og:type"  content="website" />
 	<meta property="og:url" content="https://www.ipassstore.com/Client/UCSD_CSSA_Membership_Card/"/>
 	<meta property="og:image" content="https://www.ipassstore.com/resource/image/iPassStore_icon.png"/>
@@ -113,7 +113,7 @@
 					</ul>
 				</aside>
 				<div class="description summary">
-					<h2>UCSD CSSA</h2>
+					<h2>SD CSSA</h2>
 
 
 
@@ -126,6 +126,24 @@
 
 
 
+				</div>
+				
+				<div class="screenshots">
+					<ul>
+						
+							<li id="image-1">
+								<a href="http://www.sdsucssa.org" target="_blank" class="zoom" rel="screens"><img width="196" src="image/sdsu.png" alt="" /></a>
+							</li>
+						
+							<li id="image-2">
+								<a href="http://www.ucsdcssa.org" target="_blank" class="zoom" rel="screens"><img width="196" src="image/ucsd.png" alt="" /></a>
+							</li>
+						
+							<li id="image-3">
+								<a href="http://www.usdcssa.org" target="_blank" class="zoom" rel="screens"><img width="196" src="image/usd.png" alt="" /></a>
+							</li>
+						
+					</ul>
 				</div>
 
 				<div class="card_screenshots">
@@ -257,7 +275,7 @@
 	<div class="wrapper stacks">
 		<a href="https://www.ipassstore.com/Client/UCSD_CSSA_Membership_Card/" title="Find out more about">
 			<img src="Client/UCSD_CSSA_Membership_Card/image/logo.png" width="48" height="48" />
-			<h3>UCSD CSSA</h3>
+			<h3>SD CSSA</h3>
 			<p>Student Organization</p>
 		</a>
 		<div class="info-bar">
