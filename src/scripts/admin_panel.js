@@ -1,10 +1,10 @@
 $(document).ready(function () {
-    bindColorPicker($('div#foreground_color_picker_placeholder'),$("input#json_foregroundColor_input"));
-    bindColorPicker($('div#background_color_picker_placeholder'),$("input#json_backgroundColor_input"));
+    bindColorPicker($('div#foreground_color_picker_placeholder'), $("input#json_foregroundColor_input"));
+    bindColorPicker($('div#background_color_picker_placeholder'), $("input#json_backgroundColor_input"));
     bindSubmit();
 });
 
-function bindColorPicker(placeholder,target) {
+function bindColorPicker(placeholder, target) {
     placeholder.ColorPicker({
         color: '#EFEFEF',
         onShow: function (colpkr) {
@@ -53,8 +53,8 @@ function blockUI() {
 
 function bindSubmit() {
     bindFlip();
-    bindColorPicker($('div#foreground_color_picker_placeholder'),$("input#json_foregroundColor_input"));
-    bindColorPicker($('div#background_color_picker_placeholder'),$("input#json_backgroundColor_input"));
+    bindColorPicker($('div#foreground_color_picker_placeholder'), $("input#json_foregroundColor_input"));
+    bindColorPicker($('div#background_color_picker_placeholder'), $("input#json_backgroundColor_input"));
     // this is the id of the submit button
     $("#main-form").submit(function () {
         var url = "/lib/ws/save.php"; // the script where you handle the form input.
@@ -117,26 +117,31 @@ function saveAndPush() {
 }
 
 function discardChange() {
-    console.log("abandon change");
-    var cardId = $('select#selectCardId').val();
-    console.log(cardId);
-    $.ajax({
-        type: 'POST',
-        url: "./../../admin.php",
-        data: {'cardId': cardId},
-        beforeSend: function () {
-            blockUI();
-        },
-        success: function (result) {
-            $('#main-form').replaceWith($(result).find('#main-form'));
-            bindSubmit();
-            $.unblockUI();
-        },
-        error: function (message) {
-            $.unblockUI();
-            alert(message)
-        }
-    });
+    var answer = confirm("This wil discard both the changes on front and end of the card, " +
+        "are you sure you want to do that?");
+    if (answer) {
+        console.log("abandon change");
+        var cardId = $('select#selectCardId').val();
+        console.log(cardId);
+        $.ajax({
+            type: 'POST',
+            url: "./../../admin.php",
+            data: {'cardId': cardId},
+            beforeSend: function () {
+
+                blockUI();
+            },
+            success: function (result) {
+                $('#main-form').replaceWith($(result).find('#main-form'));
+                bindSubmit();
+                $.unblockUI();
+            },
+            error: function (message) {
+                $.unblockUI();
+                alert(message)
+            }
+        });
+    }
 }
 //TODO: add progress icon
 //TODO: handel session expiration problem!
