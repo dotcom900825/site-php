@@ -280,6 +280,7 @@ if (isset($_GET['message'])) {
         $numOfBackContentGroups = count($backFields);
         print "<input name=\"back_max_counter\" id=\"back_max_counter\" type=\"hidden\" value=\""
             . $numOfBackContentGroups . "\"/>";
+        $counter = 0;
         foreach ($backFields as $contentGroup) {
             print "<div class=\"item\">";
             print "    <div class=\"content-wrapper\">";

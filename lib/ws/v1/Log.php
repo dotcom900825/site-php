@@ -32,7 +32,7 @@ class Log {
 
 	public static function WriteLogWithFormat($content){
 		$date = date('m/d/Y h:i:s a', time());
-        Log::WriteLogRaw($current.
+        Log::WriteLogRaw(
             "==================$date====================\r\n".
             "$content \r\n");
 	}
@@ -42,12 +42,12 @@ class Log {
         $payload = json_decode(file_get_contents('php://input'), true); 
 
         //validate the input
-        if ($payload && $payload['logs']) { 
-            mail($this->emailTo,
-                "Apple Pass Service Log",
-                "Log message on ".date("Y-m-d H:i:s")."\n".
-                print_r($payload['logs'],true), "From: ".($this->emailFrom));
-        }
+        //if ($payload && $payload['logs']) { 
+            //mail($this->emailTo,
+                //"Apple Pass Service Log",
+                //"Log message on ".date("Y-m-d H:i:s")."\n".
+                //print_r($payload['logs'],true), "From: ".($this->emailFrom));
+        //}
         $this->WriteLog(print_r($payload,true));
     }
 }

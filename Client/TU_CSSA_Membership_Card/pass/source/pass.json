@@ -46,9 +46,14 @@
                 "value": "中秋晚会节目报名正在进行中：http://t.cn/zQXRXNo"
             },
             {
-                "key": "discount",
-                "label": "Discount Details",
-                "value": "10% off\nChina Rose\n(504) 887-3295\n3501 N Arnoult Rd, Metairie, LA 70002\n\nDragon King\n(504) 865-0222\n6221 S Claiborne Ave, New Orleans, LA 70125"
+                "key": "discount10Off",
+                "label": "Discount Details 10% Off",
+                "value": "China Rose\n(504) 887-3295\n3501 N Arnoult Rd, Metairie, LA 70002\n\nDragon King\n(504) 865-0222\n6221 S Claiborne Ave, New Orleans, LA 70125"
+            },
+            {
+                "key": "discount15Off",
+                "label": "Discount Details 15% Off",
+                "value": "Red Star Chinese Restaurant\n(504) 861-1933\n8330 Earhart Boulevard, New Orleans, LA 70118\n\nJade Buddha Chinese Restaurant\n(504) 818-1110\n4433 Jefferson Highway, New Orleans, LA 70121"
             },
             {
                 "key": "event sponsor",

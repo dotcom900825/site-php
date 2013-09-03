@@ -80,7 +80,7 @@ class Passes
         $ifModifiedSince - the timestamp of the last update to the pass that the device
         already has installed
         lastUpdated      - the lastUpdated timestamp of the pass in the database*/
-        if ($ifModifiedSince != null && $ifModifiedSince >= $row['LastUpdated']) {
+        /*if ($ifModifiedSince != null && $ifModifiedSince >= $row['LastUpdated']) {
             //******************** Debug Block **************************
             Log::WriteLog("lastUpdated:" . strval($row['LastUpdated']));
             //***********************************************************
@@ -88,7 +88,7 @@ class Passes
             //the pass was not modified
             httpResponseCode(304);
             exit();
-        }
+        }*/
 
         //provide the last modified time to the user
         header("Last-modified: " . $row['LastUpdated'], true);
