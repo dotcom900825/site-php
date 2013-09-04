@@ -5,12 +5,22 @@
 <!--************************************************************-->
 <title>iPass Store - Test</title>
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
-<link rel="stylesheet" href="../../src/style/jquery.mobile-1.3.0.min.css" />
+<link rel="stylesheet" href="../../src/jquery.mobile/jquery.mobile-1.3.2.min.css" />
 <script src="../../src/scripts/jquery.min.js"></script>
-<script src="../../src/scripts/jquery.mobile-1.3.0.min.js"></script>
+<script src="../../src/jquery.mobile/jquery.mobile-1.3.2.min.js"></script>
 
 </head>
 
+<script>
+    function checkTerm(){
+        if($("input#checkTerms").is(':checked')){
+            $("button#submitButton").button('enable');
+        }
+        else{
+            $("button#submitButton").button('disable');
+        }
+    }
+</script>
 <!--Error Message Style-->
 <style>
 div.InputContainer>label{
@@ -51,6 +61,12 @@ div.InputContainer>label{
                         <label for="password">Password:</label>
                         <input type="password" name="password" id="password" value="" />
                     </div>
+            <div data-role="fieldcontain" class="InputContainer">
+                <fieldset data-role="controlgroup">
+                    <legend><a href="../../terms.html" target="_blank" rel="external">Terms and Conditions</a></legend>
+                    <label><input id="checkTerms" type="checkbox" name="checkTerms" onchange="checkTerm()">I agree</label>
+                </fieldset>
+            </div>
                      <input type="hidden" name="folder" value="TEST_NEW_SAMPLE"/>
                     <input type="hidden" name="id" value="2"/>
                     <button type="submit" value="Submit Values" >Submit</button>
