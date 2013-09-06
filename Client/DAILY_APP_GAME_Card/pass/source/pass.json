@@ -5,7 +5,7 @@
     "teamIdentifier": "3JAYL5R2NX",
     "webServiceURL": "https://www.ipassstore.com/lib/ws/",
     "associatedStoreIdentifiers": [
-        581370051
+        432152950
     ],
     "authenticationToken": "333c2f02a58b9f19b6d9de5e6be8beddf7c8ed63",
     "barcode": {
@@ -26,7 +26,7 @@
             {
                 "key": "app_name",
                 "label": "App of the Day",
-                "value": "Unmechanical",
+                "value": "Magnetic Billiard",
                 "changeMessage": "Your daily free App is here: %@"
             }
         ],
@@ -34,14 +34,14 @@
             {
                 "key": "developer",
                 "label": "Developer",
-                "value": "Talawa Games and Teotl Studios"
+                "value": "The Pickford Bros"
             }
         ],
         "auxiliaryFields": [
             {
                 "key": "original_price",
                 "label": "Original Price",
-                "value": "$2.99"
+                "value": "$0.99"
             },
             {
                 "key": "free",
