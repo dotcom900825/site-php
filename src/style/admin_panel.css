@@ -213,3 +213,7 @@ div#operation_panel {
     -webkit-box-shadow: 3px 3px 4px #B9B9B9;
     filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
 }
+div#operation_panel>label{
+    float: right;
+    margin-right: 5px;
+}

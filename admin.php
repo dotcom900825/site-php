@@ -123,6 +123,7 @@ if (isset($_GET['message'])) {
     <input type="button" value="Discard Change" class="btn btn-warning" onClick="discardChange()"/>
     <input id="push_button" type="button" value="Push" class="btn btn-primary" onClick="push()"/>
     <input id="save_button" type="submit" value="Save" class="btn btn-primary"/>
+    <label class="lengend-label">Remeber to save before push :)</label>
 </div>
 <div class="absolute-wrapper-outer">
     <?php echo "<input name=\"cardType\" type=\"hidden\" value=\"" . $cardType . "\" />";?>
