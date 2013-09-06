@@ -214,6 +214,5 @@ div#operation_panel {
     filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
 }
 div#operation_panel>label{
-    float: right;
-    margin-right: 5px;
+    margin-left:250px;
 }
