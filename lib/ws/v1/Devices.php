@@ -224,7 +224,7 @@ class Devices
         if ($statement->rowCount() == 0) {
 
             //******************** Debug Block **************************
-            Debug::WriteLogWithFormat("\r\nCheckPoint2: DeviceID:".$deviceID."\r\n");
+            DebugLog::WriteLogWithFormat("\r\nCheckPoint2: DeviceID:".$deviceID."\r\n");
             //***********************************************************
 
             $statement = $db->prepare("SELECT COUNT(*) FROM devices WHERE ID = ?");

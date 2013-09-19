@@ -3,33 +3,38 @@ require_once (dirname(__file__) . "/../../../lib/class/DebugLog.php");
 require_once (dirname(__file__) . "/../../../lib/class/DataInterface.php");
 require_once (dirname(__file__) . "/../../../lib/class/AmazonSES.php");
 require_once (dirname(__file__) . "/../../../lib/class/StorePass.php");
-DebugLog::WriteLogWithFormat(dirname(__file__)."/getpass.php");
+DebugLog::WriteLogWithFormat(dirname(__file__) . "/getpass.php");
 
 $emailSubject = array("UCSD_UTA_Membership_Card" => "Your UCSD UTA membership card has arrived",
-					"UCSD_CSSA_Membership_Card" => "Your UCSD CSSA membership card has arrived" );
+    "UCSD_CSSA_Membership_Card" => "Your UCSD CSSA membership card has arrived",
+    "UM_CSSA_Membership_Card" => "Your UM CSSA membership card has arrived");
 $emailContent = array("UCSD_UTA_Membership_Card" => ", Thank you for participating! \n"
-."Now you can get real time information update and all the benefits of members!\n"
-."Congratulations again, now you are a true UTA fan and loyal member,"
-."enjoy your digital membership card! ;)\n\n" ."Best Regards\n" ."iPassStore.com\n",
-"UCSD_CSSA_Membership_Card" => ", Thank you for participating! \n"
-."Now you can use this discount card at stores listed in the back of this card.\n"
-."Congratulations again, now you are a true CSSA fan and loyal member, "
-."enjoy your free membership discount card. :)\n\n"
-."Best Regards\n"
-."iPassStore.com\n" );
+    . "Now you can get real time information update and all the benefits of members!\n"
+    . "Congratulations again, now you are a true UTA fan and loyal member,"
+    . "enjoy your digital membership card! ;)\n\n" . "Best Regards\n" . "iPassStore.com\n",
+    "UCSD_CSSA_Membership_Card" => ", Thank you for participating! \n"
+        . "Now you can use this discount card at stores listed in the back of this card.\n"
+        . "Congratulations again, now you are a true CSSA fan and loyal member, "
+        . "enjoy your free membership discount card. :)\n\n"
+        . "Best Regards\n"
+        . "iPassStore.com\n",
+    "UM_CSSA_Membership_Card" => ", Thank you for participating! \n"
+        . "Now you can get real time information update and all the benefits of members!\n"
+        . "Congratulations again, now you are a true UM CSSA fan and loyal member,"
+        . "enjoy your digital membership card! ;)\n\n" . "Best Regards\n" . "iPassStore.com\n");
 $instructions = "\n\nInstructions:\n If you are iPhone/iPod Touch user, please view this email in the \"Mail\" "
-."application on your device, download the attachment and your device will automatically recognize your pass.\n\n"
-."If you are android user, please download the \"PassWallet\" app from play store, then view this email on "
-."your device and download the attachment, PassWallet will automatically recognize your pass.\n\n"
-."We worked really hard to put everything together, and we definitely want you to have a great"
-."user experience. Your feedback is extremely valuable to us. Please let us know about any problems "
-."you might have in the future, we are here to help. For Passbook related feedback or question, feel "
-."free to send an email to: support@ipassstore.com.";
+    . "application on your device, download the attachment and your device will automatically recognize your pass.\n\n"
+    . "If you are android user, please download the \"PassWallet\" app from play store, then view this email on "
+    . "your device and download the attachment, PassWallet will automatically recognize your pass.\n\n"
+    . "We worked really hard to put everything together, and we definitely want you to have a great"
+    . "user experience. Your feedback is extremely valuable to us. Please let us know about any problems "
+    . "you might have in the future, we are here to help. For Passbook related feedback or question, feel "
+    . "free to send an email to: support@ipassstore.com.";
 
 $cardFolder = $_POST['folder'];
 $fullpath = "./../../Client/$cardFolder";
 
-$no_password_filter = array("UCSD_CSSA_Membership_Card");
+$no_password_filter = array("UCSD_CSSA_Membership_Card","UM_CSSA_Membership_Card");
 
 // input validation check
 if (strlen($_POST['first_name']) < 2) {
@@ -47,18 +52,18 @@ if (!filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL)) {
     exit();
 }
 
-if($_POST['checkTerms'] == false){
+if ($_POST['checkTerms'] == false) {
     header("Location: $fullpath/form.php?message=You can't proceed without agreeing to the terms and conditions.");
     exit();
 }
 
 //**********************************************************************************
 // password check
-if(! in_array($cardFolder,$no_password_filter)){
-	if ($_POST['password'] != "aaa") {
-		header("Location: $fullpath/form.php?message=Oops! Password did not match! Try again.");
-		exit();
-	}
+if (!in_array($cardFolder, $no_password_filter)) {
+    if ($_POST['password'] != "aaa") {
+        header("Location: $fullpath/form.php?message=Oops! Password did not match! Try again.");
+        exit();
+    }
 }
 
 //######################## Modify for each card ##################################
@@ -144,9 +149,9 @@ if ($card != null) {
 //******************** Debug Block **************************
 //DebugLog::WriteLogWithFormat("point 7");
 //***********************************************************
-    
-	
-	//************************************************************************************
+
+
+    //************************************************************************************
     $subject = "Your card has arrived";
     $message = $firstName .
         ", Thank you for participating! 
@@ -156,12 +161,12 @@ Best Regards
 iPassStore Team";
 
     //************************************************************************************
-	
-	if(array_key_exists($cardFolder,$emailSubject)){
-		$subject = $emailSubject[$cardFolder];
-		$message = $firstName.$emailContent[$cardFolder].$instructions;
-	}
-	
+
+    if (array_key_exists($cardFolder, $emailSubject)) {
+        $subject = $emailSubject[$cardFolder];
+        $message = $firstName . $emailContent[$cardFolder] . $instructions;
+    }
+
     //send it over to the user
     $card->outputPassBundleAsEmailAttachmentAmazonSES($userEmail, $subject, $message);
     //$card->outputPassBundleAsWebDownload();

@@ -22,12 +22,12 @@ if (isset($_SESSION['status']) && $_SESSION['status'] == "In") {
     </div>
     <div class="row">
         <h1 class="welcome-message">iPass Store</h1>
-        <h4 class="welcome-message">Welcom to the iPassStore admin panel(beta)</h4>
+        <h4 class="welcome-message">Welcome to the iPassStore admin panel (beta)</h4>
 
         <div id="login-panel" class="container">
             <form class="form-signin" name="login" action="lib/ws/login.php" method="post">
                 <h3 class="form-signin-heading">Please sign in</h3>
-                <input type="text" name="username" class="input-block-level" placeholder="UserName">
+                <input type="text" name="username" class="input-block-level" placeholder="User Name">
                 <input type="password" name="password" class="input-block-level" placeholder="Password">
                 <label class="checkbox" style="display:none;">
                     <input type="checkbox" value="remember-me"> Remember me
