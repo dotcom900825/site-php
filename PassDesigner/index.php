@@ -1476,7 +1476,7 @@ if (!isset($_SESSION['status']) || $_SESSION['status'] != "In") {
                                             id="fg" maxlength="6" name="fg"
                                             placeholder="Hex colour value"
                                             size="6" type="text" value=
-                                            "D428E0">
+                                            "00BF8F">
                                         </div>
                                     </div>
                                 </div>
