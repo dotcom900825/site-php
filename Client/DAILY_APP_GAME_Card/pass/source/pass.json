@@ -5,14 +5,14 @@
     "teamIdentifier": "3JAYL5R2NX",
     "webServiceURL": "https://www.ipassstore.com/lib/ws/",
     "associatedStoreIdentifiers": [
-        630868758
+        580765736
     ],
     "authenticationToken": "333c2f02a58b9f19b6d9de5e6be8beddf7c8ed63",
     "barcode": {
         "message": "13741239356570381",
         "format": "PKBarcodeFormatPDF417",
         "messageEncoding": "iso-8859-1",
-        "altText": "Download Links Click Here->"
+        "altText": "<-Share | Download Links->"
     },
     "locations": [],
     "organizationName": "iPassStore",
@@ -26,7 +26,7 @@
             {
                 "key": "app_name",
                 "label": "App of the Day",
-                "value": "Balanced",
+                "value": "Megapolis",
                 "changeMessage": "Your daily free App is here: %@"
             }
         ],
@@ -34,7 +34,7 @@
             {
                 "key": "developer",
                 "label": "Developer",
-                "value": "Jaidev Soin"
+                "value": "Social Quantum"
             }
         ],
         "auxiliaryFields": [
