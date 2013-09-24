@@ -22,9 +22,19 @@ class Devices
                 Log::WriteLog("post:registrations");
                 break;
 
+            case "post:registrations_attido":
+                $this->createRegistration($params);
+                Log::WriteLog("post:registrations_attido");
+                break;
+
             case "delete:registrations":
                 $this->deleteRegistration($params);
                 Log::WriteLog("delete:registrations");
+                break;
+
+            case "delete:registrations_attido":
+                $this->deleteRegistration($params);
+                Log::WriteLog("delete:registrations_attido");
                 break;
 
                 /**
@@ -44,6 +54,14 @@ class Devices
                 //Log::WriteLog("What is this:$whatisthis");
                 //***********************************************************
 
+                $this->getDeviceUpdates($params, @(int)$_GET['passesUpdatedSince']);
+                break;
+
+            case "get:registrations_attido":
+                //******************** Debug Block **************************
+                Log::WriteLog("get:registrations_attido");
+                Log::WriteLog(print_r($params, true));
+                //***********************************************************
                 $this->getDeviceUpdates($params, @(int)$_GET['passesUpdatedSince']);
                 break;
 
