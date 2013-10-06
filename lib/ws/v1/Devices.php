@@ -110,13 +110,13 @@ class Devices
 
             $stmtInsert = $db->prepare("INSERT INTO devices (ID, PushToken) values (?, ?)");
             $stmtInsert->execute(array($deviceID, $pushToken));
-            $debugNum = $stmtInsert->affected_rows;
-            DebugLog::WriteLogRaw("First insert affected rows: $debugNum\n");
+            //$debugNum = $stmtInsert->affected_rows;
+            //DebugLog::WriteLogRaw("First insert affected rows: $debugNum\n");
 
             $stmtInsert = $db->prepare("INSERT INTO DeviceVSPass (Device,Pass) values(?,?)");
             $stmtInsert->execute(array($deviceID, $passID));
-            $debugNum = $stmtInsert->affected_rows;
-            DebugLog::WriteLogRaw("Second insert affected rows: $debugNum\n");
+            //$debugNum = $stmtInsert->affected_rows;
+            //DebugLog::WriteLogRaw("Second insert affected rows: $debugNum\n");
 
             $db->commit();
             DebugLog::WriteLogRaw("after insertion\n");

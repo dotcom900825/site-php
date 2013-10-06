@@ -43,7 +43,7 @@
 
 <div data-role="page" id="page1" data-theme="c">
     <div data-role="header" id="hdrMain">
-        <h1>UM CSSA Digital Membership Card</h1>
+        <h1>SD CSSA Digital Membership Card</h1>
     </div>
     <div data-role="content" id="contentMain" name="contentMain">
         <form id="form1" action="getpass.php" method="post">

@@ -5,7 +5,7 @@
     "teamIdentifier": "3JAYL5R2NX",
     "webServiceURL": "https://www.ipassstore.com/lib/ws/",
     "associatedStoreIdentifiers": [
-        580765736
+        561941526
     ],
     "authenticationToken": "333c2f02a58b9f19b6d9de5e6be8beddf7c8ed63",
     "barcode": {
@@ -26,22 +26,22 @@
             {
                 "key": "app_name",
                 "label": "App of the Day",
-                "value": "Megapolis",
-                "changeMessage": "Your daily free App is here: %@"
+                "value": "Dragon City Mobile",
+                "changeMessage": "Your daily free App: %@"
             }
         ],
         "secondaryFields": [
             {
                 "key": "developer",
                 "label": "Developer",
-                "value": "Social Quantum"
+                "value": "Social Point"
             }
         ],
         "auxiliaryFields": [
             {
                 "key": "original_price",
-                "label": "Original Price",
-                "value": "$0.99"
+                "label": "iOS 7 New Feature",
+                "value": "☟ Share this card with your friends"
             },
             {
                 "key": "free",
@@ -53,7 +53,7 @@
             {
                 "key": "contact",
                 "label": "Powered by iPassStore.com",
-                "value": "Become a partner:\npartner@iPassStore.com\n\nFind out more at:\niPassStore.com\n"
+                "value": "Become a partner:\nsupport@iPassStore.com\n\nFind out more at:\niPassStore.com\n"
             }
         ]
     }
