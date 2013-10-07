@@ -188,7 +188,7 @@ class Devices
                     $statDel = $db->prepare("DELETE FROM DeviceVSPass WHERE Device = ? AND Pass = ?");
                     $statDel->execute(array($deviceID, $passID));
 
-                    $num = $statDel->affected_rows;
+                    $num = $statDel->rowCount();
                     DebugLog::WriteLogWithFormat("- Delete from DeviceVSPass $num records");
                 }
 
