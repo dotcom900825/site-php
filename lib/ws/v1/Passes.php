@@ -170,6 +170,11 @@ class Passes
             $pass = new EventPass(14, "pass.com.ipassstore.sdsuAztecPass", "sdsu", "SDSU", "sdsu@ipassstore.com");
             $pass = $pass->createPassWithExistingSerialNr($error);
         }
+        else if($cardID == 15){
+            Log::WriteLog("cardID:14");
+            $pass = new EventPass(15, "pass.com.ipassstore.ucsdTritonPassNew", "TritonPassNew", "UCSD Triton Pass New", "tritonpassnew@gmail.com");
+            $pass = $pass->createPassWithExistingSerialNr($error);
+        }
 		else{
 			Log::WriteLog("cardID:other");
 			$pass = new StorePass($keyPath, $sourcePath, $keyPassword, $passTypeID, $cardID);
