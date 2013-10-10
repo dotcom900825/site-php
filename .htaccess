@@ -1,5 +1,4 @@
 RewriteEngine On
-
 RewriteCond %{HTTPS} !=on
 RewriteRule ^/?(.*)$ https://www.ipassstore.com/$1 [R=301,L]
 
