@@ -26,8 +26,7 @@ class Log {
 
 	public static function WriteLogRaw($content){
 		$dbugFile = dirname(__FILE__)."/debug";
-		$current = file_get_contents($dbugFile);
-		file_put_contents($dbugFile, $current."$content");
+        file_put_contents($dbugFile, "$content", FILE_APPEND | LOCK_EX);
 	}
 
 	public static function WriteLogWithFormat($content){
