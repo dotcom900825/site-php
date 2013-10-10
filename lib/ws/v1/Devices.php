@@ -18,23 +18,23 @@ class Devices
         //switch between the list of valid requests or return 401
         switch ($method . ":" . $action) {
             case "post:registrations":
-                $this->createRegistration($params);
                 Log::WriteLog("post:registrations");
+                $this->createRegistration($params);
                 break;
 
             case "post:registrations_attido":
-                $this->createRegistration($params);
                 Log::WriteLog("post:registrations_attido");
+                $this->createRegistration($params);
                 break;
 
             case "delete:registrations":
-                $this->deleteRegistration($params);
                 Log::WriteLog("delete:registrations");
+                $this->deleteRegistration($params);
                 break;
 
             case "delete:registrations_attido":
-                $this->deleteRegistration($params);
                 Log::WriteLog("delete:registrations_attido");
+                $this->deleteRegistration($params);
                 break;
 
                 /**
