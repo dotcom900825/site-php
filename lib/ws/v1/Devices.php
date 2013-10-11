@@ -192,8 +192,8 @@ class Devices
                     DebugLog::WriteLogWithFormat("- Delete from DeviceVSPass $num records");
                 }
 
-                $statement = $db->prepare("SELECT * FROM DeviceVSPass WHERE Device = ?");
-                $statement->execute(array($deviceID));
+                $statement = $db->prepare("SELECT * FROM DeviceVSPass WHERE Device = ? AND Pass = ?");
+                $statement->execute(array($deviceID, $passID));
                 if ($statement->rowCount() == 0) {
                     $statDel = $db->prepare("DELETE FROM devices WHERE ID = ?");
                     $statDel->execute(array($deviceID));
