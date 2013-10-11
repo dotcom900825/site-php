@@ -19,12 +19,12 @@ class Devices
         switch ($method . ":" . $action) {
             case "post:registrations":
                 Log::WriteLog("post:registrations");
-                $this->createRegistration($params);
+                $this->createRegistration($params,"ios");
                 break;
 
             case "post:registrations_attido":
                 Log::WriteLog("post:registrations_attido");
-                $this->createRegistration($params);
+                $this->createRegistration($params,"android");
                 break;
 
             case "delete:registrations":
@@ -73,7 +73,7 @@ class Devices
     }
 
     //register device with ID for a pass instance
-    private function createRegistration($params)
+    private function createRegistration($params, $deviceType)
     {
         DebugLog::WriteLogWithFormat("Devices::createRegistration(params:" . print_r($params, true) .
             ")");
@@ -108,8 +108,8 @@ class Devices
             //No device registered for this org, so both table need insertion
             $db->beginTransaction();
 
-            $stmtInsert = $db->prepare("INSERT INTO devices (ID, PushToken) values (?, ?)");
-            $stmtInsert->execute(array($deviceID, $pushToken));
+            $stmtInsert = $db->prepare("INSERT INTO devices (ID, PushToken, device_type) values (?, ?, ?)");
+            $stmtInsert->execute(array($deviceID, $pushToken, $deviceType));
             //$debugNum = $stmtInsert->affected_rows;
             //DebugLog::WriteLogRaw("First insert affected rows: $debugNum\n");
 
