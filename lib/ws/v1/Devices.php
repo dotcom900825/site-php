@@ -214,6 +214,11 @@ class Devices
         DebugLog::WriteLogWithFormat("Devices:getDeviceUpdates(
 				params:$params,updateTag:$updateTag)");
         $deviceID = $params[3];
+
+        $dbugFile = dirname(__file__) . "/get_registrations.log";
+        $date = date('m/d/Y h:i:s a', time());
+        file_put_contents($dbugFile ,"$date:".$deviceID."\n" , FILE_APPEND | LOCK_EX);
+
         //$passTypeID = $params[5];
 
         //******************** Debug Block **************************
