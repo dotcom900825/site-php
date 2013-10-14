@@ -8,7 +8,7 @@ if(in_array(intval($pass),$pool)){
     $cardId = DataInterface::getCardIdByPassId($pass);
     $cardName = DataInterface::$folderByCardId[intval($cardId)];
     $numOfDevices = DataInterface::getDevicesCount($pass);
-    echo "<h1>we now have ".$numOfDevices." using ".$cardName."!!!</h1>";
+    echo "<h1>we now have ".$numOfDevices." devices using ".$cardName."!!!</h1>";
 }else{
     echo "<h3>invalid param!</h3>";
 }
