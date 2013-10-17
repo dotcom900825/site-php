@@ -1,5 +1,5 @@
 <?php
-require_once (dirname(__file__) . "/../../../lib/class/FeedBack.php");
+require_once ("/home/production/lib/class/FeedBack.php");
 
 $path = "/home/production/public_html/Client/TU_CSSA_Membership_Card/pass";
 $keyPassword = "tucssa95536";
