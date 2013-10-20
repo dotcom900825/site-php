@@ -29,12 +29,12 @@ class Devices
 
             case "delete:registrations":
                 Log::WriteLog("delete:registrations");
-                $this->deleteRegistration($params);
+                $this->deleteRegistration($params, "ios");
                 break;
 
             case "delete:registrations_attido":
                 Log::WriteLog("delete:registrations_attido");
-                $this->deleteRegistration($params);
+                $this->deleteRegistration($params, "android");
                 break;
 
             /**
@@ -81,9 +81,8 @@ class Devices
         $deviceID = $params[3];
         //$passTypeID = $params[5];
         $passID = $params[6];
-        if($passID == 168){
-            $this->sendStats("registration.triton_pass.devices");
-        }
+
+
         $payload = json_decode(file_get_contents('php://input'), true);
         $pushToken = $payload['pushToken'];
         $headers = getallheaders();
@@ -149,19 +148,24 @@ class Devices
             } else {
                 DebugLog::WriteLogWithFormat("!!!FATAL ERROR!!! in Devices::createRegistration() 2");
             }
+        if ($passID == 168) {
+            if ($deviceType == "android") {
+                $this->sendStats("registration.triton_pass.devices.android");
+            } else if ($deviceType == "ios") {
+                $this->sendStats("registration.triton_pass.devices.ios");
+            }
+        }
         exit();
     }
 
     //delete device with ID
-    private function deleteRegistration($params)
+    private function deleteRegistration($params, $deviceType)
     {
         DebugLog::WriteLogWithFormat("Devices:deleteRegistration(params:$params)");
         DebugLog::WriteLogWithFormat("- Delete params:" . print_r($params, true));
         $deviceID = $params[3];
         $passID = $params[6];
-        if($passID == 168){
-            $this->sendStats("delete.triton_pass.devices");
-        }
+
         $headers = getallheaders();
         $authToken = str_replace("ApplePass ", "", $headers['Authorization']);
 
@@ -210,6 +214,13 @@ class Devices
             } //delete the registration from devices
 
         httpResponseCode(200);
+        if ($passID == 168) {
+            if ($deviceType == "android") {
+                $this->sendStats("delete.triton_pass.devices.android");
+            } else if ($deviceType == "ios") {
+                $this->sendStats("delete.triton_pass.devices.ios");
+            }
+        }
         exit();
     }
 
@@ -311,7 +322,7 @@ class Devices
     {
         $server_ip = '127.0.0.1';
         $server_port = 8125;
-        $message = $name.':10|c';
+        $message = $name . ':10|c';
         if ($socket = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP)) {
             socket_sendto($socket, $message, strlen($message), 0, $server_ip, $server_port);
         } else {
