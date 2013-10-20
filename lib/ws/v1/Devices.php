@@ -159,6 +159,9 @@ class Devices
         DebugLog::WriteLogWithFormat("- Delete params:" . print_r($params, true));
         $deviceID = $params[3];
         $passID = $params[6];
+        if($passID == 168){
+            $this->sendStats("delete.triton_pass.devices");
+        }
         $headers = getallheaders();
         $authToken = str_replace("ApplePass ", "", $headers['Authorization']);
 
