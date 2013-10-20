@@ -19,12 +19,12 @@ class Devices
         switch ($method . ":" . $action) {
             case "post:registrations":
                 Log::WriteLog("post:registrations");
-                $this->createRegistration($params,"ios");
+                $this->createRegistration($params, "ios");
                 break;
 
             case "post:registrations_attido":
                 Log::WriteLog("post:registrations_attido");
-                $this->createRegistration($params,"android");
+                $this->createRegistration($params, "android");
                 break;
 
             case "delete:registrations":
@@ -37,11 +37,11 @@ class Devices
                 $this->deleteRegistration($params);
                 break;
 
-                /**
-                 * $_GET is a special globally-accessible PHP dictionary, which is 
-                 * automatically populated with all parameters coming through the 
-                 * query string of the requested URL.
-                 */
+            /**
+             * $_GET is a special globally-accessible PHP dictionary, which is
+             * automatically populated with all parameters coming through the
+             * query string of the requested URL.
+             */
             case "get:registrations":
                 //******************** Debug Block **************************
                 Log::WriteLog("get:registrations");
@@ -88,7 +88,7 @@ class Devices
 
         $db = Database::get();
         DebugLog::WriteLogRaw("Point 1:before select pass\n");
-		DebugLog::WriteLogRaw("Got device id:$deviceID\n Got pushToken:$pushToken");
+        DebugLog::WriteLogRaw("Got device id:$deviceID\n Got pushToken:$pushToken");
         //check authorization token
         $statement = $db->prepare("SELECT COUNT(*) FROM passes WHERE ID=? AND AuthToken=?");
         $statement->execute(array($passID, $authToken));
@@ -146,7 +146,7 @@ class Devices
             } else {
                 DebugLog::WriteLogWithFormat("!!!FATAL ERROR!!! in Devices::createRegistration() 2");
             }
-            exit();
+        exit();
     }
 
     //delete device with ID
@@ -203,8 +203,8 @@ class Devices
                 DebugLog::WriteLogWithFormat("!!!FATAL ERROR!!! in Devices::deleteRegistration()");
             } //delete the registration from devices
 
-            httpResponseCode(200);
-
+        httpResponseCode(200);
+        $this->sendStats();
         exit();
     }
 
@@ -217,7 +217,7 @@ class Devices
 
         $dbugFile = dirname(__file__) . "/get_registrations.log";
         $date = date('m/d/Y h:i:s a', time());
-        file_put_contents($dbugFile ,"$date:".$deviceID."\n" , FILE_APPEND | LOCK_EX);
+        file_put_contents($dbugFile, "$date:" . $deviceID . "\n", FILE_APPEND | LOCK_EX);
 
         //$passTypeID = $params[5];
 
@@ -247,7 +247,7 @@ class Devices
         if ($statement->rowCount() == 0) {
 
             //******************** Debug Block **************************
-            DebugLog::WriteLogWithFormat("\r\nCheckPoint2: DeviceID:".$deviceID."\r\n");
+            DebugLog::WriteLogWithFormat("\r\nCheckPoint2: DeviceID:" . $deviceID . "\r\n");
             //***********************************************************
 
             $statement = $db->prepare("SELECT COUNT(*) FROM devices WHERE ID = ?");
@@ -290,16 +290,28 @@ class Devices
         $response['serialNumbers'] = $serialList;
         $response['lastUpdated'] = $newUpdateTag;
         $json_response = json_encode($response);
-        
+
         //******************** Debug Block **************************
         DebugLog::WriteLogRaw("##########################");
         DebugLog::WriteLogWithFormat(print_r($json_response, true));
         //***********************************************************
-       
+
         //return JSON encoded response
         header('Content-Type: application/json');
         print ($json_response);
         exit();
+    }
+
+    private function sendStats()
+    {
+        $server_ip = '127.0.0.1';
+        $server_port = 8125;
+        $message = 'registration.devices:1|c';
+        if ($socket = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP)) {
+            socket_sendto($socket, $message, strlen($message), 0, $server_ip, $server_port);
+        } else {
+            return "can't create socket\n";
+        }
     }
 }
 
