@@ -81,6 +81,9 @@ class Devices
         $deviceID = $params[3];
         //$passTypeID = $params[5];
         $passID = $params[6];
+        if($passID == 168){
+            $this->sendStats("registration.triton_pass.devices");
+        }
         $payload = json_decode(file_get_contents('php://input'), true);
         $pushToken = $payload['pushToken'];
         $headers = getallheaders();
@@ -204,7 +207,6 @@ class Devices
             } //delete the registration from devices
 
         httpResponseCode(200);
-        $this->sendStats();
         exit();
     }
 
@@ -302,11 +304,11 @@ class Devices
         exit();
     }
 
-    private function sendStats()
+    private function sendStats($name)
     {
         $server_ip = '127.0.0.1';
         $server_port = 8125;
-        $message = 'registration.devices:1|c';
+        $message = $name.':10|c';
         if ($socket = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP)) {
             socket_sendto($socket, $message, strlen($message), 0, $server_ip, $server_port);
         } else {
