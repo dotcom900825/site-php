@@ -39,10 +39,12 @@ $card->outputPassBundleAsWebDownload();
 <title></title>
 </head>
 <body>
-<form action="index.php">
+<?php
+/*<form action="index.php">
 <input type="hidden" value="create" name="action"/>
 <input type="submit" value = "create"/>
 </form>
+ */?>
 <form action="index.php">
 <input type="hidden" value="produce" name="action"/>
 <input type="submit" value = "produce"/>
