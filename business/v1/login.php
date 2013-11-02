@@ -4,8 +4,10 @@ require_once (dirname(__file__) . "/../../../lib/class/DataInterface.php");
 $email = $_POST['email'];
 $password = $_POST['password'];
 
+// careful! $email = UserName in db!
 if(DataInterface::login($email, $password)){
-    echo "success";
+    $org_id = DataInterface::getOrgIdByUsername($email);
+    echo json_encode(array('status' => 200,'organization_id' => "$org_id"));
 }else{
-    echo "failed";
+    echo json_encode(array('status' => 404));
 };
