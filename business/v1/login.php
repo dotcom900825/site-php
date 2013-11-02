@@ -1,11 +1,11 @@
 <?php
-require_once (dirname(__file__) . "/../../../lib/class/Database.php");
+require_once (dirname(__file__) . "/../../../lib/class/DataInterface.php");
 
 $email = $_POST['email'];
 $password = $_POST['password'];
 
 if(DataInterface::login($email, $password)){
-    echo "success!";
+    echo "success";
 }else{
-    echo "failed!";
+    echo "failed";
 };
