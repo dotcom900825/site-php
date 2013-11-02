@@ -11,8 +11,8 @@ $legal_serial = array(1);
 $legal_data = array(5 => $legal_serial);
 
 header('Content-type: application/json');
-if (in_array($org_id, $legal_data)) {
-    if (in_array($legal_data[$org_id], $serial)) {
+if (array_key_exists($org_id, $legal_data)) {
+    if (in_array($serial, $legal_data[$org_id])) {
         echo json_encode(array('status' => 200, 'text' => "success"));
     } else {
         echo json_encode(array('status' => 200, 'text' => "failed"));
