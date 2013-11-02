@@ -6,6 +6,7 @@ $payload = json_decode(file_get_contents('php://input'), true);
 $email = $payload['email'];
 $password = $payload['password'];
 
+header('Content-type: application/json');
 // careful! $email = UserName in db!
 if (DataInterface::login($email, $password)) {
     $org_id = DataInterface::getOrgIdByUsername($email);
