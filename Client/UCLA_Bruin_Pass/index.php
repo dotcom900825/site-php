@@ -11,7 +11,7 @@ $card = $card->createPassWithExistingSerialNr($error);
 $card->outputPassBundleAsWebDownload();
 
 
-
+/*
 //When you creat the card for the first time, you need to uncomment all
 //the following code, make the bottom part html, and press create button
 //on this page, after that, you can comment them out, and have the three
@@ -28,7 +28,7 @@ $card = $card->createPassWithExistingSerialNr($error);
 $card->outputPassBundleAsWebDownload();
 }
 
-?>
+
 
 
 
@@ -49,8 +49,8 @@ $card->outputPassBundleAsWebDownload();
 </form>
 </body>
 </html>
-
-
+*/
+?>
 
 
 
