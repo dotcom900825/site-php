@@ -171,8 +171,13 @@ class Passes
             $pass = $pass->createPassWithExistingSerialNr($error);
         }
         else if($cardID == 15){
-            Log::WriteLog("cardID:14");
+            Log::WriteLog("cardID:15");
             $pass = new EventPass(15, "pass.com.ipassstore.ucsdTritonPassNew", "TritonPassNew", "UCSD Triton Pass New", "tritonpassnew@gmail.com");
+            $pass = $pass->createPassWithExistingSerialNr($error);
+        }
+        else if($cardID == 16){
+            Log::WriteLog("cardID:16");
+            $pass = new EventPass(16, "pass.com.ipassstore.uclaBruinPass", "BruinPass", "UCLA Bruin Pass", "BruinPass@ipassstore.com");
             $pass = $pass->createPassWithExistingSerialNr($error);
         }
 		else{
