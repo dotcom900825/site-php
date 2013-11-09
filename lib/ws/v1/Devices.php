@@ -228,9 +228,9 @@ class Devices
             }
         }else if($passID == 166){
             if ($deviceType == "android") {
-                $this->sendStats("registration.aztec_pass.devices.android");
+                $this->sendStats("delete.aztec_pass.devices.android");
             } else if ($deviceType == "ios") {
-                $this->sendStats("registration.aztec_pass.devices.ios");
+                $this->sendStats("delete.aztec_pass.devices.ios");
             }
         }
         exit();
