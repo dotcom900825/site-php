@@ -154,6 +154,12 @@ class Devices
             } else if ($deviceType == "ios") {
                 $this->sendStats("registration.triton_pass.devices.ios");
             }
+        }else if($passID == 166){
+            if ($deviceType == "android") {
+                $this->sendStats("registration.aztec_pass.devices.android");
+            } else if ($deviceType == "ios") {
+                $this->sendStats("registration.aztec_pass.devices.ios");
+            }
         }
         exit();
     }
@@ -219,6 +225,12 @@ class Devices
                 $this->sendStats("delete.triton_pass.devices.android");
             } else if ($deviceType == "ios") {
                 $this->sendStats("delete.triton_pass.devices.ios");
+            }
+        }else if($passID == 166){
+            if ($deviceType == "android") {
+                $this->sendStats("registration.aztec_pass.devices.android");
+            } else if ($deviceType == "ios") {
+                $this->sendStats("registration.aztec_pass.devices.ios");
             }
         }
         exit();
