@@ -3,7 +3,7 @@
 require_once (dirname(__file__) . "/../lib/class/DataInterface.php");
 
 $pass = $_GET['pass'];
-$pool = array(168,110);
+$pool = array(168,110,166);
 if(in_array(intval($pass),$pool)){
     $cardId = DataInterface::getCardIdByPassId($pass);
     $cardName = DataInterface::$folderByCardId[intval($cardId)];
